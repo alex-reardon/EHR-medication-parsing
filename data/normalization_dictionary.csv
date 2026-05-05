@@ -1,0 +1,162 @@
+raw,replacement,category,notes
+\b1/2\b,0.5,cleanup,
+\b(?:one\s+half|1\s+half|half\s+a|half)\b,0.5,cleanup,
+\b1 1/2\b,1.5,cleanup,
+\bdihydrochloride\b,,cleanup,remove salt
+\bhcl\b,,cleanup,remove salt
+\bhydrochloride\b,,cleanup,remove salt
+\bgeneric\b,,cleanup,
+\bna\b,,cleanup,remove na 
+\bunk\b,,cleanup,remove unk (unknown)
+\bunknown\b,,cleanup,
+\baerosol\b,inhaler,form,
+\bampoule(?:s)?\b,ampoule,form,ampoule
+cap(?:s|sule|sules)?\b,caps,form,capsule variants
+\bcream\b,cream,form,topical
+\bdose\b,dose,form,dose
+drop(?:s)?\b,drop,form,drops
+\belixir\b,elixir,form,
+\bfilm\b,film,form,
+\bfoam\b,foam,form,
+\bgel\b,gel,form,
+\bgelcaps?\b,soft_gel,form,
+\bgranules?\b,granules,form,
+\bimplant\b,implant,form,
+\binhaler\b,inhaler,form,
+\binj(?:ection)?s?\b,injection,form,
+\blotion\b,lotion,form,
+\blozenge\b,lozenge,form,
+\bointment\b,ointment,form,topical
+\bpatch(?:es)?\b,patch,form,
+\bpill(?:s)?\b,pill,form,pill
+\bpowder\b,powder,form,
+\bring\b,ring,form,
+\bshot(?:s)?\b,injection,form,shot synonym
+\bsoft\s*gel(?:s)?\b,softgel,form,softgel
+\bsolution\b,solution,form,solution
+\bspray\b,spray,form,spray
+\bsuspension\b,suspension,form,suspension
+\bsyrup\b,syrup,form,syrup
+tab(?:let)?s?\b\b,tabs,form,tablet variants
+\btroche\b,lozenge,form,
+\btroche\b,lozenge,form,
+\bvial(?:s)?\b,vial,form,vial
+\bcontinuous release\b,er,release,ER
+\bcr\b,er,release,CR
+\bdepot\b,er,release,ER
+\ber\b,er,release,ER
+\bextended release\b,er,release,ER
+\bextended\s*release\b,er,release,ER
+\bimmediate\s*release\b,ir,release,IR
+\bir\b,ir,release,IR
+\blp\b,er,release,ER
+\blt\b,er,release,ER
+\bmodified release\b,er,release,ER
+\bodt\b,er,release,ER
+\bprolib\b,er,release,ER
+\bprologed release\b,er,release,ER
+\breseased lib\b,er,release,ER
+\bret\b,er,release,ER
+\bretard\b,er,release,ER
+\bsa\b,er,release,ER
+\bslow release\b,er,release,ER
+\bsr\b,er,release,ER
+\bsustained release\b,er,release,ER
+\bsustained\s*release\b,er,release,SR
+\bxl\b,er,release,ER
+\bxr\b,er,release,XR
+\bapply\b,topical,route,
+\bbuccal\b,buccal,route,
+\bby\s*mouth\b,oral,route,
+\bear\s*drops?\b,ear,route,
+\benteral tube\b,enteral tube,route,
+\beye\s*drops?\b,eye,route,
+\bim\b,im,route,intramuscular
+\binhal(?:ed|ation)?\b,inhalation ,route,
+\binfusion\b,infusion,route,
+\bintestinal infusion\b,intestinal,route,
+\bintestinal\b,intestinal,route,
+\bintramuscular\b,im,route,im
+\bintravenous\b,iv,route,iv
+\biv\b,iv,route,intravenous
+\bnasal\b,nasal,route,
+\bnebuliz(?:er|ed)?\b,inhalation,route,
+\bnose\b,nasal,route,
+\bon\s*skin\b,topical,route,
+\bophthalmic\b,eye,route,
+\boral(?:ly)?\b,oral,route,
+\botic\b,ear,route,
+\bpo\b,oral,route,by mouth
+\brectal\b,rectal,route,
+\bsc\b,subcutaneous,route,
+\bsubc\b,subcutaneous,route,
+\bsubcut(?:aneous)?\b,subcutaneous,route,
+\bsubcutaneous\b,subcutaneous,route,
+\bsublingual\b,sublingual,route,
+\bsuppository\b,rectal,route,
+\btransdermal system\b,transdermal,route,
+\btopical\b,topical,route,
+\btransdermal\b,transdermal,route,
+\bvaginal\b,vaginal,route,
+\bµg\b,mcg,unit,unicode microgram
+\bg\b,g,unit,g
+\bgram(?:s)?\b,g,unit,grams
+\bl\b,l,unit,liter
+\bliter(?:s)?\b,l,unit,liter
+\bmcg\b,mcg,unit,mcg
+\bmg\b,mg,unit,mg
+\bmicrogram(?:s)?\b,mcg,unit,micrograms
+\bmilligrams?\b,mg,unit,milligram
+\bmilliliter(?:s)?\b,ml,unit,ml
+\bml\b,ml,unit,ml
+\binhalations\b,inhalations,unit,
+tsp\b,tsp,unit,
+\bpuff\b,puff,unit,
+\binternational unit(?:s)\b,iu,unit,
+\biu\b,iu,unit,
+\bmg/kg\b,mg/kg,unit,
+\bcapful\b,capfull,unit,
+\btbsp\b,tbsp,unit,
+\btablespoon\b,tbsp,unit,
+\bteaspoon\b,tsp,unit,
+unit\b,unit,unit,
+units\b,unit,unit,
+\boz\b,oz,unit,
+\bscoop\b,scoop,unit,
+\bounce\b,oz,unit,
+\bglass\b,,cleanup,
+\b%\b,%,unit,
+\bpercent\b,%,unit,
+\botc\b,,cleanup,
+\bmg/gm\b,mg/g,unit,
+\bmilligram/gram\b,mg/g,unit,
+\bone\b,1,cleanup,
+\bin the am\b,in the am ,time_of_day,
+\bin the pm\b,in the pm,time_of_day,
+\bat bedtime\b,at bedtime,time_of_day,
+\bam\b,am,time_of_day,
+\bevening\b,evening,time_of_day,
+\bpm\b,pm,time_of_day,
+\bbedtime\b,bedtime,time_of_day,
+\bafternoon\b,afternoon,time_of_day,
+\bnoon\b,noon,time_of_day,
+\bbefore sleep\b,before sleep,time_of_day,
+\bwith dinner\b,with dinner,time_of_day,
+\bat dinner time\b,at dinner,time_of_day,
+\bat dinner\b,at dinner,time_of_day,
+\bnight\b,night,time_of_day,
+\bmorning\b,morning,time_of_day,
+\bnocte\b,nocte,time_of_day,
+\bac\b,ac,time_of_day,
+\bpc\b,pc,time_of_day,
+\bbefore\s*meals\b,before meals,time_of_day,
+\bafter\s*meals\b,after meals,time_of_day,
+\bin am\b,in am,time_of_day,
+\bnight time\b,night time,time_of_day,
+\bin the morning\b,in the morning,time_of_day,
+\bat breakfast\b,at breakfast,time_of_day,
+\bat lunch\b,at lunch,time_of_day,
+\bat night\b ,at night,time_of_day,
+\bin pm\b,in pm,time_of_day,
+\bat lunchtime\b,at lunchtime,time_of_day,
+\bin the evening\b,in the evening,time_of_day,

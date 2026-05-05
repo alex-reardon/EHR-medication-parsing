@@ -1,0 +1,357 @@
+raw,replacement,category,notes
+\b(?:10(?:\.0+)?|ten)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,10x/day,freq,10 per day
+\b(?:10(?:\.0+)?|ten)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,10x/day,freq,10 per day
+\b(?:10(?:\.0+)?|ten)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,10x/day,freq,10 per day
+\b(?:10(?:\.0+)?|ten)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,10x/hour,freq,10 per hour
+\b(?:10(?:\.0+)?|ten)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,10x/hour,freq,10 per hour
+\b(?:10(?:\.0+)?|ten)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,10x/month,freq,10 per month
+\b(?:10(?:\.0+)?|ten)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,10x/month,freq,10 per month
+\b(?:10(?:\.0+)?|ten)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,10x/month,freq,10 per month
+\b(?:10(?:\.0+)?|ten)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,10x/week,freq,10 per week
+\b(?:10(?:\.0+)?|ten)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,10x/week,freq,10 per week
+\b(?:10(?:\.0+)?|ten)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,10x/year,freq,10 per year
+\b(?:10(?:\.0+)?|ten)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,10x/year,freq,10 per year
+\b(?:11(?:\.0+)?|eleven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,11x/day,freq,11 per day
+\b(?:11(?:\.0+)?|eleven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,11x/day,freq,11 per day
+\b(?:11(?:\.0+)?|eleven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,11x/day,freq,11 per day
+\b(?:11(?:\.0+)?|eleven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,11x/hour,freq,11 per hour
+\b(?:11(?:\.0+)?|eleven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,11x/hour,freq,11 per hour
+\b(?:11(?:\.0+)?|eleven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,11x/month,freq,11 per month
+\b(?:11(?:\.0+)?|eleven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,11x/month,freq,11 per month
+\b(?:11(?:\.0+)?|eleven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,11x/month,freq,11 per month
+\b(?:11(?:\.0+)?|eleven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,11x/week,freq,11 per week
+\b(?:11(?:\.0+)?|eleven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,11x/week,freq,11 per week
+\b(?:11(?:\.0+)?|eleven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,11x/year,freq,11 per year
+\b(?:11(?:\.0+)?|eleven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,11x/year,freq,11 per year
+\b(?:12(?:\.0+)?|twelve)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,12x/day,freq,12 per day
+\b(?:12(?:\.0+)?|twelve)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,12x/day,freq,12 per day
+\b(?:12(?:\.0+)?|twelve)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,12x/day,freq,12 per day
+\b(?:12(?:\.0+)?|twelve)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,12x/hour,freq,12 per hour
+\b(?:12(?:\.0+)?|twelve)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,12x/hour,freq,12 per hour
+\b(?:12(?:\.0+)?|twelve)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,12x/month,freq,12 per month
+\b(?:12(?:\.0+)?|twelve)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,12x/month,freq,12 per month
+\b(?:12(?:\.0+)?|twelve)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,12x/month,freq,12 per month
+\b(?:12(?:\.0+)?|twelve)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,12x/week,freq,12 per week
+\b(?:12(?:\.0+)?|twelve)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,12x/week,freq,12 per week
+\b(?:12(?:\.0+)?|twelve)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,12x/year,freq,12 per year
+\b(?:12(?:\.0+)?|twelve)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,12x/year,freq,12 per year
+\bonce\b,1x,freq_fallback,once (no unit)
+\b(?:once\s*(?:daily|a\s*day|per\s*day|every\s*day|each\s*day))\b,1x/day,freq,once daily
+\b(?:every\s*24\s*(?:hours?|hrs?)|q24h|q24)\b,1x/day,freq,
+\b(?:q\.?\s*d\.?|od|q24h|q24)\b,1x/day,freq,
+\bq\s*/?\s*(?:day|d)\b,1x/day,freq,
+\b(?:1(?:\.0+)?|one)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,1x/day,freq,1 per day
+\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,1x/day,freq,once per day
+\bdaily\b,1x/day,freq,daily
+\b(?:1(?:\.0+)?|one)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,1x/day,freq,1 per day
+\bevery\s*day\b|\beveryday\b,1x/day,freq,every day 
+\b(?:1(?:\.0+)?|one)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,1x/day,freq,1 per day
+\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,1x/day,freq,once per day
+\b(?:1(?:\.0+)?|one)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,1x/hour,freq,1 per hour
+\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,1x/hour,freq,once per hour
+\b(?:1(?:\.0+)?|one)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,1x/hour,freq,1 per hour
+\b(?:1(?:\.0+)?|one)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,1x/month,freq,1 per month
+\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,1x/month,freq,once per month
+\b(?:1(?:\.0+)?|one)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,1x/month,freq,1 per month
+\b(?:1(?:\.0+)?|one)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,1x/month,freq,1 per month
+\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,1x/month,freq,once per month
+\bq\s*(?:w|wk|week)\b,1x/week,freq,
+\b(?:1(?:\.0+)?|one)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,1x/week,freq,1 per week
+\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,1x/week,freq,once per week
+\bweekly\b,1x/week,freq,weekly
+\b(?:1(?:\.0+)?|one)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,1x/week,freq,1 per week
+\b(?:once\s+a\s+year|yearly|annually)\b,1x/year,freq,
+\b(?:1(?:\.0+)?|one)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,1x/year,freq,1 per year
+\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,1x/year,freq,once per year
+\b(?:1(?:\.0+)?|one)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,1x/year,freq,1 per year
+\btwice\b,2x,freq_fallback,twice (no unit)
+\bb[\.\s]*i?[\.\s]*d\b,2x/day,freq,bid
+\btwice\s*(?:daily|a day|per day)\b,2x/day,freq,
+\b(?:2(?:\.0+)?|two)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,2x/day,freq,2 per day
+\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,2x/day,freq,twice per day
+\b(?:2(?:\.0+)?|two)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,2x/day,freq,2 per day
+\b(?:2(?:\.0+)?|two)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,2x/day,freq,2 per day
+\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,2x/day,freq,twice per day
+\b(?:2(?:\.0+)?|two)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,2x/hour,freq,2 per hour
+\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,2x/hour,freq,twice per hour
+\b(?:2(?:\.0+)?|two)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,2x/hour,freq,2 per hour
+\b(?:2(?:\.0+)?|two)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,2x/month,freq,2 per month
+\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,2x/month,freq,twice per month
+\b(?:2(?:\.0+)?|two)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,2x/month,freq,2 per month
+\b(?:2(?:\.0+)?|two)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,2x/month,freq,2 per month
+\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,2x/month,freq,twice per month
+\b(?:2(?:\.0+)?|two)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,2x/week,freq,2 per week
+\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,2x/week,freq,twice per week
+\b(?:2(?:\.0+)?|two)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,2x/week,freq,2 per week
+\b(?:biw|biweekly)\b,2x/week,freq,biw
+\b(?:2(?:\.0+)?|two)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,2x/year,freq,2 per year
+\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,2x/year,freq,twice per year
+\b(?:2(?:\.0+)?|two)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,2x/year,freq,2 per year
+\btid\b,3x/day,freq,tid
+\b(?:3(?:\.0+)?|three)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,3x/day,freq,3 per day
+\b(?:3(?:\.0+)?|three)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,3x/day,freq,3 per day
+\b(?:3(?:\.0+)?|three)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,3x/day,freq,3 per day
+\b(?:3(?:\.0+)?|three)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,3x/hour,freq,3 per hour
+\b(?:3(?:\.0+)?|three)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,3x/hour,freq,3 per hour
+\b(?:3(?:\.0+)?|three)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,3x/month,freq,3 per month
+\b(?:3(?:\.0+)?|three)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,3x/month,freq,3 per month
+\b(?:3(?:\.0+)?|three)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,3x/month,freq,3 per month
+\btiw\b,3x/week,freq,
+\b(?:3(?:\.0+)?|three)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,3x/week,freq,3 per week
+\b(?:3(?:\.0+)?|three)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,3x/week,freq,3 per week
+\b(?:3(?:\.0+)?|three)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,3x/year,freq,3 per year
+\b(?:3(?:\.0+)?|three)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,3x/year,freq,3 per year
+\b(?:4(?:\.0+)?|four)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,4x/day,freq,4 per day
+\bqid\b,4x/day,freq,qid
+\b(?:4(?:\.0+)?|four)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,4x/day,freq,4 per day
+\b(?:4(?:\.0+)?|four)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,4x/day,freq,4 per day
+\b(?:4(?:\.0+)?|four)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,4x/hour,freq,4 per hour
+\b(?:4(?:\.0+)?|four)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,4x/hour,freq,4 per hour
+\b(?:4(?:\.0+)?|four)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,4x/month,freq,4 per month
+\b(?:4(?:\.0+)?|four)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,4x/month,freq,4 per month
+\b(?:4(?:\.0+)?|four)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,4x/month,freq,4 per month
+\b(?:4(?:\.0+)?|four)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,4x/week,freq,4 per week
+\b(?:4(?:\.0+)?|four)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,4x/week,freq,4 per week
+\b(?:4(?:\.0+)?|four)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,4x/year,freq,4 per year
+\b(?:4(?:\.0+)?|four)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,4x/year,freq,4 per year
+\b(?:5(?:\.0+)?|five)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,5x/day,freq,5 per day
+\b(?:5(?:\.0+)?|five)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,5x/day,freq,5 per day
+\b(?:5(?:\.0+)?|five)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,5x/day,freq,5 per day
+\b(?:5(?:\.0+)?|five)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,5x/hour,freq,5 per hour
+\b(?:5(?:\.0+)?|five)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,5x/hour,freq,5 per hour
+\b(?:5(?:\.0+)?|five)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,5x/month,freq,5 per month
+\b(?:5(?:\.0+)?|five)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,5x/month,freq,5 per month
+\b(?:5(?:\.0+)?|five)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,5x/month,freq,5 per month
+\b(?:5(?:\.0+)?|five)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,5x/week,freq,5 per week
+\b(?:5(?:\.0+)?|five)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,5x/week,freq,5 per week
+\b(?:5(?:\.0+)?|five)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,5x/year,freq,5 per year
+\b(?:5(?:\.0+)?|five)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,5x/year,freq,5 per year
+\b(?:6(?:\.0+)?|six)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,6x/day,freq,6 per day
+\b(?:6(?:\.0+)?|six)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,6x/day,freq,6 per day
+\b(?:6(?:\.0+)?|six)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,6x/day,freq,6 per day
+\b(?:6(?:\.0+)?|six)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,6x/hour,freq,6 per hour
+\b(?:6(?:\.0+)?|six)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,6x/hour,freq,6 per hour
+\b(?:6(?:\.0+)?|six)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,6x/month,freq,6 per month
+\b(?:6(?:\.0+)?|six)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,6x/month,freq,6 per month
+\b(?:6(?:\.0+)?|six)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,6x/month,freq,6 per month
+\b(?:6(?:\.0+)?|six)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,6x/week,freq,6 per week
+\b(?:6(?:\.0+)?|six)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,6x/week,freq,6 per week
+\b(?:6(?:\.0+)?|six)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,6x/year,freq,6 per year
+\b(?:6(?:\.0+)?|six)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,6x/year,freq,6 per year
+\b(?:7(?:\.0+)?|seven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,7x/day,freq,7 per day
+\b(?:7(?:\.0+)?|seven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,7x/day,freq,7 per day
+\b(?:7(?:\.0+)?|seven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,7x/day,freq,7 per day
+\b(?:7(?:\.0+)?|seven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,7x/hour,freq,7 per hour
+\b(?:7(?:\.0+)?|seven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,7x/hour,freq,7 per hour
+\b(?:7(?:\.0+)?|seven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,7x/month,freq,7 per month
+\b(?:7(?:\.0+)?|seven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,7x/month,freq,7 per month
+\b(?:7(?:\.0+)?|seven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,7x/month,freq,7 per month
+\b(?:7(?:\.0+)?|seven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,7x/week,freq,7 per week
+\b(?:7(?:\.0+)?|seven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,7x/week,freq,7 per week
+\b(?:7(?:\.0+)?|seven)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,7x/year,freq,7 per year
+\b(?:7(?:\.0+)?|seven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,7x/year,freq,7 per year
+\b(?:8(?:\.0+)?|eight)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,8x/day,freq,8 per day
+\b(?:8(?:\.0+)?|eight)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,8x/day,freq,8 per day
+\b(?:8(?:\.0+)?|eight)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,8x/day,freq,8 per day
+\b(?:8(?:\.0+)?|eight)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,8x/hour,freq,8 per hour
+\b(?:8(?:\.0+)?|eight)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,8x/hour,freq,8 per hour
+\b(?:8(?:\.0+)?|eight)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,8x/month,freq,8 per month
+\b(?:8(?:\.0+)?|eight)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,8x/month,freq,8 per month
+\b(?:8(?:\.0+)?|eight)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,8x/month,freq,8 per month
+\b(?:8(?:\.0+)?|eight)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,8x/week,freq,8 per week
+\b(?:8(?:\.0+)?|eight)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,8x/week,freq,8 per week
+\b(?:8(?:\.0+)?|eight)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,8x/year,freq,8 per year
+\b(?:8(?:\.0+)?|eight)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,8x/year,freq,8 per year
+\b(?:9(?:\.0+)?|nine)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,9x/day,freq,9 per day
+\b(?:9(?:\.0+)?|nine)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,9x/day,freq,9 per day
+\b(?:9(?:\.0+)?|nine)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,9x/day,freq,9 per day
+\b(?:9(?:\.0+)?|nine)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:h|hr|hour|hours|hrs)\b,9x/hour,freq,9 per hour
+\b(?:9(?:\.0+)?|nine)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,9x/hour,freq,9 per hour
+\b(?:9(?:\.0+)?|nine)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|monthly)\b,9x/month,freq,9 per month
+\b(?:9(?:\.0+)?|nine)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,9x/month,freq,9 per month
+\b(?:9(?:\.0+)?|nine)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:m|mo|month|months|monthly)\b,9x/month,freq,9 per month
+\b(?:9(?:\.0+)?|nine)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:w|week|wk|wks|weeks|weekly)\b,9x/week,freq,9 per week
+\b(?:9(?:\.0+)?|nine)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,9x/week,freq,9 per week
+\b(?:9(?:\.0+)?|nine)\s*(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?(?:y|yr|year|yearly|annually)\b,9x/year,freq,9 per year
+\b(?:9(?:\.0+)?|nine)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*)\s*(?:w|week|weeks|wk|m|mo|month|months)\b,9x/year,freq,9 per year
+\b(?:prn|as needed|rarely|occasionally|intermittent)\b,prn,freq,
+\bq\s*(?:1(?:\.0+)?|one)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q1 day,freq,q1 day
+\bevery\s*(?:1(?:\.0+)?|one)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q1 day,freq,every 1 day
+\bq\s*(?:1(?:\.0+)?|one)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q1 day,freq,q1 day
+\bevery\s*(?:1(?:\.0+)?|one)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q1 day,freq,every 1 day
+\bq\s*(?:1(?:\.0+)?|one)\s*(?:h|hr|hour|hours|hrs)\b,q1 hour,freq,q1 hour
+\bevery\s*(?:1(?:\.0+)?|one)\s*(?:h|hr|hour|hours|hrs)\b,q1 hour,freq,every 1 hour
+\bqh\b,q1 hour,freq,qh
+\bq\s*(?:1(?:\.0+)?|one)\s*(?:m|mo|month|monthly)\b,q1 month,freq,q1 month
+\bevery\s*(?:1(?:\.0+)?|one)\s*(?:m|mo|month|monthly)\b,q1 month,freq,every 1 month
+\bq\s*(?:1(?:\.0+)?|one)\s*(?:m|mo|month|months|monthly)\b,q1 month,freq,q1 month
+\bevery\s*(?:1(?:\.0+)?|one)\s*(?:m|mo|month|months|monthly)\b,q1 month,freq,every 1 month
+\bq\s*(?:1(?:\.0+)?|one)\s*(?:w|week|wk|wks|weeks|weekly)\b,q1 week,freq,q1 week
+\bevery\s*(?:1(?:\.0+)?|one)\s*(?:w|week|wk|wks|weeks|weekly)\b,q1 week,freq,every 1 week
+\bq\s*(?:1(?:\.0+)?|one)\s*(?:y|yr|year|yearly|annually)\b,q1 year,freq,q1 year
+\bevery\s*(?:1(?:\.0+)?|one)\s*(?:y|yr|year|yearly|annually)\b,q1 year,freq,every 1 year
+\bq\s*(?:10(?:\.0+)?|ten)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q10 day,freq,q10 day
+\bevery\s*(?:10(?:\.0+)?|ten)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q10 day,freq,every 10 day
+\bq\s*(?:10(?:\.0+)?|ten)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q10 day,freq,q10 day
+\bevery\s*(?:10(?:\.0+)?|ten)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q10 day,freq,every 10 day
+\bq\s*(?:10(?:\.0+)?|ten)\s*(?:h|hr|hour|hours|hrs)\b,q10 hour,freq,q10 hour
+\bevery\s*(?:10(?:\.0+)?|ten)\s*(?:h|hr|hour|hours|hrs)\b,q10 hour,freq,every 10 hour
+\bq\s*(?:10(?:\.0+)?|ten)\s*(?:m|mo|month|monthly)\b,q10 month,freq,q10 month
+\bevery\s*(?:10(?:\.0+)?|ten)\s*(?:m|mo|month|monthly)\b,q10 month,freq,every 10 month
+\bq\s*(?:10(?:\.0+)?|ten)\s*(?:m|mo|month|months|monthly)\b,q10 month,freq,q10 month
+\bevery\s*(?:10(?:\.0+)?|ten)\s*(?:m|mo|month|months|monthly)\b,q10 month,freq,every 10 month
+\bq\s*(?:10(?:\.0+)?|ten)\s*(?:w|week|wk|wks|weeks|weekly)\b,q10 week,freq,q10 week
+\bevery\s*(?:10(?:\.0+)?|ten)\s*(?:w|week|wk|wks|weeks|weekly)\b,q10 week,freq,every 10 week
+\bq\s*(?:10(?:\.0+)?|ten)\s*(?:y|yr|year|yearly|annually)\b,q10 year,freq,q10 year
+\bevery\s*(?:10(?:\.0+)?|ten)\s*(?:y|yr|year|yearly|annually)\b,q10 year,freq,every 10 year
+\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q11 day,freq,q11 day
+\bevery\s*(?:11(?:\.0+)?|eleven)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q11 day,freq,every 11 day
+\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q11 day,freq,q11 day
+\bevery\s*(?:11(?:\.0+)?|eleven)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q11 day,freq,every 11 day
+\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:h|hr|hour|hours|hrs)\b,q11 hour,freq,q11 hour
+\bevery\s*(?:11(?:\.0+)?|eleven)\s*(?:h|hr|hour|hours|hrs)\b,q11 hour,freq,every 11 hour
+\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:m|mo|month|monthly)\b,q11 month,freq,q11 month
+\bevery\s*(?:11(?:\.0+)?|eleven)\s*(?:m|mo|month|monthly)\b,q11 month,freq,every 11 month
+\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:m|mo|month|months|monthly)\b,q11 month,freq,q11 month
+\bevery\s*(?:11(?:\.0+)?|eleven)\s*(?:m|mo|month|months|monthly)\b,q11 month,freq,every 11 month
+\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:w|week|wk|wks|weeks|weekly)\b,q11 week,freq,q11 week
+\bevery\s*(?:11(?:\.0+)?|eleven)\s*(?:w|week|wk|wks|weeks|weekly)\b,q11 week,freq,every 11 week
+\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:y|yr|year|yearly|annually)\b,q11 year,freq,q11 year
+\bevery\s*(?:11(?:\.0+)?|eleven)\s*(?:y|yr|year|yearly|annually)\b,q11 year,freq,every 11 year
+\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q12 day,freq,q12 day
+\bevery\s*(?:12(?:\.0+)?|twelve)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q12 day,freq,every 12 day
+\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q12 day,freq,q12 day
+\bevery\s*(?:12(?:\.0+)?|twelve)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q12 day,freq,every 12 day
+\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:h|hr|hour|hours|hrs)\b,q12 hour,freq,q12 hour
+\bevery\s*(?:12(?:\.0+)?|twelve)\s*(?:h|hr|hour|hours|hrs)\b,q12 hour,freq,every 12 hour
+\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:m|mo|month|monthly)\b,q12 month,freq,q12 month
+\bevery\s*(?:12(?:\.0+)?|twelve)\s*(?:m|mo|month|monthly)\b,q12 month,freq,every 12 month
+\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:m|mo|month|months|monthly)\b,q12 month,freq,q12 month
+\bevery\s*(?:12(?:\.0+)?|twelve)\s*(?:m|mo|month|months|monthly)\b,q12 month,freq,every 12 month
+\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:w|week|wk|wks|weeks|weekly)\b,q12 week,freq,q12 week
+\bevery\s*(?:12(?:\.0+)?|twelve)\s*(?:w|week|wk|wks|weeks|weekly)\b,q12 week,freq,every 12 week
+\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:y|yr|year|yearly|annually)\b,q12 year,freq,q12 year
+\bevery\s*(?:12(?:\.0+)?|twelve)\s*(?:y|yr|year|yearly|annually)\b,q12 year,freq,every 12 year
+\bq\s*(?:2(?:\.0+)?|two)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q2 day,freq,q2 day
+\bevery\s*(?:2(?:\.0+)?|two)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q2 day,freq,every 2 day
+\bq\s*(?:2(?:\.0+)?|two)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q2 day,freq,q2 day
+\bevery\s*(?:2(?:\.0+)?|two)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q2 day,freq,every 2 day
+\bq\s*(?:2(?:\.0+)?|two)\s*(?:h|hr|hour|hours|hrs)\b,q2 hour,freq,q2 hour
+\bevery\s*(?:2(?:\.0+)?|two)\s*(?:h|hr|hour|hours|hrs)\b,q2 hour,freq,every 2 hour
+\bq\s*(?:2(?:\.0+)?|two)\s*(?:m|mo|month|monthly)\b,q2 month,freq,q2 month
+\bevery\s*(?:2(?:\.0+)?|two)\s*(?:m|mo|month|monthly)\b,q2 month,freq,every 2 month
+\bq\s*(?:2(?:\.0+)?|two)\s*(?:m|mo|month|months|monthly)\b,q2 month,freq,q2 month
+\bevery\s*(?:2(?:\.0+)?|two)\s*(?:m|mo|month|months|monthly)\b,q2 month,freq,every 2 month
+\bq\s*(?:2(?:\.0+)?|two)\s*(?:w|week|wk|wks|weeks|weekly)\b,q2 week,freq,q2 week
+\bevery\s*(?:2(?:\.0+)?|two)\s*(?:w|week|wk|wks|weeks|weekly)\b,q2 week,freq,every 2 week
+\bq\s*(?:2(?:\.0+)?|two)\s*(?:y|yr|year|yearly|annually)\b,q2 year,freq,q2 year
+\bevery\s*(?:2(?:\.0+)?|two)\s*(?:y|yr|year|yearly|annually)\b,q2 year,freq,every 2 year
+\bq\s*(?:3(?:\.0+)?|three)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q3 day,freq,q3 day
+\bevery\s*(?:3(?:\.0+)?|three)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q3 day,freq,every 3 day
+\bq\s*(?:3(?:\.0+)?|three)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q3 day,freq,q3 day
+\bevery\s*(?:3(?:\.0+)?|three)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q3 day,freq,every 3 day
+\bq\s*(?:3(?:\.0+)?|three)\s*(?:h|hr|hour|hours|hrs)\b,q3 hour,freq,q3 hour
+\bevery\s*(?:3(?:\.0+)?|three)\s*(?:h|hr|hour|hours|hrs)\b,q3 hour,freq,every 3 hour
+\bq\s*(?:3(?:\.0+)?|three)\s*(?:m|mo|month|monthly)\b,q3 month,freq,q3 month
+\bevery\s*(?:3(?:\.0+)?|three)\s*(?:m|mo|month|monthly)\b,q3 month,freq,every 3 month
+\bq\s*(?:3(?:\.0+)?|three)\s*(?:m|mo|month|months|monthly)\b,q3 month,freq,q3 month
+\bevery\s*(?:3(?:\.0+)?|three)\s*(?:m|mo|month|months|monthly)\b,q3 month,freq,every 3 month
+\bq\s*(?:3(?:\.0+)?|three)\s*(?:w|week|wk|wks|weeks|weekly)\b,q3 week,freq,q3 week
+\bevery\s*(?:3(?:\.0+)?|three)\s*(?:w|week|wk|wks|weeks|weekly)\b,q3 week,freq,every 3 week
+\bq\s*(?:3(?:\.0+)?|three)\s*(?:y|yr|year|yearly|annually)\b,q3 year,freq,q3 year
+\bevery\s*(?:3(?:\.0+)?|three)\s*(?:y|yr|year|yearly|annually)\b,q3 year,freq,every 3 year
+\bq\s*(?:4(?:\.0+)?|four)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q4 day,freq,q4 day
+\bevery\s*(?:4(?:\.0+)?|four)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q4 day,freq,every 4 day
+\bq\s*(?:4(?:\.0+)?|four)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q4 day,freq,q4 day
+\bevery\s*(?:4(?:\.0+)?|four)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q4 day,freq,every 4 day
+\bq\s*(?:4(?:\.0+)?|four)\s*(?:h|hr|hour|hours|hrs)\b,q4 hour,freq,q4 hour
+\bevery\s*(?:4(?:\.0+)?|four)\s*(?:h|hr|hour|hours|hrs)\b,q4 hour,freq,every 4 hour
+\bq\s*(?:4(?:\.0+)?|four)\s*(?:m|mo|month|monthly)\b,q4 month,freq,q4 month
+\bevery\s*(?:4(?:\.0+)?|four)\s*(?:m|mo|month|monthly)\b,q4 month,freq,every 4 month
+\bq\s*(?:4(?:\.0+)?|four)\s*(?:m|mo|month|months|monthly)\b,q4 month,freq,q4 month
+\bevery\s*(?:4(?:\.0+)?|four)\s*(?:m|mo|month|months|monthly)\b,q4 month,freq,every 4 month
+\bq\s*(?:4(?:\.0+)?|four)\s*(?:w|week|wk|wks|weeks|weekly)\b,q4 week,freq,q4 week
+\bevery\s*(?:4(?:\.0+)?|four)\s*(?:w|week|wk|wks|weeks|weekly)\b,q4 week,freq,every 4 week
+\bq\s*(?:4(?:\.0+)?|four)\s*(?:y|yr|year|yearly|annually)\b,q4 year,freq,q4 year
+\bevery\s*(?:4(?:\.0+)?|four)\s*(?:y|yr|year|yearly|annually)\b,q4 year,freq,every 4 year
+\bq\s*(?:5(?:\.0+)?|five)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q5 day,freq,q5 day
+\bevery\s*(?:5(?:\.0+)?|five)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q5 day,freq,every 5 day
+\bq\s*(?:5(?:\.0+)?|five)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q5 day,freq,q5 day
+\bevery\s*(?:5(?:\.0+)?|five)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q5 day,freq,every 5 day
+\bq\s*(?:5(?:\.0+)?|five)\s*(?:h|hr|hour|hours|hrs)\b,q5 hour,freq,q5 hour
+\bevery\s*(?:5(?:\.0+)?|five)\s*(?:h|hr|hour|hours|hrs)\b,q5 hour,freq,every 5 hour
+\bq\s*(?:5(?:\.0+)?|five)\s*(?:m|mo|month|monthly)\b,q5 month,freq,q5 month
+\bevery\s*(?:5(?:\.0+)?|five)\s*(?:m|mo|month|monthly)\b,q5 month,freq,every 5 month
+\bq\s*(?:5(?:\.0+)?|five)\s*(?:m|mo|month|months|monthly)\b,q5 month,freq,q5 month
+\bevery\s*(?:5(?:\.0+)?|five)\s*(?:m|mo|month|months|monthly)\b,q5 month,freq,every 5 month
+\bq\s*(?:5(?:\.0+)?|five)\s*(?:w|week|wk|wks|weeks|weekly)\b,q5 week,freq,q5 week
+\bevery\s*(?:5(?:\.0+)?|five)\s*(?:w|week|wk|wks|weeks|weekly)\b,q5 week,freq,every 5 week
+\bq\s*(?:5(?:\.0+)?|five)\s*(?:y|yr|year|yearly|annually)\b,q5 year,freq,q5 year
+\bevery\s*(?:5(?:\.0+)?|five)\s*(?:y|yr|year|yearly|annually)\b,q5 year,freq,every 5 year
+\bq\s*(?:6(?:\.0+)?|six)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q6 day,freq,q6 day
+\bevery\s*(?:6(?:\.0+)?|six)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q6 day,freq,every 6 day
+\bq\s*(?:6(?:\.0+)?|six)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q6 day,freq,q6 day
+\bevery\s*(?:6(?:\.0+)?|six)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q6 day,freq,every 6 day
+\bq\s*(?:6(?:\.0+)?|six)\s*(?:h|hr|hour|hours|hrs)\b,q6 hour,freq,q6 hour
+\bevery\s*(?:6(?:\.0+)?|six)\s*(?:h|hr|hour|hours|hrs)\b,q6 hour,freq,every 6 hour
+\bq\s*(?:6(?:\.0+)?|six)\s*(?:m|mo|month|monthly)\b,q6 month,freq,q6 month
+\bevery\s*(?:6(?:\.0+)?|six)\s*(?:m|mo|month|monthly)\b,q6 month,freq,every 6 month
+\bq\s*(?:6(?:\.0+)?|six)\s*(?:m|mo|month|months|monthly)\b,q6 month,freq,q6 month
+\bevery\s*(?:6(?:\.0+)?|six)\s*(?:m|mo|month|months|monthly)\b,q6 month,freq,every 6 month
+\bq\s*(?:6(?:\.0+)?|six)\s*(?:w|week|wk|wks|weeks|weekly)\b,q6 week,freq,q6 week
+\bevery\s*(?:6(?:\.0+)?|six)\s*(?:w|week|wk|wks|weeks|weekly)\b,q6 week,freq,every 6 week
+\bq\s*(?:6(?:\.0+)?|six)\s*(?:y|yr|year|yearly|annually)\b,q6 year,freq,q6 year
+\bevery\s*(?:6(?:\.0+)?|six)\s*(?:y|yr|year|yearly|annually)\b,q6 year,freq,every 6 year
+\bq\s*(?:7(?:\.0+)?|seven)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q7 day,freq,q7 day
+\bevery\s*(?:7(?:\.0+)?|seven)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q7 day,freq,every 7 day
+\bq\s*(?:7(?:\.0+)?|seven)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q7 day,freq,q7 day
+\bevery\s*(?:7(?:\.0+)?|seven)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q7 day,freq,every 7 day
+\bq\s*(?:7(?:\.0+)?|seven)\s*(?:h|hr|hour|hours|hrs)\b,q7 hour,freq,q7 hour
+\bevery\s*(?:7(?:\.0+)?|seven)\s*(?:h|hr|hour|hours|hrs)\b,q7 hour,freq,every 7 hour
+\bq\s*(?:7(?:\.0+)?|seven)\s*(?:m|mo|month|monthly)\b,q7 month,freq,q7 month
+\bevery\s*(?:7(?:\.0+)?|seven)\s*(?:m|mo|month|monthly)\b,q7 month,freq,every 7 month
+\bq\s*(?:7(?:\.0+)?|seven)\s*(?:m|mo|month|months|monthly)\b,q7 month,freq,q7 month
+\bevery\s*(?:7(?:\.0+)?|seven)\s*(?:m|mo|month|months|monthly)\b,q7 month,freq,every 7 month
+\bq\s*(?:7(?:\.0+)?|seven)\s*(?:w|week|wk|wks|weeks|weekly)\b,q7 week,freq,q7 week
+\bevery\s*(?:7(?:\.0+)?|seven)\s*(?:w|week|wk|wks|weeks|weekly)\b,q7 week,freq,every 7 week
+\bq\s*(?:7(?:\.0+)?|seven)\s*(?:y|yr|year|yearly|annually)\b,q7 year,freq,q7 year
+\bevery\s*(?:7(?:\.0+)?|seven)\s*(?:y|yr|year|yearly|annually)\b,q7 year,freq,every 7 year
+\bq\s*(?:8(?:\.0+)?|eight)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q8 day,freq,q8 day
+\bevery\s*(?:8(?:\.0+)?|eight)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q8 day,freq,every 8 day
+\bq\s*(?:8(?:\.0+)?|eight)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q8 day,freq,q8 day
+\bevery\s*(?:8(?:\.0+)?|eight)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q8 day,freq,every 8 day
+\bq\s*(?:8(?:\.0+)?|eight)\s*(?:h|hr|hour|hours|hrs)\b,q8 hour,freq,q8 hour
+\bevery\s*(?:8(?:\.0+)?|eight)\s*(?:h|hr|hour|hours|hrs)\b,q8 hour,freq,every 8 hour
+\bq\s*(?:8(?:\.0+)?|eight)\s*(?:m|mo|month|monthly)\b,q8 month,freq,q8 month
+\bevery\s*(?:8(?:\.0+)?|eight)\s*(?:m|mo|month|monthly)\b,q8 month,freq,every 8 month
+\bq\s*(?:8(?:\.0+)?|eight)\s*(?:m|mo|month|months|monthly)\b,q8 month,freq,q8 month
+\bevery\s*(?:8(?:\.0+)?|eight)\s*(?:m|mo|month|months|monthly)\b,q8 month,freq,every 8 month
+\bq\s*(?:8(?:\.0+)?|eight)\s*(?:w|week|wk|wks|weeks|weekly)\b,q8 week,freq,q8 week
+\bevery\s*(?:8(?:\.0+)?|eight)\s*(?:w|week|wk|wks|weeks|weekly)\b,q8 week,freq,every 8 week
+\bq\s*(?:8(?:\.0+)?|eight)\s*(?:y|yr|year|yearly|annually)\b,q8 year,freq,q8 year
+\bevery\s*(?:8(?:\.0+)?|eight)\s*(?:y|yr|year|yearly|annually)\b,q8 year,freq,every 8 year
+\bq\s*(?:9(?:\.0+)?|nine)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q9 day,freq,q9 day
+\bevery\s*(?:9(?:\.0+)?|nine)\s*(?:d|day|daily|24\s*(?:hours?|hrs?|h))\b,q9 day,freq,every 9 day
+\bq\s*(?:9(?:\.0+)?|nine)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q9 day,freq,q9 day
+\bevery\s*(?:9(?:\.0+)?|nine)\s*(?:d|day|daily|days|24\s*(?:hours?|hrs?|h))\b,q9 day,freq,every 9 day
+\bq\s*(?:9(?:\.0+)?|nine)\s*(?:h|hr|hour|hours|hrs)\b,q9 hour,freq,q9 hour
+\bevery\s*(?:9(?:\.0+)?|nine)\s*(?:h|hr|hour|hours|hrs)\b,q9 hour,freq,every 9 hour
+\bq\s*(?:9(?:\.0+)?|nine)\s*(?:m|mo|month|monthly)\b,q9 month,freq,q9 month
+\bevery\s*(?:9(?:\.0+)?|nine)\s*(?:m|mo|month|monthly)\b,q9 month,freq,every 9 month
+\bq\s*(?:9(?:\.0+)?|nine)\s*(?:m|mo|month|months|monthly)\b,q9 month,freq,q9 month
+\bevery\s*(?:9(?:\.0+)?|nine)\s*(?:m|mo|month|months|monthly)\b,q9 month,freq,every 9 month
+\bq\s*(?:9(?:\.0+)?|nine)\s*(?:w|week|wk|wks|weeks|weekly)\b,q9 week,freq,q9 week
+\bevery\s*(?:9(?:\.0+)?|nine)\s*(?:w|week|wk|wks|weeks|weekly)\b,q9 week,freq,every 9 week
+\bq\s*(?:9(?:\.0+)?|nine)\s*(?:y|yr|year|yearly|annually)\b,q9 year,freq,q9 year
+\bevery\s*(?:9(?:\.0+)?|nine)\s*(?:y|yr|year|yearly|annually)\b,q9 year,freq,every 9 year
+\b(?:every other day|qod|every other night)\b,qod,freq,
+(?:/|\bper\b|\ba\b|x)\s*(?:d|day|daily)(?![a-z]),1x/day,freq_fallback,
+(?:/|\bper\b|\ba\b|x)\s*(?:24h|24hr|24hrs|24hour|24hours)(?![a-z]),1x/day,freq_fallback,
+(?:/|\bper\b|\ba\b|x)\s*(?:m|mo|month)(?![a-z]),1x/month,freq_fallback,
+\bmonthly\b,1x/month,freq_fallback,
+(?:/|\bper\b|\ba\b|x)\s*(?:y|yr|year)(?![a-z]),1x/year,freq_fallback,
+\b(?:qam|in the am|every\s*morning)\b,qam,freq_fallback,time of day
+\b(?:q\s*pm|every\s*evening|in the pm)\b,qpm,freq_fallback,time of day 
+\b(?:qhs|hs|at\s*bedtime|night\s*time)\b,qpm,freq_fallback,time of day
+\bnightly\b,qpm,freq_fallback,
+\b1\s*x\b,1x,freq_fallback,
