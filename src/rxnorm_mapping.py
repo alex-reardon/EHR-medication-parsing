@@ -1,9 +1,13 @@
 import pandas as pd
 from rapidfuzz import process, fuzz
+import re
 
 
+# -------------------------------
+# BUILD LOOKUP
+# -------------------------------
 def build_rxnorm_lookup(rrf_path: str):
-    
+
     cols = [
         "rxcui", "lat", "ts", "lui", "stt", "sui", "ispref",
         "rxaui", "saui", "scui", "sdui", "sab", "tty",
@@ -15,9 +19,8 @@ def build_rxnorm_lookup(rrf_path: str):
     rx = rx[(rx["lat"] == "ENG") & (rx["suppress"] == "N")]
     rx = rx[rx["tty"].isin(["IN", "MIN", "BN"])].copy()
 
-    rx["str_lower"] = rx["str"].str.lower()
+    rx["str_lower"] = rx["str"].str.lower().str.strip()
 
-    # 🔥 store ALL info
     lookup = rx.drop_duplicates("str_lower").set_index("str_lower")[["rxcui", "tty"]]
 
     rx_names = lookup.index.tolist()
@@ -25,23 +28,41 @@ def build_rxnorm_lookup(rrf_path: str):
     return rx_names, lookup
 
 
-
+# -------------------------------
+# PRIORITY FUNCTION
+# -------------------------------
 def better(new, best):
     priority = {"MIN": 0, "IN": 1, "BN": 2}
 
     if best[3] == -1:
         return True
+
     p_new = priority.get(new[2], 99)
     p_best = priority.get(best[2], 99)
+
     return (p_new < p_best) or (p_new == p_best and new[3] > best[3])
 
 
+def normalize_term(term):
+    if not isinstance(term, str):
+        return term
+
+    term = term.lower()
+    term = term.replace("/", " ")   # 🔥 CRITICAL FIX
+    term = term.replace("-", " ")
+    term = re.sub(r"\s+", " ", term).strip()
+
+    return term
+
+# -------------------------------
+# MATCH FUNCTION (handles lists)
+# -------------------------------
 def match_rxnorm(term, rx_names, lookup, threshold=85):
-    
+
     # -------------------------------
     # CASE 1: list input
     # -------------------------------
-    if isinstance(term, list):
+    if isinstance(term, (list, tuple)):
         best = (None, None, None, -1)
 
         for t in term:
@@ -62,20 +83,26 @@ def match_rxnorm(term, rx_names, lookup, threshold=85):
         return None, None, None, None
 
     match, score, _ = process.extractOne(
-        term.lower(),
+        normalize_term(term),
         rx_names,
         scorer=fuzz.token_sort_ratio
     )
 
     if score >= threshold:
-        rxcui = lookup.loc[match, "rxcui"]
-        tty = lookup.loc[match, "tty"]
-        return match, rxcui, tty, score
+        row = lookup.loc[match]
+
+        # handle duplicate index
+        if isinstance(row, pd.DataFrame):
+            row = row.iloc[0]
+
+        return match, row["rxcui"], row["tty"], score
 
     return None, None, None, None
 
 
-
+# -------------------------------
+# APPLY FUNCTION (handles lists safely)
+# -------------------------------
 def apply_rxnorm_mapping(
     df: pd.DataFrame,
     input_col: str,
@@ -91,7 +118,7 @@ def apply_rxnorm_mapping(
     rx_names, lookup = build_rxnorm_lookup(rrf_path)
 
     # -------------------------------
-    # make list values hashable
+    # convert lists → tuples for hashing
     # -------------------------------
     def safe_key(x):
         return tuple(x) if isinstance(x, list) else x
@@ -107,7 +134,7 @@ def apply_rxnorm_mapping(
     }
 
     # -------------------------------
-    # apply mapping (FIXED)
+    # apply mapping
     # -------------------------------
     df[out1] = df[input_col].map(lambda x: mapping.get(safe_key(x), (None, None, None, None))[0])
     df[out2] = df[input_col].map(lambda x: mapping.get(safe_key(x), (None, None, None, None))[1])
@@ -115,20 +142,49 @@ def apply_rxnorm_mapping(
     df[out3] = df[input_col].map(lambda x: mapping.get(safe_key(x), (None, None, None, None))[3])
 
     # -------------------------------
-    # optional: remove paren text
+    # OPTIONAL: remove matched paren text
     # -------------------------------
-    if input_col == "paren_text":
+    if input_col == "paren_text" and col_str_name is not None:
+
         mask = df[out1].notna()
 
+        def clean_row(row):
+            text = row[col_str_name + 'normalized']
+            paren = row['paren_text']
+            match = row[out1]  # 🔥 THIS is what matched RxNorm
+
+            if not isinstance(text, str) or not isinstance(match, str):
+                return text
+
+            # -------------------------------
+            # CASE 1: list of parentheses
+            # -------------------------------
+            if isinstance(paren, (list, tuple)):
+                for p in paren:
+                    if isinstance(p, str) and match in p:
+                        text = text.replace(f"({p})", "")
+                return text
+
+            # -------------------------------
+            # CASE 2: single string
+            # -------------------------------
+            if isinstance(paren, str) and match in paren:
+                return text.replace(f"({paren})", "")
+
+            return text
+
         df.loc[mask, col_str_name + 'normalized'] = df.loc[mask].apply(
-            lambda row: row[col_str_name + 'normalized'].replace(f"({row['paren_text']})", ""),
+            clean_row,
             axis=1
         )
 
-        df[col_str_name + 'normalized'] = df[col_str_name + 'normalized'].str.replace(
-            r"[()]", "", regex=True
+        # cleanup stray parentheses + spacing
+        df[col_str_name + 'normalized'] = (
+            df[col_str_name + 'normalized']
+            .str.replace(r"[()]", "", regex=True)
+            .str.replace(r"\s+", " ", regex=True)
+            .str.strip()
         )
-
     # -------------------------------
     # metrics
     # -------------------------------

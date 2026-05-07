@@ -16,7 +16,7 @@ def normalize_text(text: str) -> str:
     text = re.sub(r'(?<=\d),\s*(?=\d)', '.', text) # convert commas between numbers → decimals # FIXME
     text = re.sub(r'\\', '/', text) #capture double //
     text = text.replace('[', '(').replace(']', ')')
-    text = re.sub(r'[^a-z0-9\s\./\+\-%\(\)]', ' ', text)
+    text = re.sub(r'[^a-z0-9\s\./\-%\(\)]', ' ', text)
     text = re.sub(r'\(', ' (', text)
     text = re.sub(r'(?<!\d)\.(?!\d)', '', text) # only keep decimals if between two numbers 
     text = re.sub(r'\s+', ' ', text)# collapse whitespace
@@ -57,7 +57,7 @@ def apply_replacements(df, col, replacements):
 
     updated = df[col].astype(str).copy()
 
-    # 🔥 sort patterns longest → shortest
+    # sort patterns longest → shortest
     sorted_patterns = sorted(
         replacements.items(),
         key=lambda x: len(x[0]),
@@ -132,7 +132,7 @@ def normalize_combo(text):
         enta = dose_map.get("entacapone")
 
         if enta:
-            normalized = f"carbidopa/levodopa/entacapone {carb}/{levo}/{enta}"
+            normalized = f"carbidopa/entacapone/levodopa {carb}/{enta}/{levo}"
         else:
             normalized = f"carbidopa/levodopa {carb}/{levo}"
 
@@ -147,14 +147,13 @@ def normalize_combo(text):
 
 
 
-
 # -------------------------------
 # MAIN PREPROCESS FUNCTION
 # -------------------------------
 def preprocess_medications(
     df: pd.DataFrame,
-    input_col: str = "med",
-    output_col : str = 'med_normalized', 
+    input_col: str,
+    output_col : str,
     replacement_path : str = None
 ) -> pd.DataFrame:
     """
@@ -168,12 +167,11 @@ def preprocess_medications(
     """
     df = df.drop_duplicates().copy()
     df.loc[:, output_col] = df[input_col].apply(normalize_text)
-    df["paren_text"] = df[output_col].str.findall(r"\(([^)]*)\)").str[0] # FIXME will not work if two parentheses
-
     replacements = load_replacements(replacement_path)
 
     df[output_col] = apply_replacements(df, output_col, replacements)
     df[output_col] = df[output_col].apply(normalize_combo)
+    df["paren_text"] = df[output_col].str.findall(r"\(([^)]*)\)")    
     #df[output_col] = df[output_col].str.replace("/", " ", regex=False)
 
     return df

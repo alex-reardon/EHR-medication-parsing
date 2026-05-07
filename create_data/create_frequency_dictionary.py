@@ -21,7 +21,10 @@ time_units = {
 n_per_day = {
     "day" : 1, 
     "week" : 7, 
-    "month" : 30
+    "month" : 30,
+    "year" : 365, 
+    "hour" : 24
+
 }
 
 
@@ -46,11 +49,13 @@ for n, word in num_words.items():
         \b
         """)
 
-        # Translate to per day
-        if unit_name in n_per_day:
-            replacement = n / n_per_day[unit_name]
-        else:
-            replacement = f"{n}x/{unit_name}"
+        if unit_name == 'hour' :
+            replacement = n*n_per_day[unit_name]
+        elif unit_name == 'day' : 
+            replacement = n 
+        else : 
+            replacement = 1 / (n * n_per_day[unit_name])
+
 
         rows.append({
             "raw": pattern_standard,
@@ -71,10 +76,10 @@ for n, word in num_words.items():
         """)
 
         # ✅ NEW LOGIC (interval-based)
-        if unit_name in n_per_day:
+        if unit_name == 'hour' :
+            replacement = n_per_day[unit_name]/n
+        else : 
             replacement = 1 / (n * n_per_day[unit_name])
-        else:
-            replacement = f"q{n} {unit_name}"
 
         rows.append({
             "raw": pattern_q,
@@ -96,10 +101,11 @@ for n, word in num_words.items():
         """)
 
         # ✅ NEW LOGIC (interval-based)
-        if unit_name in n_per_day:
+
+        if unit_name == 'hour' :
+            replacement = n_per_day[unit_name]/n
+        else : 
             replacement = 1 / (n * n_per_day[unit_name])
-        else:
-            replacement = f"q{n} {unit_name}"
 
         rows.append({
             "raw": pattern_every,
@@ -132,10 +138,9 @@ for n, word in num_words.items():
 
       
         # ✅ NEW LOGIC
-        if unit_name in n_per_day:
-            replacement = n / n_per_day[unit_name]
-        else:
-            replacement = f"{n}x/{unit_name}"
+
+        replacement = n / n_per_day[unit_name]
+
 
         rows.append({
             "raw": pattern_days_per_week,
@@ -156,10 +161,9 @@ for word, n in special_words.items():
         pattern = rf"\b{word}\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?{unit_pattern}\b"
 
         # ✅ NEW LOGIC
-        if unit_name in n_per_day:
-            replacement = n / n_per_day[unit_name]
-        else:
-            replacement = f"{n}x/{unit_name}"
+
+        replacement = n / n_per_day[unit_name]
+
 
         rows.append({
             "raw": pattern,

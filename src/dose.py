@@ -1,6 +1,8 @@
 import re
 import pandas as pd
 
+NUM = r'\d+(?:\.\d+)?'
+SEP = r'\s*[/\-]\s*'
 
 def load_unit_pattern(path: str) -> str:
     """
@@ -31,8 +33,8 @@ def load_unit_pattern(path: str) -> str:
 def clean_text_whitespace(text: str) -> str:
     """Standardize spacing and strip trailing slashes."""
     if not isinstance(text, str): return text
-    text = re.sub(r"\s+", " ", text).strip()
-    return re.sub(r"[/\-.]\s*$", "", text)
+    text = re.sub(r"[/\-.]\s*$", "", text)
+    return re.sub(r"\s+", " ", text).strip()
 
 
 
@@ -66,7 +68,6 @@ def extract_dose_and_units(text: str, unit_pattern: str):
     text = re.sub(ratio_unit_each_pattern, '', text)
 
 
-
     # -------------------------------
     # 1B. ratios WITH units (25/100 mg) or 25-100 mg
     # -------------------------------
@@ -78,9 +79,7 @@ def extract_dose_and_units(text: str, unit_pattern: str):
         doses.extend([float(p) for p in parts])
         units.extend([unit] * len(parts))  # 🔥 duplicate unit for each dose
 
-
     text = re.sub(ratio_pattern, '', text)
-
 
 
     # -------------------------------
@@ -92,7 +91,6 @@ def extract_dose_and_units(text: str, unit_pattern: str):
     for ratio in ratio_no_unit_matches:
         parts = re.split(r'\s*[/\-]\s*', ratio)
         doses.extend([float(p) for p in parts])
-
 
     text = re.sub(ratio_no_unit_pattern, '', text)
 
@@ -126,7 +124,6 @@ def extract_dose_and_units(text: str, unit_pattern: str):
     clean_text = re.sub(r'[/-]', ' ', clean_text)
 
     
-
     return pd.Series([
         doses if doses else None,
         units,
@@ -135,12 +132,10 @@ def extract_dose_and_units(text: str, unit_pattern: str):
 
 
 
-
 def apply_dose_unit_extraction(df: pd.DataFrame, input_col: str, output_col : str, path: str):
     """
     Applies dose + unit extraction to dataframe
     """
-
     unit_pattern = load_unit_pattern(path)
 
     df[["dose", "units", output_col]] = df[input_col].apply(
