@@ -74,73 +74,129 @@ def apply_replacements(df, col, replacements):
 
 
 def normalize_combo(text):
+
     if not isinstance(text, str):
         return text
 
-    text_lower = text.lower()
+    text = text.lower()
 
-    # normalize slashes spacing (helps matching)
-    text_clean = re.sub(r'\s*/\s*', ' / ', text_lower)
+    # -----------------------------------------
+    # normalize separators/spaces
+    # -----------------------------------------
+    text = re.sub(r'\s*/\s*', '/', text)
+    text = re.sub(r'\s*-\s*', '-', text)
+    text = re.sub(r'\s+', ' ', text).strip()
 
-    # map aliases → canonical
-    drug_map = {
-        "levodopa": "levodopa",
-        "levocomp": "levodopa",
-        "carbidopa": "carbidopa",
-        "entacapone": "entacapone"
-    }
-
-    drugs = "|".join(drug_map.keys())
-
-    # -------------------------------
-    # extract (drug, dose) pairs BOTH directions
-    # -------------------------------
-    pattern = re.compile(
-        rf"(?:"
-        rf"({drugs})\s*(\d+\.?\d*)"        # drug → number
-        rf"|"
-        rf"(\d+\.?\d*)\s*({drugs})"        # number → drug
-        rf")"
+    # ==========================================================
+    # CASE 1
+    # levodopa carbidopa 100/25mg
+    # levodopa/carbidopa 100/25
+    #
+    # -> carbidopa/levodopa 25/100
+    # ==========================================================
+    pattern_reverse_pair = re.compile(
+        r'''
+        levodopa
+        \s*
+        (?:/|\s+)
+        \s*
+        carbidopa
+        \s+
+        (\d+\.?\d*)
+        \s*[/\-]\s*
+        (\d+\.?\d*)
+        \s*(?:mg)?
+        ''',
+        flags=re.I | re.X
     )
 
-    matches = list(pattern.finditer(text_clean))
+    def reverse_pair_repl(m):
 
-    if not matches:
-        return text
+        levo = m.group(1)
+        carb = m.group(2)
 
-    dose_map = {}
-    spans = []
+        return f"carbidopa/levodopa {carb}/{levo}"
 
-    for m in matches:
-        spans.append(m.span())
+    text = pattern_reverse_pair.sub(reverse_pair_repl, text)
 
-        if m.group(1) and m.group(2):
-            drug = drug_map[m.group(1)]
-            dose = m.group(2)
-        elif m.group(3) and m.group(4):
-            drug = drug_map[m.group(4)]
-            dose = m.group(3)
-        else:
-            continue
+    # ==========================================================
+    # CASE 2
+    # carbidopa/levodopa/entacapone 25/100/200
+    #
+    # -> carbidopa/entacapone/levodopa 25/200/100
+    # ==========================================================
+    pattern_triple = re.compile(
+        r'''
+        carbidopa
+        \s*[/\-]\s*
+        levodopa
+        \s*[/\-]\s*
+        entacapone
+        \s+
+        (\d+\.?\d*)
+        \s*[/\-]\s*
+        (\d+\.?\d*)
+        \s*[/\-]\s*
+        (\d+\.?\d*)
+        \s*(?:mg)?
+        ''',
+        flags=re.I | re.X
+    )
 
-        dose_map[drug] = dose
+    def reorder_triple(m):
 
-    # require at least carbidopa + levodopa
-    if "carbidopa" in dose_map and "levodopa" in dose_map:
-        carb = dose_map["carbidopa"]
-        levo = dose_map["levodopa"]
-        enta = dose_map.get("entacapone")
+        carb = m.group(1)
+        levo = m.group(2)
+        enta = m.group(3)
 
-        if enta:
-            normalized = f"carbidopa/entacapone/levodopa {carb}/{enta}/{levo}"
-        else:
-            normalized = f"carbidopa/levodopa {carb}/{levo}"
+        return (
+            f"carbidopa/entacapone/levodopa "
+            f"{carb}/{enta}/{levo}"
+        )
 
-        # replace ONLY the span covering all matches
-        start = min(s[0] for s in spans)
-        end = max(s[1] for s in spans)
+    text = pattern_triple.sub(reorder_triple, text)
 
-        return text[:start] + normalized + text[end:]
+    # ==========================================================
+    # CASE 3
+    # levodopa/carbidopa/entacapone 100/25/200
+    # levodopa carbidopa entacapone 100/25/200
+    #
+    # -> carbidopa/entacapone/levodopa 25/200/100
+    # ==========================================================
+    pattern_reverse_triple = re.compile(
+        r'''
+        levodopa
+        \s*
+        (?:/|\s+)
+        \s*
+        carbidopa
+        \s*
+        (?:/|\s+)
+        \s*
+        entacapone
+        \s+
+        (\d+\.?\d*)
+        \s*[/\-]\s*
+        (\d+\.?\d*)
+        \s*[/\-]\s*
+        (\d+\.?\d*)
+        \s*(?:mg)?
+        ''',
+        flags=re.I | re.X
+    )
+
+    def reverse_triple_repl(m):
+
+        levo = m.group(1)
+        carb = m.group(2)
+        enta = m.group(3)
+
+        return (
+            f"carbidopa/entacapone/levodopa "
+            f"{carb}/{enta}/{levo}"
+        )
+
+    text = pattern_reverse_triple.sub(reverse_triple_repl, text)
 
     return text
 
