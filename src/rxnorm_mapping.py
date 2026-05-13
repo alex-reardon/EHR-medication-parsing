@@ -23,9 +23,17 @@ def build_rxnorm_lookup(rrf_path: str):
 
     lookup = rx.drop_duplicates("str_lower").set_index("str_lower")[["rxcui", "tty"]]
 
+    # MIN lookup by RXCUI
+    min_lookup = (
+        rx[rx["tty"] == "MIN"]
+        .drop_duplicates("rxcui")
+        .set_index("rxcui")["str_lower"]
+        .to_dict()
+    )
+
     rx_names = lookup.index.tolist()
 
-    return rx_names, lookup
+    return rx_names, lookup, min_lookup
 
 
 # -------------------------------
@@ -115,7 +123,7 @@ def apply_rxnorm_mapping(
     col_str_name: str = None
 ) -> pd.DataFrame:
 
-    rx_names, lookup = build_rxnorm_lookup(rrf_path)
+    rx_names, lookup, min_lookup = build_rxnorm_lookup(rrf_path)
 
     # -------------------------------
     # convert lists → tuples for hashing
@@ -142,49 +150,72 @@ def apply_rxnorm_mapping(
     df[out3] = df[input_col].map(lambda x: mapping.get(safe_key(x), (None, None, None, None))[3])
 
     # -------------------------------
-    # OPTIONAL: remove matched paren text
+    # add MIN concept if tty is BN/IN
+    # -------------------------------
+    def get_min_match(row):
+
+        tty = row[out4]
+        rxcui = row[out2]
+
+        if tty in ["BN", "IN"]:
+
+            return min_lookup.get(rxcui)
+
+        return row[out1]
+
+    df["MIN"] = df.apply(get_min_match, axis=1)
+
+    
+   # -------------------------------
+    # ALWAYS remove parenthetical text
     # -------------------------------
     if input_col == "paren_text" and col_str_name is not None:
 
-        mask = df[out1].notna()
-
         def clean_row(row):
-            text = row[col_str_name + 'normalized']
-            paren = row['paren_text']
-            match = row[out1]  # 🔥 THIS is what matched RxNorm
 
-            if not isinstance(text, str) or not isinstance(match, str):
+            text = row[col_str_name + 'no_time']
+            paren = row['paren_text']
+
+            if not isinstance(text, str):
                 return text
 
             # -------------------------------
-            # CASE 1: list of parentheses
+            # CASE 1: list/tuple
             # -------------------------------
             if isinstance(paren, (list, tuple)):
+
                 for p in paren:
-                    if isinstance(p, str) and match in p:
+
+                    if isinstance(p, str):
+
                         text = text.replace(f"({p})", "")
+
                 return text
 
             # -------------------------------
             # CASE 2: single string
             # -------------------------------
-            if isinstance(paren, str) and match in paren:
+            if isinstance(paren, str):
+
                 return text.replace(f"({paren})", "")
 
             return text
 
-        df.loc[mask, col_str_name + 'normalized'] = df.loc[mask].apply(
+        df[col_str_name + 'no_time'] = df.apply(
             clean_row,
             axis=1
         )
 
-        # cleanup stray parentheses + spacing
-        df[col_str_name + 'normalized'] = (
-            df[col_str_name + 'normalized']
+        # -------------------------------
+        # cleanup
+        # -------------------------------
+        df[col_str_name + 'no_time'] = (
+            df[col_str_name + 'no_time']
             .str.replace(r"[()]", "", regex=True)
             .str.replace(r"\s+", " ", regex=True)
             .str.strip()
         )
+
     # -------------------------------
     # metrics
     # -------------------------------

@@ -71,7 +71,9 @@ def clean_text_whitespace(text: str) -> str:
     """Standardize spacing and strip trailing slashes."""
     if not isinstance(text, str): return text
     text = re.sub(r"/\s*$", "", text)
-    return re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r'[^a-zA-Z0-9]+$', '', text)
+    return text
 
 
 # -------------------------------
@@ -93,6 +95,7 @@ def apply_category_extraction(
         lambda x: extract_category(x, category_pattern))
 
     df[output_col] = df[output_col].apply(clean_text_whitespace)
+    df[output_col] = df[output_col].str.replace(r'\s*/\s*', '/', regex=True)
 
     # Metrics
     mapped = df[category].notna().sum()

@@ -87,6 +87,7 @@ def extract_amount_and_form(df: pd.DataFrame, input_col: str, output_col: str, f
 def apply_extract_amount_and_form(df, input_col, output_col, path):
     forms_df = load_formulation_csv(path)
     df = extract_amount_and_form(df, input_col, output_col, forms_df)
+    df[output_col] = df[output_col].str.replace(r'\s*/\s*', '/', regex=True)
 
     mapped = df["form"].notna().sum()
     print(f"Form Extraction Complete: {mapped}/{len(df)} rows mapped ({mapped/len(df):.2%})")

@@ -100,7 +100,7 @@ tab(?:let)?s?\b\b,tabs,form,tablet variants
 \bdelayed release\b,er,release,ER
 \bdepot\b,er,release,ER
 \bec\b,er,release,ER
-\bec\b,ec,release,ER
+\benteric\b,er,release,ER
 \benteric coated\b,ec,release,ER
 \ber\b,er,release,ER
 \bextended release\b,er,release,ER

@@ -500,8 +500,7 @@ def run_frequency_extraction_layered(
 
     # NORMALIZE 
     df["frequency_per_day"] = df["freq_raw"].apply(normalize_freq)
-
-
+    df[clean_med_name] = df[clean_med_name].str.replace(r'\s*/\s*', '/', regex=True)
     # -------------------------------
     # METRICS
     # -------------------------------
