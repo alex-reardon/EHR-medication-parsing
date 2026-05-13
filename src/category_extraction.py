@@ -81,8 +81,6 @@ def clean_text_whitespace(text: str) -> str:
 # -------------------------------
 def apply_category_extraction(
     df: pd.DataFrame,
-    input_col: str ,
-    output_col : str,
     category : str, 
     data_path: str = None
 ) -> pd.DataFrame:
@@ -91,11 +89,11 @@ def apply_category_extraction(
     category_pattern = load_category_pattern(data_path, category)
 
 
-    df[[category, output_col]] = df[input_col].apply(
+    df[[category, "clean_text"]] = df["clean_text"].apply(
         lambda x: extract_category(x, category_pattern))
 
-    df[output_col] = df[output_col].apply(clean_text_whitespace)
-    df[output_col] = df[output_col].str.replace(r'\s*/\s*', '/', regex=True)
+    df["clean_text"] = df["clean_text"].apply(clean_text_whitespace)
+    df["clean_text"] = df["clean_text"].str.replace(r'\s*/\s*', '/', regex=True)
 
     # Metrics
     mapped = df[category].notna().sum()

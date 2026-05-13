@@ -112,10 +112,10 @@ def extract_weekday_frequency(text):
 
 
 
-def apply_weekday_frequency(df, input_col, output_col):
-    mask = df[output_col].isna() # FIXME
+def apply_weekday_frequency(df):
+    mask = df["frequency_per_day"].isna() # FIXME
 
-    df.loc[mask, output_col] = df.loc[mask, input_col].apply(
+    df.loc[mask, "frequency_per_day"] = df.loc[mask, "clean_text"].apply(
         extract_weekday_frequency
     )
 
@@ -161,15 +161,13 @@ def build_extractor(compiled_rules):
 # -------------------------------
 def apply_frequency_extraction_fast(
     df: pd.DataFrame,
-    input_col: str,
     freq_rules: pd.DataFrame,
-    output_col: str = "freq_raw"
 ):
     df = df.copy()
 
     # ensure column exists
-    if output_col not in df.columns:
-        df[output_col] = None
+    if "frequency_per_day" not in df.columns:
+        df["frequency_per_day"] = None
     
 
     # compile rules once
@@ -181,8 +179,8 @@ def apply_frequency_extraction_fast(
     extractor = build_extractor(compiled_rules)
 
     def process_row(row):
-        text = row[input_col]
-        existing = row[output_col]
+        text = row["clean_text"]
+        existing = row["frequency_per_day"]
 
         new_matches, cleaned = extractor(text)
 
@@ -199,9 +197,9 @@ def apply_frequency_extraction_fast(
 
         return pd.Series([combined, cleaned])
     
-    df[[output_col, input_col]] = df.apply(process_row, axis=1)
+    df[["frequency_per_day", "clean_text"]] = df.apply(process_row, axis=1)
     
-    df[input_col] = df[input_col].str.replace(r"/\s*$", "", regex=True).str.strip()
+    df["clean_text"] = df["clean_text"].str.replace(r"/\s*$", "", regex=True).str.strip()
     return df
 
 
@@ -264,8 +262,8 @@ def extract_timing_frequency(text: str, timing_patterns: dict) -> int:
 
 
 
-def apply_timing_extraction(df, input_col, output_col, timing_patterns):
-    df[output_col] = df[input_col].apply(
+def apply_timing_extraction(df, timing_patterns):
+    df["freq_timing"] = df["clean_text"].apply(
         lambda x: extract_timing_frequency(x, timing_patterns)
     )
     return df
@@ -377,8 +375,8 @@ def extract_prn_flag(text, prn_pattern):
 
 
 
-def apply_prn_extraction(df, input_col, output_col, prn_pattern):
-    df[output_col] = df[input_col].apply(
+def apply_prn_extraction(df, prn_pattern):
+    df['is_prn'] = df["clean_text"].apply(
         lambda x: extract_prn_flag(x, prn_pattern)
     )
     return df
@@ -405,9 +403,6 @@ def build_pattern(df):
 
 def run_frequency_extraction_layered(
     df: pd.DataFrame,
-    input_col: str,
-    clean_med_name = None, 
-    output_col: str = "freq_raw",
     path: str = None
 ) -> pd.DataFrame:
 
@@ -423,15 +418,13 @@ def run_frequency_extraction_layered(
     # -------------------------------
     df = apply_prn_extraction(
         df,
-        input_col=input_col, 
-        output_col="is_prn",
         prn_pattern=prn_patterns
     )
 
     # -------------------------------
     # REMOVE PRN FROM TEXT
     # -------------------------------
-    df[input_col] = df[input_col].apply(
+    df["clean_text"] = df["clean_text"].apply(
         lambda x: remove_prn_terms(x, prn_patterns)
     )
 
@@ -443,9 +436,7 @@ def run_frequency_extraction_layered(
 
     df = apply_frequency_extraction_fast(
         df=df,
-        input_col=input_col,
         freq_rules=rules_main,
-        output_col=output_col
     )
 
     # -------------------------------
@@ -455,17 +446,15 @@ def run_frequency_extraction_layered(
 
     df = apply_frequency_extraction_fast(
         df=df,
-        input_col=input_col,
         freq_rules=rules_fallback,
-        output_col=output_col
     )
 
     # -------------------------------
     # WEEKDAY fallback
     # -------------------------------
-    df = apply_weekday_frequency(df, input_col, output_col)
+    df = apply_weekday_frequency(df)
 
-    df["freq_raw"] = df[output_col].apply(clean_numeric_freq)
+    df["freq_raw"] = df["frequency_per_day"].apply(clean_numeric_freq)
 
 
 
@@ -476,12 +465,10 @@ def run_frequency_extraction_layered(
 
     df = apply_timing_extraction(
         df,
-        input_col=input_col,
-        output_col="frequency_timing",
         timing_patterns=timing_patterns
     )
 
-    df[clean_med_name] = df[input_col].apply(
+    df["clean_text"] = df["clean_text"].apply(
     lambda x: remove_timing_terms(x, timing_patterns)
 )
 
@@ -492,7 +479,7 @@ def run_frequency_extraction_layered(
     df["freq_raw"] = df.apply(
         lambda row: resolve_frequency(
             row["freq_raw"],
-            row["frequency_timing"]
+            row["freq_timing"]
         ),
         axis=1
     )
@@ -500,7 +487,7 @@ def run_frequency_extraction_layered(
 
     # NORMALIZE 
     df["frequency_per_day"] = df["freq_raw"].apply(normalize_freq)
-    df[clean_med_name] = df[clean_med_name].str.replace(r'\s*/\s*', '/', regex=True)
+    df["clean_text"] = df["clean_text"].str.replace(r'\s*/\s*', '/', regex=True)
     # -------------------------------
     # METRICS
     # -------------------------------

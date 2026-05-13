@@ -7,6 +7,9 @@ from src.rxnorm_mapping import apply_rxnorm_mapping
 from src.pick_best_rxnorm import pick_best_rxnorm
 from src.reorder_dose import reorder_combo_doses
 from src.get_drug_class import apply_rxclass_mapping
+from src.quantity_normalization import apply_quantity_normalization
+from src.compile_rules import compile_medication_rules
+
 import pandas as pd
 
 norm_path = "data/normalization_dictionary.csv"
@@ -30,6 +33,7 @@ col_str_name = 'CMMED_'
 df = pd.read_csv("data/ADNI/simulated/RECCMEDS_25Mar2026_simulated.csv")
 subid = 'PTID'
 start_col = col_str_name + 'simulated'
+df = df[[start_col]]
 
 
 '''
@@ -53,12 +57,16 @@ df = df.sample(n=2000, random_state=42) # FIXME DO ALL
 '''
 
 
-
-
-df = preprocess_medications(df, input_col = start_col, output_col = col_str_name + 'normalized', replacement_path = norm_path)
-df = apply_extract_amount_and_form(df, input_col = col_str_name + "normalized", output_col = col_str_name + 'no_form' , path = norm_path) 
-df = apply_category_extraction(df, input_col = col_str_name + "no_form", output_col = col_str_name + "no_release", category = "release" , data_path = norm_path)
-df = run_frequency_extraction_layered(df,  input_col = col_str_name + 'no_release', clean_med_name = col_str_name + 'normalized_no_frequency', output_col = 'frequency_per_day', path = freq_path)
+compiled_rules = compile_medication_rules(norm_path)
+df = preprocess_medications(df, raw_med_col = start_col)
+df = apply_quantity_normalization(df, compiled_rules = compiled_rules['quantity'])
+df.to_csv(outdir + 'p.csv')
+janetl
+df = apply_extract_amount_and_form(df, path = norm_path) 
+df = apply_category_extraction(df, category = "release" , data_path = norm_path)
+df = run_frequency_extraction_layered(df, path = freq_path)
+df.to_csv(outdir + 'p.csv')
+janetl
 df = apply_dose_unit_extraction(df, input_col = col_str_name + 'normalized_no_frequency', output_col = col_str_name + "no_dose_unit", path = norm_path)
 df.to_csv(outdir + 'alex.csv')
 df = apply_category_extraction(df, input_col = col_str_name + "no_dose_unit", output_col = col_str_name + "no_route", category = "route" , data_path = norm_path)
