@@ -113,13 +113,9 @@ def match_rxnorm(term, rx_names, lookup, threshold=85):
 # -------------------------------
 def apply_rxnorm_mapping(
     df: pd.DataFrame,
-    input_col: str,
     rrf_path: str,
+    out : str,
     threshold: int = 85,
-    out1: str = None,
-    out2: str = None,
-    out3: str = None,
-    out4: str = None,
     col_str_name: str = None
 ) -> pd.DataFrame:
 
@@ -131,7 +127,7 @@ def apply_rxnorm_mapping(
     def safe_key(x):
         return tuple(x) if isinstance(x, list) else x
 
-    unique_vals = df[input_col].dropna().apply(safe_key).unique()
+    unique_vals = df["clean_text"].dropna().apply(safe_key).unique()
 
     # -------------------------------
     # build mapping
@@ -144,24 +140,24 @@ def apply_rxnorm_mapping(
     # -------------------------------
     # apply mapping
     # -------------------------------
-    df[out1] = df[input_col].map(lambda x: mapping.get(safe_key(x), (None, None, None, None))[0])
-    df[out2] = df[input_col].map(lambda x: mapping.get(safe_key(x), (None, None, None, None))[1])
-    df[out4] = df[input_col].map(lambda x: mapping.get(safe_key(x), (None, None, None, None))[2])
-    df[out3] = df[input_col].map(lambda x: mapping.get(safe_key(x), (None, None, None, None))[3])
+    df["rxnorm_match" + out] = df["clean_text"].map(lambda x: mapping.get(safe_key(x), (None, None, None, None))[0])
+    df["rxcui" + out] = df["clean_text"].map(lambda x: mapping.get(safe_key(x), (None, None, None, None))[1])
+    df["score" + out] = df["clean_text"].map(lambda x: mapping.get(safe_key(x), (None, None, None, None))[2])
+    df["tty" + out] = df["clean_text"].map(lambda x: mapping.get(safe_key(x), (None, None, None, None))[3])
 
     # -------------------------------
     # add MIN concept if tty is BN/IN
     # -------------------------------
     def get_min_match(row):
 
-        tty = row[out4]
-        rxcui = row[out2]
+        tty = row["tty" + out]
+        rxcui = row["rxcui" + out]
 
         if tty in ["BN", "IN"]:
 
             return min_lookup.get(rxcui)
 
-        return row[out1]
+        return row["rxnorm_match" + out]
 
     df["MIN"] = df.apply(get_min_match, axis=1)
 
@@ -169,7 +165,7 @@ def apply_rxnorm_mapping(
    # -------------------------------
     # ALWAYS remove parenthetical text
     # -------------------------------
-    if input_col == "paren_text" and col_str_name is not None:
+    if "clean_text" == "paren_text" and col_str_name is not None:
 
         def clean_row(row):
 
@@ -219,7 +215,7 @@ def apply_rxnorm_mapping(
     # -------------------------------
     # metrics
     # -------------------------------
-    mapped = df[out1].notna().sum()
+    mapped = df["rxnorm_match" + out].notna().sum()
     print(f"RXNorm Extraction Complete: {mapped}/{len(df)} rows mapped ({mapped/len(df):.2%})")
 
     return df

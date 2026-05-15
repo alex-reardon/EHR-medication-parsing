@@ -27,40 +27,35 @@ raw,replacement,category,notes
 \beight\b,8,quantity,
 \bnine\b,9,quantity,
 \bten\b,10,quantity,
-\bonce\b,1 time,quantity,
-\btwice\b,2 times,quantity,
-\bthrice\b,3 times,quantity,
-\ba (?=(?:tab|tabs|tablet|tablets|cap|caps|capsule|capsules)\b),1,quantity,
-\ban (?=(?:tab|tabs|tablet|tablets|cap|caps|capsule|capsules)\b),1,quantity,
 \band\b,,cleanup,
 \bat\b,,cleanup,
-\bbolus\b,,cleanup,FIXME
-\bcorrective dosing\b,,cleanup,FIXME
-\bdihydrochloride\b,,cleanup,remove salt
+\bbolus\b,,cleanup,
+\bcorrective dosing\b,,cleanup,
+\bdihydrochloride\b,,cleanup,
 \bdopa\b,levodopa,cleanup,
 \bgeneric\b,,cleanup,
-\bglass\b,,cleanup,
-\bhcl\b,,cleanup,remove salt
+\bglass\b,,cleanup,FIXME
+\bhcl\b,,cleanup,FIXME
 \bhydrochloride\b,,cleanup,remove salt
 \bin\b,,cleanup,
 \blevo\b,levodopa,cleanup,
-\block\b,,cleanup,FIXME
-\bna\b,,cleanup,remove na 
-\bns\b,normal saline,cleanup,
+\block\b,,cleanup,
+\bna\b,,cleanup,remove salt
+\bns\b,normal saline,cleanup,remove salt
 \bnss\b,normal saline solution,cleanup,
 \bof\b,,cleanup,
-\bone\b,1,cleanup,
-\botc\b,,cleanup,
+\bone\b,1,cleanup,FIXME
+\botc\b,,cleanup,remove na 
 \btake\b,,cleanup,
 \btbcr\b,tb cr,cleanup,
 \btbec\b,tb ec,cleanup,
 \bthe\b,,cleanup,
-\bunk(?:nown)?\b,,cleanup,remove unk (unknown)
+\bunk(?:nown)?\b,,cleanup,
 \bbag\b,iv bag,device,
 \bbtl\b,bottle,device,
 \bcont fast\b,continuous fast ,device,
 \bcont\b,cont,device,
-\bcup\b,cup,device,
+\bcup\b,cup,device,remove unk (unknown)
 \bflex cont\b,flex cont,device,
 \blocked\b,locked,device,
 \bmbp\b,iv bag,device,
@@ -71,77 +66,77 @@ raw,replacement,category,notes
 \bplas cont\b,plastic cont,device,
 \brtu bp\b,bag,device,
 \bsdv\b,sdv,device,
-\b(?:supp|suppository|suppositories)\b,suppository,form,
-\baerosol\b,inhaler,form,
-\bampoule(?:s)?\b,ampoule,form,ampoule
-\bchew(?:able)?\b,chew,form,
-\bcream\b,cream,form,topical
-\bdisperse\b,dispersible,form,
-\bdispersible\b,dispersible,form,
-\bdose\b,dose,form,dose
-\belixir\b,elixir,form,
-\bemul(?:sion)?\b,emulsion,form,
-\bfilm\b,film,form,
-\bfoam\b,foam,form,
-\bgel\b,gel,form,
-\bgelcaps?\b,soft_gel,form,
-\bgranules?\b,granules,form,
-\bij\b,injection,form,
-\bimplant\b,implant,form,
-\binhaler\b,inhaler,form,
-\binj(?:ection)?s?\b,injection,form,
-\bliq(?:uid)?s?\b,liquid,form,
-\bliqd\b,liquid,form,
-\blotion\b,lotion,form,
-\blozenge\b,lozenge,form,
-\bmodutab(?:s)?\b,modutabs,form,
-\bointment\b,ointment,form,topical
-\bpack\b,pack,form,
-\bpatch(?:es)?\b,patch,form,
-\bpill(?:s)?\b,pill,form,pill
-\bpmx\b,premix,form,
-\bpowder\b,powder,form,
-\bprefill\b,prefill,form,
-\bpremix\b,premix,form,
-\bpump\b,pump,form,
-\breconstituted\b,reconstituted,form,
-\bring\b,ring,form,
-\bshot(?:s)?\b,injection,form,shot synonym
-\bsoft\s*gel(?:s)?\b,softgel,form,softgel
-\bsoln\b,soln,form,
-\bsolp\b,solution powder,form,
-\bsolr\b,solution reconstituted,form,
-\bsolu\b,solution,form,
-\bsolution\b,solution,form,solution
-\bsolv inj\b,inj,form,
-\bsolv\b,solvent,form,
-\bspray\b,spray,form,spray
-\bsusp(?:ension)?\b,suspension,form,
-\bsyr(?:inge)?\b,syringe,form,
-\bsyrup\b,syrup,form,syrup
-\btb\b,tabs,form,
-\btroche\b,lozenge,form,
-\bvial(?:s)?\b,vial,form,vial
-cap(?:s|sule|sules)?\b,caps,form,capsule variants
-drop(?:s)?\b,drop,form,drops
-tab(?:let)?s?\b\b,tabs,form,tablet variants
-\bcontinuous release\b,er,release,ER
-\bcr\b,er,release,CR
-\bdelayed release\b,er,release,ER
-\bdepot\b,er,release,ER
-\bec\b,er,release,ER
+(?:supp|suppository|suppositories)\b,suppository,form,
+aerosol\b,inhaler,form,
+ampoule(?:s)?\b,ampoule,form,
+chew(?:able)?\b,chew,form,
+cream\b,cream,form,
+disperse\b,dispersible,form,
+dispersible\b,dispersible,form,
+dose\b,dose,form,ampoule
+elixir\b,elixir,form,
+emul(?:sion)?\b,emulsion,form,topical
+film\b,film,form,
+foam\b,foam,form,
+gel\b,gel,form,dose
+gelcaps?\b,soft_gel,form,
+granules?\b,granules,form,
+ij\b,injection,form,
+implant\b,implant,form,
+inhaler\b,inhaler,form,
+inj(?:ection)?s?\b,injection,form,
+liq(?:uid)?s?\b,liquid,form,
+liqd\b,liquid,form,
+lotion\b,lotion,form,
+lozenge\b,lozenge,form,
+modutab(?:s)?\b,modutabs,form,
+ointment\b,ointment,form,
+pack\b,pack,form,
+patch(?:es)?\b,patch,form,
+pill(?:s)?\b,pill,form,
+pmx\b,premix,form,
+powder\b,powder,form,topical
+prefill\b,prefill,form,
+premix\b,premix,form,
+pump\b,pump,form,pill
+reconstituted\b,reconstituted,form,
+ring\b,ring,form,
+shot(?:s)?\b,injection,form,
+soft\s*gel(?:s)?\b,softgel,form,
+soln\b,soln,form,
+solp\b,solution powder,form,
+solr\b,solution reconstituted,form,
+solu\b,solution,form,shot synonym
+solution\b,solution,form,softgel
+solv inj\b,inj,form,
+solv\b,solvent,form,
+spray\b,spray,form,
+susp(?:ension)?\b,suspension,form,
+syr(?:inge)?\b,syringe,form,solution
+syrup\b,syrup,form,
+tb\b,tabs,form,
+troche\b,lozenge,form,spray
+vial(?:s)?\b,vial,form,
+cap(?:s|sule|sules)?\b,caps,form,
+drop(?:s)?\b,drop,form,syrup
+tab(?:let)?s?\b,tabs,form,
+\bcontinuous release\b,er,release,
+\bcr\b,er,release,vial
+\bdelayed release\b,er,release,capsule variants
+\bdepot\b,er,release,drops
+\bec\b,er,release,tablet variants
 \benteric\b,er,release,ER
-\benteric coated\b,ec,release,ER
+\benteric coated\b,er,release,CR
 \ber\b,er,release,ER
 \bextended release\b,er,release,ER
 \bextended\s*release\b,er,release,ER
-\bimmediate\s*release\b,ir,release,IR
-\bir\b,ir,release,IR
+\bimmediate\s*release\b,ir,release,ER
+\bir\b,ir,release,ER
 \blp\b,er,release,ER
 \blt\b,er,release,ER
 \bmodified release\b,er,release,ER
-\bodt\b,er,release,ER
-\bprolib\b,er,release,ER
+\bodt\b,er,release,IR
+\bprolib\b,er,release,IR
 \bprologed release\b,er,release,ER
 \breseased lib\b,er,release,ER
 \bret\b,er,release,ER
@@ -151,38 +146,38 @@ tab(?:let)?s?\b\b,tabs,form,tablet variants
 \bsr\b,er,release,ER
 \bsustained release\b,er,release,ER
 \bsustained-release\b,er,release,ER
-\bsustained\s*release\b,er,release,SR
+\bsustained\s*release\b,er,release,ER
 \bxl\b,er,release,ER
-\bxr\b,er,release,XR
-\bapply\b,topical,route,
-\bbuccal\b,buccal,route,
-\bby\s*mouth\b,oral,route,
-\bcatheter\b,catheter,route,
-\bdialysis\b,dialysis,route,
+\bxr\b,er,release,ER
+\bapply\b,topical,route,ER
+\bbuccal\b,buccal,route,ER
+\bby\s*mouth\b,oral,route,SR
+\bcatheter\b,catheter,route,ER
+\bdialysis\b,dialysis,route,XR
 \bear\s*drops?\b,ear,route,
 \benteral tube\b,enteral tube,route,
 \beye\s*drops?\b,eye,route,
 \bflush\b,flush,route,
 \bg tube\b,g tube,route,
 \bgtube\b,gtube,route,
-\bim\b,im,route,intramuscular
+\bim\b,im,route,
 \bimv\b,imv,route,
 \binfusion\b,infusion,route,
 \binh(?:l)?\b,inhalation,route,
 \binhal(?:e|ed|ation)?\b,inhalation ,route,
-\bintercatheter\b,intercatheter,route,
+\bintercatheter\b,intercatheter,route,intramuscular
 \bintestinal infusion\b,intestinal,route,
 \bintestinal\b,intestinal,route,
 \bintradermal\b,intradermal,route,
-\bintramuscular\b,im,route,im
-\bintravenous\b,iv,route,iv
+\bintramuscular\b,im,route,
+\bintravenous\b,iv,route,
 \birrigation\b,irrigation,route,
-\biv(?:bp)?\b,iv,route,intravenous
+\biv(?:bp)?\b,iv,route,
 \bjtube\b,jtube,route,
-\bmis\b,mis,route,
-\bmt\b,mt,route,
+\bmis\b,mis,route,im
+\bmt\b,mt,route,iv
 \bnasal\b,nasal,route,
-\bnasogastric tube\b,nasogastric tube,route,
+\bnasogastric tube\b,nasogastric tube,route,intravenous
 \bneb(?:u)?\b,neb,route,
 \bnebuliz(?:er|ed)?\b,neb,route,
 \bng tube\b,ng tube,route,
@@ -198,12 +193,12 @@ tab(?:let)?s?\b\b,tabs,form,tablet variants
 \bpgbk\b,piggy back,route,
 \bpiggy back\b,piggy back,route,
 \bpiggyback\b,piggy back,route,
-\bpo\b,oral,route,by mouth
+\bpo\b,oral,route,
 \bre supp\b,rectal,route,
 \brec\b,rectal,route,
 \brect(?:al)?\b,rectal,route,
 \bsc\b,subcutaneous,route,
-\bsl\b,sublingual,route,
+\bsl\b,sublingual,route,by mouth
 \bsub(?:l|lingual)?\b,sublingual,route,
 \bsubc\b,subcutaneous,route,
 \bsubcut(?:aneous)?\b,subcutaneous,route,
@@ -242,37 +237,26 @@ tab(?:let)?s?\b\b,tabs,form,tablet variants
 \bpc\b,pc,time_of_day,
 \bpm\b,pm,time_of_day,
 \bwith dinner\b,dinner,time_of_day,
-\b%\b,%,unit,
-\bcapful\b,capfull,unit,
-\bg\b,g,unit,g
-\bgm\b,g,unit,
-\bgram(?:s)?\b,g,unit,grams
-\binhalations\b,inhalations,unit,
-\binternational unit(?:s)\b,iu,unit,
-\biu\b,iu,unit,
-\bl\b,l,unit,liter
-\bliter(?:s)?\b,l,unit,liter
-\bmcg\b,mcg,unit,mcg
-\bmeq/l\b,meq/l,unit,
-\bmeq\b,meq,unit,
-\bmg/gm\b,mg/g,unit,
-\bmg/kg\b,mg/kg,unit,
-\bmg\b,mg,unit,mg
-\bmicrogram(?:s)?\b,mcg,unit,micrograms
-\bmilligram/gram\b,mg/g,unit,
-\bmilligrams?\b,mg,unit,milligram
-\bmilliliter(?:s)?\b,ml,unit,ml
-\bml\b,ml,unit,ml
-\bounce\b,oz,unit,
-\boz\b,oz,unit,
-\bpercent\b,%,unit,
-\b%\b,%,unit,
-\bpuff\b,puff,unit,
-\bscoop\b,scoop,unit,
-\btablespoon\b,tbsp,unit,
-\btbsp\b,tbsp,unit,
-\bteaspoon\b,tsp,unit,
-\bud\b,unit dose,unit,
-\bÂµg\b,mcg,unit,
-tsp\b,tsp,unit,
+(?:µg|ug|mcg)(?:s)?\b,mcg,unit,
+gm(?:s)?\b,g,unit,
+gram(?:s)?\b,g,unit,
+international unit(?:s)?\b,iu,unit,
+kilogram(?:s)?\b,kg,unit,
+liter(?:s)?\b,l,unit,
+microgram(?:s)?\b,mcg,unit,
+milligram(?:s)?\b,mg,unit,
+milliliter(?:s)?\b,ml,unit,
+ounce(?:s)?\b,oz,unit,
+percent(?:s)?\b,%,unit,
+tablespoon(?:s)?\b,tbsp,unit,
+teaspoon(?:s)?\b,tsp,unit,
+ud\b,unit dose,unit,
 unit(?:s)?\b,unit,unit,
+inhalation(?:s)?\b,inhalations,unit,
+meq/l\b,meq/l,unit,
+meq(?:s)?\b,meq,unit,
+mg/g\b,mg/g,unit,
+mg/kg\b,mg/kg,unit,
+puff(?:s)?\b,puff,unit,
+scoop(?:s)?\b,scoop,unit,
+capful(?:s)?\b,capful,unit,

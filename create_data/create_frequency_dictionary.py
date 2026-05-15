@@ -10,11 +10,49 @@ num_words = {
 }
 
 time_units = {
-    "day": r"(?:d|day|daily|day|24\s*(?:hours?|hrs?|h))",
-    "week": r"(?:w|week|wk|wks|weeks|weekly)",
-    "month": r"(?:m|mo|month|months|monthly)",
-    "year": r"(?:y|yr|year|yearly|annually)",
-    "hour": r"(?:h|hr|hour|hours|hrs)"
+    "day": r"(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)",
+    "week": r"(?:weekly|weeks|week|wks|wk|w)",
+    "month": r"(?:monthly|months|month|mo|m)",
+    "year": r"(?:annually|yearly|year|yr|y)",
+    "hour": r"(?:hours|hour|hrs|hr|h)"
+}
+
+adverb_units = r"""
+    (?:
+        daily
+        |weekly
+        |monthly
+        |yearly
+        |annually
+    )
+"""
+
+adverb_units = {
+
+    "day": {
+        "pattern": r"(?:daily)",
+        "days": 1
+    },
+
+    "week": {
+        "pattern": r"(?:weekly)",
+        "days": 7
+    },
+
+    "month": {
+        "pattern": r"(?:monthly)",
+        "days": 30
+    },
+
+    "year": {
+        "pattern": r"(?:yearly|annually)",
+        "days": 365
+    },
+
+    "hour": {
+        "pattern": r"(?:hourly)",
+        "days": 1/24
+    }
 }
 
 
@@ -28,6 +66,15 @@ n_per_day = {
 }
 
 
+n_per_day_adverb = {
+    "daily" : 1, 
+    "weekly" : 7, 
+    "monthly" : 30,
+    "yearly" : 365,
+    "annually" : 365,
+    "hourly" : 1/24
+
+}
 
 
 rows = []
@@ -36,25 +83,38 @@ for n, word in num_words.items():
     for unit_name, unit_pattern in time_units.items():
 
         # -------------------------------
-        # Pattern 1: "2x per day", "two daily"
+        # Pattern 1: "2x per day"
         # -------------------------------
 
         pattern_standard = re.sub(r"\s+", "", rf"""
-        \b
-        (?:{n}(?:\.0+)?|{word})
-        \s*
-        (?:(?:x|times?)\s*)?
-        (?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)?
-        {unit_pattern}
-        \b
+            \b
+            (?:{n}(?:\.0+)?|{word})
+            \s*
+            (?:
+                (?:(?:x|times?)\s*)?
+                (?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)
+                |
+                (?:(?:x|times?)\s*)
+            )
+            {unit_pattern}
+            \b
         """)
 
-        if unit_name == 'hour' :
-            replacement = n*n_per_day[unit_name]
-        elif unit_name == 'day' : 
-            replacement = n 
-        else : 
-            replacement = 1 / (n * n_per_day[unit_name])
+        if unit_name == "hour":
+            
+            replacement = (
+                n * n_per_day[unit_name]
+            )
+
+        elif unit_name == "day":
+
+            replacement = n
+
+        else:
+
+            replacement = (
+                n / n_per_day[unit_name]
+            )
 
 
         rows.append({
@@ -63,6 +123,60 @@ for n, word in num_words.items():
             "priority": 1,
             "notes": f"{n} per {unit_name}"
         })
+
+
+        # =================================================
+        # Pattern 2
+        # ex:
+        # 2 weekly
+        # 3 monthly
+            # =================================================
+
+        if unit_name in adverb_units:
+            
+            adverb_pattern = (
+                adverb_units[unit_name]["pattern"]
+            )
+
+            pattern_adverb = re.sub(r"\s+", "", rf"""
+                \b
+                (?:{n}(?:\.0+)?|{word})
+                \s+
+                {adverb_pattern}
+                \b
+            """)
+
+        # -----------------------------------------
+        # ADVERB REPLACEMENT
+        # ex:
+        # 2 weekly  = 2/7
+        # 3 monthly = 3/30
+        # 2 hourly  = 2*24
+        # -----------------------------------------
+
+        if unit_name == "hour":
+
+            replacement_adverb = (
+                n * 24
+            )
+
+        else:
+
+            replacement_adverb = (
+                n / adverb_units[unit_name]["days"]
+            )
+
+        rows.append({
+
+            "raw": pattern_adverb,
+
+            "replacement": replacement_adverb,
+
+            "priority": 1,
+
+            "notes": f"{n} {unit_name} adverb"
+        })
+
 
         # -------------------------------
         # Pattern 2: "q2w", "q3d"
@@ -94,8 +208,8 @@ for n, word in num_words.items():
 
         pattern_every = re.sub(r"\s+", "", rf"""
         \b
-        every\s*(?:{n}(?:\.0+)?|{word})
-        \s*
+        every\s+(?:{n}(?:\.0+)?|{word})
+        \s+
         {unit_pattern}
         \b
         """)
@@ -118,10 +232,12 @@ for n, word in num_words.items():
 
 for n, word in num_words.items():
     time_units_no_day = {
-    "week": r"(?:w|week|wk|wks|weeks|weekly)",
-    "month": r"(?:m|mo|month|months|monthly)",
-    "year": r"(?:y|yr|year|yearly|annually)",
-    "hour": r"(?:h|hr|hour|hours|hrs)"}
+    "week": r"(?:weekly|weeks|week|wks|wk|w)",
+    "month": r"(?:monthly|months|month|mo|m)",
+    "year": r"(?:annually|yearly|year|yr|y)",
+    "hour": r"(?:hours|hour|hrs|hr|h)"
+    }
+
     for unit_name, unit_pattern in time_units_no_day.items():
 
         pattern_days_per_week = re.sub(r"\s+", "", rf"""
@@ -177,7 +293,7 @@ for word, n in special_words.items():
 rows.append({
     "raw": r"\bonce\b",
     "replacement": "1x",
-    "priority": 1,
+    "priority": 2,
     "notes": "once (no unit)"
 })
 
@@ -185,7 +301,7 @@ rows.append({
 rows.append({
     "raw": r"\btwice\b",
     "replacement": "2x",
-    "priority": 1,
+    "priority": 2,
     "notes": "twice (no unit)"
 })
 
