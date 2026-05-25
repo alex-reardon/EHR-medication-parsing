@@ -4,7 +4,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-def extract_category(
+def _extract_category(
     text,
     compiled_rules
 ):
@@ -95,37 +95,6 @@ def extract_category(
     ])
 
 
-# -------------------------------
-# CLEANUP
-# -------------------------------
-def clean_text_whitespace(
-    text: str
-) -> str:
-
-    if not isinstance(text, str):
-        return text
-
-    text = re.sub(
-        r"/\s*$",
-        "",
-        text
-    )
-
-    text = re.sub(
-        r"\s+",
-        " ",
-        text
-    ).strip()
-
-    text = re.sub(
-        r'[^a-zA-Z0-9\)]+$',
-        '',
-        text
-    )
-
-    return text
-
-
-def extract_medication_category(df, category, compiled_rules) :
-    df[[category, f"{category}_raw", "clean_text"]] = (df["clean_text"].apply( lambda x: extract_category(x, compiled_rules)))
+def apply_category_extraction(df, category, compiled_rules) :
+    df[[f"{category}", f"{category}_source", "clean_text"]] = (df["clean_text"].apply( lambda x: _extract_category(x, compiled_rules)))
     return df

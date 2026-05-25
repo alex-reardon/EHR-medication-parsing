@@ -5,7 +5,7 @@ import pandas as pd
 # =========================================================
 # BUILD PRN PATTERN
 # =========================================================
-def build_prn_pattern(
+def _build_prn_regex(
     compiled_rules
 ):
     """
@@ -46,7 +46,7 @@ def build_prn_pattern(
 # =========================================================
 # EXTRACT PRN
 # =========================================================
-def remove_prn(
+def extract_prn(
     text,
     prn_pattern
 ):
@@ -117,7 +117,7 @@ def remove_prn(
 # =========================================================
 # APPLY PRN EXTRACTION
 # =========================================================
-def extract_prn(
+def apply_prn_extraction(
     df,
     compiled_rules
 ):
@@ -134,7 +134,7 @@ def extract_prn(
     # -----------------------------------------------------
     # BUILD PATTERN
     # -----------------------------------------------------
-    prn_pattern = build_prn_pattern(
+    prn_pattern = _build_prn_regex(
         compiled_rules
     )
 
@@ -146,7 +146,7 @@ def extract_prn(
         "prn_raw",
         "clean_text"
     ]] = df["clean_text"].apply(
-        lambda x: remove_prn(
+        lambda x: extract_prn(
             x,
             prn_pattern
         )

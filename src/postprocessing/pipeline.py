@@ -1,12 +1,7 @@
 # postprocessing/postprocessing_pipeline.py
+from postprocessing.residual_numbers import apply_residual_number_extraction
+from postprocessing.cleanup import apply_cleanup
 
-from postprocessing.extraction_cleanup import (
-    clean_extraction_artifacts
-)
-
-from postprocessing.residual_number_extraction import (
-    apply_residual_number_extraction
-)
 
 
 def clean_extracted_text(
@@ -35,13 +30,9 @@ def clean_extracted_text(
     pd.DataFrame
     """
 
-    df = df.copy()
-
-
     # -----------------------------------------------------
     # EXTRACT RESIDUAL NUMBERS
     # -----------------------------------------------------
-
     df = apply_residual_number_extraction(
         df,
         text_col=text_col
@@ -51,10 +42,10 @@ def clean_extracted_text(
     # -----------------------------------------------------
     # CLEAN EXTRACTION ARTIFACTS
     # -----------------------------------------------------
-
-    df[text_col] = (
-        df[text_col]
-        .apply(clean_extraction_artifacts)
+    df = apply_cleanup(
+        df, 
+        text_col = text_col
     )
+
 
     return df

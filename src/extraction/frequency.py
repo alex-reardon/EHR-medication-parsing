@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 # =========================================================
 # HELPERS
 # =========================================================
-def has_existing_value(val):
+def _has_valid_existing_value(val):
 
     if val is None:
         return False
@@ -27,7 +27,7 @@ def has_existing_value(val):
 # =========================================================
 # CORE FAST EXTRACTOR (CACHED)
 # =========================================================
-def build_extractor(compiled_rules):
+def _build_frequency_regex(compiled_rules):
 
     compiled_rules = sorted(
     compiled_rules,
@@ -36,7 +36,7 @@ def build_extractor(compiled_rules):
     )
 
     @lru_cache(maxsize=20000)
-    def extract(text):
+    def _extract_frequency_from_text(text):
 
         if text is None or (
             isinstance(text, float)
@@ -120,13 +120,13 @@ def build_extractor(compiled_rules):
             text
         )
 
-    return extract
+    return _extract_frequency_from_text
 
 
 # =========================================================
 # APPLY FREQUENCY EXTRACTION
 # =========================================================
-def apply_frequency_extraction_fast(
+def extract_frequency_fast(
     df: pd.DataFrame,
     compiled_rules,
     freq_col="frequency_per_day",
@@ -144,14 +144,14 @@ def apply_frequency_extraction_fast(
     if raw_col not in df.columns:
         df[raw_col] = None
 
-    extractor = build_extractor(
+    extractor = _build_frequency_regex(
         compiled_rules
     )
 
     # -----------------------------------------------------
     # PROCESS ROW
     # -----------------------------------------------------
-    def process_row(row):
+    def _process_frequency_row(row):
 
         text = row["clean_text"]
 
@@ -177,7 +177,7 @@ def apply_frequency_extraction_fast(
         # -------------------------------------------------
         # NORMALIZED MATCHES
         # -------------------------------------------------
-        if has_existing_value(existing):
+        if _has_valid_existing_value(existing):
 
             existing = (
                 existing
@@ -197,7 +197,7 @@ def apply_frequency_extraction_fast(
         # -------------------------------------------------
         # RAW MATCHES
         # -------------------------------------------------
-        if has_existing_value(existing_raw):
+        if _has_valid_existing_value(existing_raw):
 
             existing_raw = (
                 existing_raw
@@ -224,7 +224,7 @@ def apply_frequency_extraction_fast(
     # APPLY
     # -----------------------------------------------------
     df[[freq_col, raw_col, "clean_text"]] = df.apply(
-        process_row,
+        _process_frequency_row,
         axis=1
     )
 
@@ -247,7 +247,7 @@ def apply_frequency_extraction_fast(
 # =========================================================
 # NORMALIZE FREQUENCY
 # =========================================================
-def normalize_freq(val):
+def normalize_frequency_value(val):
 
     if isinstance(val, list):
         val = val[0] if val else None
@@ -266,7 +266,7 @@ def normalize_freq(val):
 # =========================================================
 # CLEAN NUMERIC FREQUENCY
 # =========================================================
-def clean_numeric_freq(numeric_freq):
+def normalize_numeric_frequency(numeric_freq):
 
     # -----------------------------------------------------
     # LIST INPUT
@@ -319,19 +319,18 @@ def clean_numeric_freq(numeric_freq):
 # =========================================================
 # MAIN PIPELINE
 # =========================================================
-def extract_frequency(
+def apply_frequency_extraction(
     df: pd.DataFrame,
     compiled_rules
 ) -> pd.DataFrame:
 
-    df.to_csv("/Users/emudr/Desktop/frequency.csv")
     df = df.copy()
 
     # -----------------------------------------------------
     # PASS 1
     # EXPLICIT
     # -----------------------------------------------------
-    df = apply_frequency_extraction_fast(
+    df = extract_frequency_fast(
         df=df,
         compiled_rules=compiled_rules[
             "frequency_primary"
@@ -342,7 +341,7 @@ def extract_frequency(
     # PASS 2
     # GENERAL
     # -----------------------------------------------------
-    df = apply_frequency_extraction_fast(
+    df = extract_frequency_fast(
         df=df,
         compiled_rules=compiled_rules[
             "frequency_secondary"
@@ -354,8 +353,8 @@ def extract_frequency(
     # -----------------------------------------------------
     df["frequency_per_day"] = (
         df["frequency_per_day"]
-        .apply(clean_numeric_freq)
-        .apply(normalize_freq)
+        .apply(normalize_numeric_frequency)
+        .apply(normalize_frequency_value)
     )
 
     # -----------------------------------------------------

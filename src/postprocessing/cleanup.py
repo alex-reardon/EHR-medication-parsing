@@ -4,7 +4,7 @@ import re
 import pandas as pd
 
 
-def clean_extraction_artifacts(text: str) -> str:
+def _clean_extraction_artifacts(text: str) -> str:
 
     if pd.isna(text):
         return text
@@ -30,12 +30,21 @@ def clean_extraction_artifacts(text: str) -> str:
     )
 
     # -----------------------------------------
+    # NORMALIZE SEPARATORS
+    # -----------------------------------------
+    text = re.sub(
+        r"\s*(?:\+|/|-|:|and)\s*",
+        "/",
+        text
+    )
+
+    # -----------------------------------------
     # REMOVE DOUBLE / REPEATED HYPHENS
     # ex: "- -"
     # -----------------------------------------
 
     text = re.sub(
-        r'\s*-\s*-\s*',
+        r'\s*/\s*/\s*',
         ' ',
         text
     )
@@ -51,11 +60,11 @@ def clean_extraction_artifacts(text: str) -> str:
     )
 
     # -----------------------------------------
-    # REMOVE TRAILING HYPHENS
+    # REMOVE TRAILING SLASHES
     # -----------------------------------------
 
     text = re.sub(
-        r'[\s/\-.–—−]+$',
+        r'[\s/\/.///]+$',
         '',
         text
     )
@@ -65,15 +74,6 @@ def clean_extraction_artifacts(text: str) -> str:
     text = re.sub(
         r'[^a-zA-Z0-9]+$',
         '',
-        text
-    )
-
-    # -----------------------------------------
-    # NORMALIZE SEPARATORS
-    # -----------------------------------------
-    text = re.sub(
-        r"\s*(?:\+|/|-|and)\s*",
-        "/",
         text
     )
 
@@ -89,3 +89,11 @@ def clean_extraction_artifacts(text: str) -> str:
     ).strip()
 
     return text
+
+
+
+def apply_cleanup(df, text_col) : 
+    df[text_col] = df[text_col].apply(lambda x: _clean_extraction_artifacts(x))
+    return df
+
+    

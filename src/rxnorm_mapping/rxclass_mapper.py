@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 
 
-def get_rxclass(
+def _fetch_rxclass_classes(
     rxcui,
     rela_source="ATC"
 ):
@@ -76,7 +76,7 @@ def get_rxclass(
 def apply_rxclass_mapping(
     df,
     rxcui_col="rxcui",
-    out_col="drug_class",
+    out_col="rxclass_atc",
     rela_source="ATC"
 ):
 
@@ -84,7 +84,7 @@ def apply_rxclass_mapping(
     unique_rxcuis = df[rxcui_col].dropna().unique()
 
     mapping = {
-        rxcui: get_rxclass(rxcui, rela_source)
+        rxcui: _fetch_rxclass_classes(rxcui, rela_source)
         for rxcui in unique_rxcuis
     }
 

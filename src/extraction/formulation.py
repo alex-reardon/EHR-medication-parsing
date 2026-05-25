@@ -12,7 +12,7 @@ SEP = r'\s*-\s*'
 # BUILD SINGLE REGEX FROM COMPILED RULES
 # ---------------------------------------------------------
 
-def build_form_regex(compiled_rules):
+def _build_formulation_regex(compiled_rules):
     # Sort by length descending to ensure longer phrases match first
     raw_patterns = sorted(
         [rule["pattern_raw"] for rule in compiled_rules], 
@@ -44,7 +44,7 @@ def build_form_regex(compiled_rules):
 # ---------------------------------------------------------
 # PARSE SINGLE TEXT
 # ---------------------------------------------------------
-def parse_formulations(text, compiled_pattern, compiled_rules):
+def extract_formulations(text, compiled_pattern, compiled_rules):
     parsed = {"forms": [], "clean_text": text}
 
     if pd.isna(text) or text == "":
@@ -102,16 +102,18 @@ def parse_formulations(text, compiled_pattern, compiled_rules):
 
     return parsed
 
+
+
 # ---------------------------------------------------------
 # APPLY TO DATAFRAME
 # ---------------------------------------------------------
-def extract_formulation(df, compiled_rules):
+def apply_formulation_extraction(df, compiled_rules):
     df = df.copy()
-    compiled_pattern = build_form_regex(compiled_rules)
+    compiled_pattern = _build_formulation_regex(compiled_rules)
 
     # 1. Generate full parsed column
     df["parsed_formulations"] = df["clean_text"].apply(
-        lambda x: parse_formulations(x, compiled_pattern, compiled_rules)
+        lambda x: extract_formulations(x, compiled_pattern, compiled_rules)
     )
 
     # 2. Extract Forms (Unique & Non-Null)

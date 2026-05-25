@@ -11,7 +11,7 @@ import pandas as pd
 PAREN_PATTERN = r'\((.*?)\)'
 
 
-def extract_parenthetical_text(text):
+def extract_parenthetical(text):
 
     """
     Extract text inside parentheses.
@@ -89,7 +89,7 @@ def extract_parenthetical_text(text):
 # APPLY TO DATAFRAME
 # ---------------------------------------------------------
 
-def extract_parenthetical(
+def apply_parenthetical_extraction(
     df,
     text_col="clean_text"
 ):
@@ -101,7 +101,7 @@ def extract_parenthetical(
     # -----------------------------------------------------
 
     df["parsed_parenthetical"] = df[text_col].apply(
-        extract_parenthetical_text
+        extract_parenthetical
     )
 
     # -----------------------------------------------------

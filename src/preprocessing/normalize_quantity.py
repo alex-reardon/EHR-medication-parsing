@@ -6,7 +6,7 @@ import re
 # APPLY NORMALIZATION RULES TO SINGLE TEXT
 # ---------------------------------------------------
 
-def apply_rules(
+def _apply_regex_replacement_rules(
     text: str,
     compiled_rules: list,
 ) -> str:
@@ -46,14 +46,50 @@ def apply_rules(
 # QUANTITY NORMALIZATION
 # ---------------------------------------------------
 
-def normalize_quantity(
+def normalize_quantities(
     text: str,
     quantity_patterns: list,
 ) -> str:
 
-    text = apply_rules(
+    text = _apply_regex_replacement_rules(
         text=text,
         compiled_rules=quantity_patterns,
     )
 
     return text
+
+
+def apply_quantity_normalization(
+    df: pd.DataFrame,
+    quantity_patterns: list = None
+) -> pd.DataFrame:
+
+    """
+    Apply regex-based quantity normalization to a dataframe column.
+    """
+
+    df = df.copy()
+
+    if quantity_patterns is None:
+        return df
+
+    df["clean_text"] = df["clean_text"].apply(
+        lambda x: normalize_quantities(
+            text=x,
+            quantity_patterns=quantity_patterns
+        )
+    )
+
+    # -------------------------------
+    # METRICS
+    # -------------------------------
+    total = len(df)
+    non_null = df["clean_text"].notna().sum()
+
+    print(
+        f"Quantity Normalization Complete: "
+        f"{non_null}/{total} rows processed "
+        f"({non_null/total:.2%})"
+    )
+
+    return df

@@ -1,19 +1,11 @@
 # extraction/extraction_pipeline.py
-
 import pandas as pd
-
-from extraction.dose_extraction import extract_dose
-
-from extraction.frequency_extraction import extract_frequency
-
-from extraction.formulation_extraction import extract_formulation
-
-from extraction.prn_extraction import extract_prn
-
-from extraction.medication_category_extraction import extract_medication_category
-
-from extraction.parenthetical_extraction import (extract_parenthetical)
-
+from extraction.formulation import apply_formulation_extraction
+from extraction.category import apply_category_extraction
+from extraction.prn_frequency import apply_prn_extraction
+from extraction.dose import apply_dose_extraction
+from extraction.frequency import apply_frequency_extraction
+from extraction.parenthetical import apply_parenthetical_extraction
 
 # ---------------------------------------------------
 # MAIN EXTRACTION PIPELINE
@@ -47,31 +39,20 @@ def extract_medication_entities(
     # ---------------------------------------------------
     # LOAD PATTERNS
     # ---------------------------------------------------
-
-
-
     formulation_patterns = compiled_norm_patterns["form"]
-
     release_patterns = compiled_norm_patterns["release"]
-    
     prn_patterns = compiled_freq_patterns["prn"]
-
     frequency_patterns = compiled_freq_patterns
-
     dose_patterns = compiled_norm_patterns['unit']
-
     route_patterns = compiled_norm_patterns['route']
-
     device_patterns = compiled_norm_patterns['device']
-
     timing_patterns = compiled_norm_patterns['time_of_day']
-
+    meal_patterns = compiled_norm_patterns['meal_relation']
 
     # ---------------------------------------------------
     # FORMULATION EXTRACTION
     # ---------------------------------------------------
-
-    df = extract_formulation(
+    df = apply_formulation_extraction(
         df=df,
         compiled_rules = formulation_patterns,
     )
@@ -80,7 +61,7 @@ def extract_medication_entities(
     # ---------------------------------------------------
     # RELEASE EXTRACTION
     # ---------------------------------------------------
-    df = extract_medication_category(
+    df = apply_category_extraction(
         df=df,
         compiled_rules = release_patterns,
         category = 'release'
@@ -90,7 +71,7 @@ def extract_medication_entities(
     # ---------------------------------------------------
     # PRN EXTRACTION
     # ---------------------------------------------------
-    df = extract_prn(
+    df = apply_prn_extraction(
         df=df,
         compiled_rules = prn_patterns
     )
@@ -100,7 +81,7 @@ def extract_medication_entities(
     # FREQUENCY EXTRACTION
     # ---------------------------------------------------
 
-    df = extract_frequency(
+    df = apply_frequency_extraction(
         df=df,
         compiled_rules=frequency_patterns
     )
@@ -109,7 +90,7 @@ def extract_medication_entities(
     # ---------------------------------------------------
     # DOSE EXTRACTION
     # ---------------------------------------------------
-    df = extract_dose(
+    df = apply_dose_extraction(
         df=df, 
         compiled_rules = dose_patterns
     )
@@ -118,7 +99,7 @@ def extract_medication_entities(
     # ---------------------------------------------------
     # ROUTE EXTRACTION
     # ---------------------------------------------------
-    df = extract_medication_category(
+    df = apply_category_extraction(
         df=df,
         compiled_rules = route_patterns,
         category = 'route'
@@ -127,7 +108,7 @@ def extract_medication_entities(
     # ---------------------------------------------------
     # Device EXTRACTION
     # ---------------------------------------------------
-    df = extract_medication_category(
+    df = apply_category_extraction(
         df=df,
         compiled_rules = device_patterns,
         category = 'device'
@@ -136,17 +117,28 @@ def extract_medication_entities(
     # ---------------------------------------------------
     # Timing EXTRACTION
     # ---------------------------------------------------
-    df = extract_medication_category(
+    df = apply_category_extraction(
         df=df,
         compiled_rules = timing_patterns,
         category = 'time_of_day'
     )
 
 
+
+    # ---------------------------------------------------
+    # MEAL: RELATION EXTRACTION
+    # ---------------------------------------------------
+    df = apply_category_extraction(
+        df=df,
+        compiled_rules = meal_patterns,
+        category = 'meal_relation'
+    )
+
+
     # ---------------------------------------------------
     # Parentheses EXTRACTION
     # ---------------------------------------------------
-    df = extract_parenthetical(df)
+    df = apply_parenthetical_extraction(df)
 
 
     return df

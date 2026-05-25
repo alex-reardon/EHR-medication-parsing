@@ -1,5 +1,4 @@
 # postprocessing/residual_number_extraction.py
-
 import re
 import pandas as pd
 
@@ -11,7 +10,7 @@ import pandas as pd
 NUMBER_PATTERN = r'\b-?\d+(?:\.\d+)?\b'
 
 
-def extract_residual_numbers(text):
+def _extract_residual_numbers(text):
 
     """
     Extract leftover standalone numbers that were not
@@ -136,7 +135,7 @@ def apply_residual_number_extraction(
     df = df.copy()
 
     parsed = df[text_col].apply(
-        extract_residual_numbers
+        _extract_residual_numbers
     )
 
     # -----------------------------------------------------

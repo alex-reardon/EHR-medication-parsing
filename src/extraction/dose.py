@@ -13,7 +13,7 @@ SEP = r'\s*[/\-]\s*'
 # BUILD UNIT PATTERN
 # FROM COMPILED RULES
 # =========================================================
-def build_unit_pattern(
+def _build_unit_regex(
     compiled_rules
 ):
     """
@@ -38,6 +38,8 @@ def build_unit_pattern(
     unit_values = list(
         dict.fromkeys(unit_values)
     )
+    print(unit_values)
+    janetl
 
     # -----------------------------------------------------
     # LONGEST FIRST
@@ -67,7 +69,7 @@ def build_unit_pattern(
 # =========================================================
 # EXTRACT DOSES
 # =========================================================
-def remove_dose_and_units(
+def extract_dose(
     text: str,
     unit_pattern: str
 ):
@@ -343,7 +345,7 @@ def remove_dose_and_units(
 # =========================================================
 # APPLY TO DATAFRAME
 # =========================================================
-def extract_dose(
+def apply_dose_extraction(
     df: pd.DataFrame,
     compiled_rules
 ):
@@ -357,7 +359,7 @@ def extract_dose(
     # -----------------------------------------------------
     # BUILD UNIT PATTERN
     # -----------------------------------------------------
-    unit_pattern = build_unit_pattern(
+    unit_pattern = _build_unit_regex(
         compiled_rules
     )
 
@@ -369,7 +371,7 @@ def extract_dose(
         "dose",
         "clean_text"
     ]] = df["clean_text"].apply(
-        lambda x: remove_dose_and_units(
+        lambda x: extract_dose(
             x,
             unit_pattern
         )

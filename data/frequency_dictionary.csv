@@ -1,399 +1,399 @@
-raw,replacement,priority,category,notes,Unnamed: 5
-\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:annually|yearly|year|yr|y)\b,0.00022831050228310502,1,frequency,q 12 year,
-\bevery\s+(?:12(?:\.0+)?|twelve)\s+(?:annually|yearly|year|yr|y)\b,0.00022831050228310502,1,frequency,every 12 year,
-\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:annually|yearly|year|yr|y)\b,0.00024906600249066,1,frequency,q 11 year,
-\bevery\s+(?:11(?:\.0+)?|eleven)\s+(?:annually|yearly|year|yr|y)\b,0.00024906600249066,1,frequency,every 11 year,
-\bq\s*(?:10(?:\.0+)?|ten)\s*(?:annually|yearly|year|yr|y)\b,0.000273972602739726,1,frequency,q 10 year,
-\bevery\s+(?:10(?:\.0+)?|ten)\s+(?:annually|yearly|year|yr|y)\b,0.000273972602739726,1,frequency,every 10 year,
-\bq\s*(?:9(?:\.0+)?|nine)\s*(?:annually|yearly|year|yr|y)\b,0.00030441400304414006,1,frequency,q 9 year,
-\bevery\s+(?:9(?:\.0+)?|nine)\s+(?:annually|yearly|year|yr|y)\b,0.00030441400304414006,1,frequency,every 9 year,
-\bq\s*(?:8(?:\.0+)?|eight)\s*(?:annually|yearly|year|yr|y)\b,0.00034246575342465754,1,frequency,q 8 year,
-\bevery\s+(?:8(?:\.0+)?|eight)\s+(?:annually|yearly|year|yr|y)\b,0.00034246575342465754,1,frequency,every 8 year,
-\bq\s*(?:7(?:\.0+)?|seven)\s*(?:annually|yearly|year|yr|y)\b,0.0003913894324853229,1,frequency,q 7 year,
-\bevery\s+(?:7(?:\.0+)?|seven)\s+(?:annually|yearly|year|yr|y)\b,0.0003913894324853229,1,frequency,every 7 year,
-\bq\s*(?:6(?:\.0+)?|six)\s*(?:annually|yearly|year|yr|y)\b,0.00045662100456621003,1,frequency,q 6 year,
-\bevery\s+(?:6(?:\.0+)?|six)\s+(?:annually|yearly|year|yr|y)\b,0.00045662100456621003,1,frequency,every 6 year,
-\bq\s*(?:5(?:\.0+)?|five)\s*(?:annually|yearly|year|yr|y)\b,0.000547945205479452,1,frequency,q 5 year,
-\bevery\s+(?:5(?:\.0+)?|five)\s+(?:annually|yearly|year|yr|y)\b,0.000547945205479452,1,frequency,every 5 year,
-\bq\s*(?:4(?:\.0+)?|four)\s*(?:annually|yearly|year|yr|y)\b,0.0006849315068493151,1,frequency,q 4 year,
-\bevery\s+(?:4(?:\.0+)?|four)\s+(?:annually|yearly|year|yr|y)\b,0.0006849315068493151,1,frequency,every 4 year,
-\bq\s*(?:3(?:\.0+)?|three)\s*(?:annually|yearly|year|yr|y)\b,0.0009132420091324201,1,frequency,q 3 year,
-\bevery\s+(?:3(?:\.0+)?|three)\s+(?:annually|yearly|year|yr|y)\b,0.0009132420091324201,1,frequency,every 3 year,
-\bq\s*(?:2(?:\.0+)?|two)\s*(?:annually|yearly|year|yr|y)\b,0.0013698630136986301,1,frequency,q 2 year,
-\bevery\s+(?:2(?:\.0+)?|two)\s+(?:annually|yearly|year|yr|y)\b,0.0013698630136986301,1,frequency,every 2 year,
-\b(?:1(?:\.0+)?|one)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.0027397260273972603,1,frequency,1 per year,
-\b(?:1(?:\.0+)?|one)\s+(?:yearly|annually)\b,0.0027397260273972603,1,frequency,1 year adverb,
-\bq\s*(?:1(?:\.0+)?|one)\s*(?:annually|yearly|year|yr|y)\b,0.0027397260273972603,1,frequency,q 1 year,
-\bevery\s+(?:1(?:\.0+)?|one)\s+(?:annually|yearly|year|yr|y)\b,0.0027397260273972603,1,frequency,every 1 year,
-\b(?:1(?:\.0+)?|one)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.0027397260273972603,1,frequency,1 days per year,
-\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:annually|yearly|year|yr|y)\b,0.0027397260273972603,1,frequency,once per year,
-\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:monthly|months|month|mo|m)\b,0.002777777777777778,1,frequency,q 12 month,
-\bevery\s+(?:12(?:\.0+)?|twelve)\s+(?:monthly|months|month|mo|m)\b,0.002777777777777778,1,frequency,every 12 month,
-\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:monthly|months|month|mo|m)\b,0.0030303030303030303,1,frequency,q 11 month,
-\bevery\s+(?:11(?:\.0+)?|eleven)\s+(?:monthly|months|month|mo|m)\b,0.0030303030303030303,1,frequency,every 11 month,
-\bq\s*(?:10(?:\.0+)?|ten)\s*(?:monthly|months|month|mo|m)\b,0.0033333333333333335,1,frequency,q 10 month,
-\bevery\s+(?:10(?:\.0+)?|ten)\s+(?:monthly|months|month|mo|m)\b,0.0033333333333333335,1,frequency,every 10 month,
-\bq\s*(?:9(?:\.0+)?|nine)\s*(?:monthly|months|month|mo|m)\b,0.003703703703703704,1,frequency,q 9 month,
-\bevery\s+(?:9(?:\.0+)?|nine)\s+(?:monthly|months|month|mo|m)\b,0.003703703703703704,1,frequency,every 9 month,
-\bq\s*(?:8(?:\.0+)?|eight)\s*(?:monthly|months|month|mo|m)\b,0.004166666666666667,1,frequency,q 8 month,
-\bevery\s+(?:8(?:\.0+)?|eight)\s+(?:monthly|months|month|mo|m)\b,0.004166666666666667,1,frequency,every 8 month,
-\bq\s*(?:7(?:\.0+)?|seven)\s*(?:monthly|months|month|mo|m)\b,0.004761904761904762,1,frequency,q 7 month,
-\bevery\s+(?:7(?:\.0+)?|seven)\s+(?:monthly|months|month|mo|m)\b,0.004761904761904762,1,frequency,every 7 month,
-\b(?:2(?:\.0+)?|two)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.005479452054794521,1,frequency,2 per year,
-\b(?:2(?:\.0+)?|two)\s+(?:yearly|annually)\b,0.005479452054794521,1,frequency,2 year adverb,
-\b(?:2(?:\.0+)?|two)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.005479452054794521,1,frequency,2 days per year,
-\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:annually|yearly|year|yr|y)\b,0.005479452054794521,1,frequency,twice per year,
-\bq\s*(?:6(?:\.0+)?|six)\s*(?:monthly|months|month|mo|m)\b,0.005555555555555556,1,frequency,q 6 month,
-\bevery\s+(?:6(?:\.0+)?|six)\s+(?:monthly|months|month|mo|m)\b,0.005555555555555556,1,frequency,every 6 month,
-\bq\s*(?:5(?:\.0+)?|five)\s*(?:monthly|months|month|mo|m)\b,0.006666666666666667,1,frequency,q 5 month,
-\bevery\s+(?:5(?:\.0+)?|five)\s+(?:monthly|months|month|mo|m)\b,0.006666666666666667,1,frequency,every 5 month,
-\b(?:3(?:\.0+)?|three)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.00821917808219178,1,frequency,3 per year,
-\b(?:3(?:\.0+)?|three)\s+(?:yearly|annually)\b,0.00821917808219178,1,frequency,3 year adverb,
-\b(?:3(?:\.0+)?|three)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.00821917808219178,1,frequency,3 days per year,
-\bq\s*(?:4(?:\.0+)?|four)\s*(?:monthly|months|month|mo|m)\b,0.008333333333333333,1,frequency,q 4 month,
-\bevery\s+(?:4(?:\.0+)?|four)\s+(?:monthly|months|month|mo|m)\b,0.008333333333333333,1,frequency,every 4 month,
-\b(?:4(?:\.0+)?|four)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.010958904109589041,1,frequency,4 per year,
-\b(?:4(?:\.0+)?|four)\s+(?:yearly|annually)\b,0.010958904109589041,1,frequency,4 year adverb,
-\b(?:4(?:\.0+)?|four)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.010958904109589041,1,frequency,4 days per year,
-\bq\s*(?:3(?:\.0+)?|three)\s*(?:monthly|months|month|mo|m)\b,0.011111111111111112,1,frequency,q 3 month,
-\bevery\s+(?:3(?:\.0+)?|three)\s+(?:monthly|months|month|mo|m)\b,0.011111111111111112,1,frequency,every 3 month,
-\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.011904761904761904,1,frequency,q 12 week,
-\bevery\s+(?:12(?:\.0+)?|twelve)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.011904761904761904,1,frequency,every 12 week,
-\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.012987012987012988,1,frequency,q 11 week,
-\bevery\s+(?:11(?:\.0+)?|eleven)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.012987012987012988,1,frequency,every 11 week,
-\b(?:5(?:\.0+)?|five)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.0136986301369863,1,frequency,5 per year,
-\b(?:5(?:\.0+)?|five)\s+(?:yearly|annually)\b,0.0136986301369863,1,frequency,5 year adverb,
-\b(?:5(?:\.0+)?|five)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.0136986301369863,1,frequency,5 days per year,
-\bq\s*(?:10(?:\.0+)?|ten)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.014285714285714285,1,frequency,q 10 week,
-\bevery\s+(?:10(?:\.0+)?|ten)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.014285714285714285,1,frequency,every 10 week,
-\bq\s*(?:9(?:\.0+)?|nine)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.015873015873015872,1,frequency,q 9 week,
-\bevery\s+(?:9(?:\.0+)?|nine)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.015873015873015872,1,frequency,every 9 week,
-\b(?:6(?:\.0+)?|six)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.01643835616438356,1,frequency,6 per year,
-\b(?:6(?:\.0+)?|six)\s+(?:yearly|annually)\b,0.01643835616438356,1,frequency,6 year adverb,
-\b(?:6(?:\.0+)?|six)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.01643835616438356,1,frequency,6 days per year,
-\bq\s*(?:2(?:\.0+)?|two)\s*(?:monthly|months|month|mo|m)\b,0.016666666666666666,1,frequency,q 2 month,
-\bevery\s+(?:2(?:\.0+)?|two)\s+(?:monthly|months|month|mo|m)\b,0.016666666666666666,1,frequency,every 2 month,
-\bq\s*(?:8(?:\.0+)?|eight)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.017857142857142856,1,frequency,q 8 week,
-\bevery\s+(?:8(?:\.0+)?|eight)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.017857142857142856,1,frequency,every 8 week,
-\b(?:7(?:\.0+)?|seven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.019178082191780823,1,frequency,7 per year,
-\b(?:7(?:\.0+)?|seven)\s+(?:yearly|annually)\b,0.019178082191780823,1,frequency,7 year adverb,
-\b(?:7(?:\.0+)?|seven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.019178082191780823,1,frequency,7 days per year,
-\bq\s*(?:7(?:\.0+)?|seven)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.02040816326530612,1,frequency,q 7 week,
-\bevery\s+(?:7(?:\.0+)?|seven)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.02040816326530612,1,frequency,every 7 week,
-\b(?:8(?:\.0+)?|eight)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.021917808219178082,1,frequency,8 per year,
-\b(?:8(?:\.0+)?|eight)\s+(?:yearly|annually)\b,0.021917808219178082,1,frequency,8 year adverb,
-\b(?:8(?:\.0+)?|eight)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.021917808219178082,1,frequency,8 days per year,
-\bq\s*(?:6(?:\.0+)?|six)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.023809523809523808,1,frequency,q 6 week,
-\bevery\s+(?:6(?:\.0+)?|six)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.023809523809523808,1,frequency,every 6 week,
-\b(?:9(?:\.0+)?|nine)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.024657534246575342,1,frequency,9 per year,
-\b(?:9(?:\.0+)?|nine)\s+(?:yearly|annually)\b,0.024657534246575342,1,frequency,9 year adverb,
-\b(?:9(?:\.0+)?|nine)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.024657534246575342,1,frequency,9 days per year,
-\b(?:10(?:\.0+)?|ten)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.0273972602739726,1,frequency,10 per year,
-\b(?:10(?:\.0+)?|ten)\s+(?:yearly|annually)\b,0.0273972602739726,1,frequency,10 year adverb,
-\b(?:10(?:\.0+)?|ten)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.0273972602739726,1,frequency,10 days per year,
-\bq\s*(?:5(?:\.0+)?|five)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.02857142857142857,1,frequency,q 5 week,
-\bevery\s+(?:5(?:\.0+)?|five)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.02857142857142857,1,frequency,every 5 week,
-\b(?:11(?:\.0+)?|eleven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.030136986301369864,1,frequency,11 per year,
-\b(?:11(?:\.0+)?|eleven)\s+(?:yearly|annually)\b,0.030136986301369864,1,frequency,11 year adverb,
-\b(?:11(?:\.0+)?|eleven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.030136986301369864,1,frequency,11 days per year,
-\b(?:12(?:\.0+)?|twelve)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.03287671232876712,1,frequency,12 per year,
-\b(?:12(?:\.0+)?|twelve)\s+(?:yearly|annually)\b,0.03287671232876712,1,frequency,12 year adverb,
-\b(?:12(?:\.0+)?|twelve)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.03287671232876712,1,frequency,12 days per year,
-\b(?:1(?:\.0+)?|one)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.03333333333333333,1,frequency,1 per month,
-\b(?:1(?:\.0+)?|one)\s+(?:monthly)\b,0.03333333333333333,1,frequency,1 month adverb,
-\bq\s*(?:1(?:\.0+)?|one)\s*(?:monthly|months|month|mo|m)\b,0.03333333333333333,1,frequency,q 1 month,
-\bevery\s+(?:1(?:\.0+)?|one)\s+(?:monthly|months|month|mo|m)\b,0.03333333333333333,1,frequency,every 1 month,
-\b(?:1(?:\.0+)?|one)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.03333333333333333,1,frequency,1 days per month,
-\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:monthly|months|month|mo|m)\b,0.03333333333333333,1,frequency,once per month,
-\bq\s*(?:4(?:\.0+)?|four)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.03571428571428571,1,frequency,q 4 week,
-\bevery\s+(?:4(?:\.0+)?|four)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.03571428571428571,1,frequency,every 4 week,
-\b(?:1(?:\.0+)?|one)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.041666666666666664,1,frequency,1 days per hour,
-\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:hours|hour|hrs|hr|h)\b,0.041666666666666664,1,frequency,once per hour,
-\bq\s*(?:3(?:\.0+)?|three)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.047619047619047616,1,frequency,q 3 week,
-\bevery\s+(?:3(?:\.0+)?|three)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.047619047619047616,1,frequency,every 3 week,
-\b(?:2(?:\.0+)?|two)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.06666666666666667,1,frequency,2 per month,
-\b(?:2(?:\.0+)?|two)\s+(?:monthly)\b,0.06666666666666667,1,frequency,2 month adverb,
-\b(?:2(?:\.0+)?|two)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.06666666666666667,1,frequency,2 days per month,
-\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:monthly|months|month|mo|m)\b,0.06666666666666667,1,frequency,twice per month,
-\bq\s*(?:2(?:\.0+)?|two)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.07142857142857142,1,frequency,q 2 week,
-\bevery\s+(?:2(?:\.0+)?|two)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.07142857142857142,1,frequency,every 2 week,
-\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.08333333333333333,1,frequency,q 12 day,
-\bevery\s+(?:12(?:\.0+)?|twelve)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.08333333333333333,1,frequency,every 12 day,
-\b(?:2(?:\.0+)?|two)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.08333333333333333,1,frequency,2 days per hour,
-\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:hours|hour|hrs|hr|h)\b,0.08333333333333333,1,frequency,twice per hour,
-\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.09090909090909091,1,frequency,q 11 day,
-\bevery\s+(?:11(?:\.0+)?|eleven)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.09090909090909091,1,frequency,every 11 day,
-\b(?:3(?:\.0+)?|three)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.1,1,frequency,3 per month,
-\b(?:3(?:\.0+)?|three)\s+(?:monthly)\b,0.1,1,frequency,3 month adverb,
-\bq\s*(?:10(?:\.0+)?|ten)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.1,1,frequency,q 10 day,
-\bevery\s+(?:10(?:\.0+)?|ten)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.1,1,frequency,every 10 day,
-\b(?:3(?:\.0+)?|three)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.1,1,frequency,3 days per month,
-\bq\s*(?:9(?:\.0+)?|nine)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.1111111111111111,1,frequency,q 9 day,
-\bevery\s+(?:9(?:\.0+)?|nine)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.1111111111111111,1,frequency,every 9 day,
-\bq\s*(?:8(?:\.0+)?|eight)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.125,1,frequency,q 8 day,
-\bevery\s+(?:8(?:\.0+)?|eight)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.125,1,frequency,every 8 day,
-\b(?:3(?:\.0+)?|three)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.125,1,frequency,3 days per hour,
-\b(?:4(?:\.0+)?|four)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.13333333333333333,1,frequency,4 per month,
-\b(?:4(?:\.0+)?|four)\s+(?:monthly)\b,0.13333333333333333,1,frequency,4 month adverb,
-\b(?:4(?:\.0+)?|four)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.13333333333333333,1,frequency,4 days per month,
-\b(?:1(?:\.0+)?|one)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,0.14285714285714285,1,frequency,1 per week,
-\b(?:1(?:\.0+)?|one)\s+(?:weekly)\b,0.14285714285714285,1,frequency,1 week adverb,
-\bq\s*(?:1(?:\.0+)?|one)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.14285714285714285,1,frequency,q 1 week,
-\bq\s*(?:7(?:\.0+)?|seven)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.14285714285714285,1,frequency,q 7 day,
-\bevery\s+(?:1(?:\.0+)?|one)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.14285714285714285,1,frequency,every 1 week,
-\bevery\s+(?:7(?:\.0+)?|seven)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.14285714285714285,1,frequency,every 7 day,
-\b(?:1(?:\.0+)?|one)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,0.14285714285714285,1,frequency,1 days per week,
-\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:weekly|weeks|week|wks|wk|w)\b,0.14285714285714285,1,frequency,once per week,
-\b(?:5(?:\.0+)?|five)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.16666666666666666,1,frequency,5 per month,
-\b(?:5(?:\.0+)?|five)\s+(?:monthly)\b,0.16666666666666666,1,frequency,5 month adverb,
-\bq\s*(?:6(?:\.0+)?|six)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.16666666666666666,1,frequency,q 6 day,
-\bevery\s+(?:6(?:\.0+)?|six)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.16666666666666666,1,frequency,every 6 day,
-\b(?:4(?:\.0+)?|four)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.16666666666666666,1,frequency,4 days per hour,
-\b(?:5(?:\.0+)?|five)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.16666666666666666,1,frequency,5 days per month,
-\bq\s*(?:5(?:\.0+)?|five)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.2,1,frequency,q 5 day,
-\b(?:6(?:\.0+)?|six)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.2,1,frequency,6 per month,
-\b(?:6(?:\.0+)?|six)\s+(?:monthly)\b,0.2,1,frequency,6 month adverb,
-\bevery\s+(?:5(?:\.0+)?|five)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.2,1,frequency,every 5 day,
-\b(?:6(?:\.0+)?|six)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.2,1,frequency,6 days per month,
-\b(?:5(?:\.0+)?|five)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.20833333333333334,1,frequency,5 days per hour,
-\b(?:7(?:\.0+)?|seven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.23333333333333334,1,frequency,7 per month,
-\b(?:7(?:\.0+)?|seven)\s+(?:monthly)\b,0.23333333333333334,1,frequency,7 month adverb,
-\b(?:7(?:\.0+)?|seven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.23333333333333334,1,frequency,7 days per month,
-\bq\s*(?:4(?:\.0+)?|four)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.25,1,frequency,q 4 day,
-\bevery\s+(?:4(?:\.0+)?|four)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.25,1,frequency,every 4 day,
-\b(?:6(?:\.0+)?|six)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.25,1,frequency,6 days per hour,
-\b(?:8(?:\.0+)?|eight)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.26666666666666666,1,frequency,8 per month,
-\b(?:8(?:\.0+)?|eight)\s+(?:monthly)\b,0.26666666666666666,1,frequency,8 month adverb,
-\b(?:8(?:\.0+)?|eight)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.26666666666666666,1,frequency,8 days per month,
-\b(?:2(?:\.0+)?|two)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,0.2857142857142857,1,frequency,2 per week,
-\b(?:2(?:\.0+)?|two)\s+(?:weekly)\b,0.2857142857142857,1,frequency,2 week adverb,
-\b(?:2(?:\.0+)?|two)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,0.2857142857142857,1,frequency,2 days per week,
-\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:weekly|weeks|week|wks|wk|w)\b,0.2857142857142857,1,frequency,twice per week,
-\b(?:7(?:\.0+)?|seven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.2916666666666667,1,frequency,7 days per hour,
-\b(?:9(?:\.0+)?|nine)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.3,1,frequency,9 per month,
-\b(?:9(?:\.0+)?|nine)\s+(?:monthly)\b,0.3,1,frequency,9 month adverb,
-\b(?:9(?:\.0+)?|nine)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.3,1,frequency,9 days per month,
-\bq\s*(?:3(?:\.0+)?|three)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.3333333333333333,1,frequency,q 3 day,
-\b(?:10(?:\.0+)?|ten)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.3333333333333333,1,frequency,10 per month,
-\b(?:10(?:\.0+)?|ten)\s+(?:monthly)\b,0.3333333333333333,1,frequency,10 month adverb,
-\bevery\s+(?:3(?:\.0+)?|three)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.3333333333333333,1,frequency,every 3 day,
-\b(?:8(?:\.0+)?|eight)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.3333333333333333,1,frequency,8 days per hour,
-\b(?:10(?:\.0+)?|ten)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.3333333333333333,1,frequency,10 days per month,
-\b(?:11(?:\.0+)?|eleven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.36666666666666664,1,frequency,11 per month,
-\b(?:11(?:\.0+)?|eleven)\s+(?:monthly)\b,0.36666666666666664,1,frequency,11 month adverb,
-\b(?:11(?:\.0+)?|eleven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.36666666666666664,1,frequency,11 days per month,
-\b(?:9(?:\.0+)?|nine)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.375,1,frequency,9 days per hour,
-\b(?:12(?:\.0+)?|twelve)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.4,1,frequency,12 per month,
-\b(?:12(?:\.0+)?|twelve)\s+(?:monthly)\b,0.4,1,frequency,12 month adverb,
-\b(?:12(?:\.0+)?|twelve)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.4,1,frequency,12 days per month,
-\b(?:10(?:\.0+)?|ten)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.4166666666666667,1,frequency,10 days per hour,
-\b(?:3(?:\.0+)?|three)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,0.42857142857142855,1,frequency,3 per week,
-\b(?:3(?:\.0+)?|three)\s+(?:weekly)\b,0.42857142857142855,1,frequency,3 week adverb,
-\b(?:3(?:\.0+)?|three)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,0.42857142857142855,1,frequency,3 days per week,
-\b(?:11(?:\.0+)?|eleven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.4583333333333333,1,frequency,11 days per hour,
-\bq\s*(?:2(?:\.0+)?|two)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.5,1,frequency,q 2 day,
-\bevery\s+(?:2(?:\.0+)?|two)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.5,1,frequency,every 2 day,
-\b(?:12(?:\.0+)?|twelve)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.5,1,frequency,12 days per hour,
-\b(?:4(?:\.0+)?|four)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,0.5714285714285714,1,frequency,4 per week,
-\b(?:4(?:\.0+)?|four)\s+(?:weekly)\b,0.5714285714285714,1,frequency,4 week adverb,
-\b(?:4(?:\.0+)?|four)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,0.5714285714285714,1,frequency,4 days per week,
-\b(?:5(?:\.0+)?|five)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,0.7142857142857143,1,frequency,5 per week,
-\b(?:5(?:\.0+)?|five)\s+(?:weekly)\b,0.7142857142857143,1,frequency,5 week adverb,
-\b(?:5(?:\.0+)?|five)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,0.7142857142857143,1,frequency,5 days per week,
-\b(?:6(?:\.0+)?|six)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,0.8571428571428571,1,frequency,6 per week,
-\b(?:6(?:\.0+)?|six)\s+(?:weekly)\b,0.8571428571428571,1,frequency,6 week adverb,
-\b(?:6(?:\.0+)?|six)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,0.8571428571428571,1,frequency,6 days per week,
-\b(?:1(?:\.0+)?|one)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,1,1,frequency,1 per day,
-\b(?:1(?:\.0+)?|one)\s+(?:daily)\b,1.0,1,frequency,1 day adverb,
-\bq\s*(?:1(?:\.0+)?|one)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,1.0,1,frequency,q 1 day,
-\b(?:7(?:\.0+)?|seven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,1.0,1,frequency,7 per week,
-\b(?:7(?:\.0+)?|seven)\s+(?:weekly)\b,1.0,1,frequency,7 week adverb,
-\bevery\s+(?:1(?:\.0+)?|one)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,1.0,1,frequency,every 1 day,
-\b(?:7(?:\.0+)?|seven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,1.0,1,frequency,7 days per week,
-\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,1.0,1,frequency,once per day,
-\b(?:8(?:\.0+)?|eight)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,1.1428571428571428,1,frequency,8 per week,
-\b(?:8(?:\.0+)?|eight)\s+(?:weekly)\b,1.1428571428571428,1,frequency,8 week adverb,
-\b(?:8(?:\.0+)?|eight)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,1.1428571428571428,1,frequency,8 days per week,
-\b(?:9(?:\.0+)?|nine)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,1.2857142857142858,1,frequency,9 per week,
-\b(?:9(?:\.0+)?|nine)\s+(?:weekly)\b,1.2857142857142858,1,frequency,9 week adverb,
-\b(?:9(?:\.0+)?|nine)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,1.2857142857142858,1,frequency,9 days per week,
-\b(?:10(?:\.0+)?|ten)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,1.4285714285714286,1,frequency,10 per week,
-\b(?:10(?:\.0+)?|ten)\s+(?:weekly)\b,1.4285714285714286,1,frequency,10 week adverb,
-\b(?:10(?:\.0+)?|ten)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,1.4285714285714286,1,frequency,10 days per week,
-\b(?:11(?:\.0+)?|eleven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,1.5714285714285714,1,frequency,11 per week,
-\b(?:11(?:\.0+)?|eleven)\s+(?:weekly)\b,1.5714285714285714,1,frequency,11 week adverb,
-\b(?:11(?:\.0+)?|eleven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,1.5714285714285714,1,frequency,11 days per week,
-\b(?:12(?:\.0+)?|twelve)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,1.7142857142857142,1,frequency,12 per week,
-\b(?:12(?:\.0+)?|twelve)\s+(?:weekly)\b,1.7142857142857142,1,frequency,12 week adverb,
-\b(?:12(?:\.0+)?|twelve)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,1.7142857142857142,1,frequency,12 days per week,
-\b(?:2(?:\.0+)?|two)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,2,1,frequency,2 per day,
-\b(?:2(?:\.0+)?|two)\s+(?:daily)\b,2.0,1,frequency,2 day adverb,
-\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:hours|hour|hrs|hr|h)\b,2.0,1,frequency,q 12 hour,
-\bevery\s+(?:12(?:\.0+)?|twelve)\s+(?:hours|hour|hrs|hr|h)\b,2.0,1,frequency,every 12 hour,
-\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,2.0,1,frequency,twice per day,
-\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:hours|hour|hrs|hr|h)\b,2.1818181818181817,1,frequency,q 11 hour,
-\bevery\s+(?:11(?:\.0+)?|eleven)\s+(?:hours|hour|hrs|hr|h)\b,2.1818181818181817,1,frequency,every 11 hour,
-\bq\s*(?:10(?:\.0+)?|ten)\s*(?:hours|hour|hrs|hr|h)\b,2.4,1,frequency,q 10 hour,
-\bevery\s+(?:10(?:\.0+)?|ten)\s+(?:hours|hour|hrs|hr|h)\b,2.4,1,frequency,every 10 hour,
-\bq\s*(?:9(?:\.0+)?|nine)\s*(?:hours|hour|hrs|hr|h)\b,2.6666666666666665,1,frequency,q 9 hour,
-\bevery\s+(?:9(?:\.0+)?|nine)\s+(?:hours|hour|hrs|hr|h)\b,2.6666666666666665,1,frequency,every 9 hour,
-\b(?:3(?:\.0+)?|three)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,3,1,frequency,3 per day,
-\b(?:3(?:\.0+)?|three)\s+(?:daily)\b,3.0,1,frequency,3 day adverb,
-\bq\s*(?:8(?:\.0+)?|eight)\s*(?:hours|hour|hrs|hr|h)\b,3.0,1,frequency,q 8 hour,
-\bevery\s+(?:8(?:\.0+)?|eight)\s+(?:hours|hour|hrs|hr|h)\b,3.0,1,frequency,every 8 hour,
-\bq\s*(?:7(?:\.0+)?|seven)\s*(?:hours|hour|hrs|hr|h)\b,3.4285714285714284,1,frequency,q 7 hour,
-\bevery\s+(?:7(?:\.0+)?|seven)\s+(?:hours|hour|hrs|hr|h)\b,3.4285714285714284,1,frequency,every 7 hour,
-\b(?:4(?:\.0+)?|four)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,4,1,frequency,4 per day,
-\b(?:4(?:\.0+)?|four)\s+(?:daily)\b,4.0,1,frequency,4 day adverb,
-\bq\s*(?:6(?:\.0+)?|six)\s*(?:hours|hour|hrs|hr|h)\b,4.0,1,frequency,q 6 hour,
-\bevery\s+(?:6(?:\.0+)?|six)\s+(?:hours|hour|hrs|hr|h)\b,4.0,1,frequency,every 6 hour,
-\bq\s*(?:5(?:\.0+)?|five)\s*(?:hours|hour|hrs|hr|h)\b,4.8,1,frequency,q 5 hour,
-\bevery\s+(?:5(?:\.0+)?|five)\s+(?:hours|hour|hrs|hr|h)\b,4.8,1,frequency,every 5 hour,
-\b(?:5(?:\.0+)?|five)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,5,1,frequency,5 per day,
-\b(?:5(?:\.0+)?|five)\s+(?:daily)\b,5.0,1,frequency,5 day adverb,
-\bq\s*(?:4(?:\.0+)?|four)\s*(?:hours|hour|hrs|hr|h)\b,6.0,1,frequency,q 4 hour,
-\b(?:6(?:\.0+)?|six)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,6,1,frequency,6 per day,
-\b(?:6(?:\.0+)?|six)\s+(?:daily)\b,6.0,1,frequency,6 day adverb,
-\bevery\s+(?:4(?:\.0+)?|four)\s+(?:hours|hour|hrs|hr|h)\b,6.0,1,frequency,every 4 hour,
-\b(?:7(?:\.0+)?|seven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,7,1,frequency,7 per day,
-\b(?:7(?:\.0+)?|seven)\s+(?:daily)\b,7.0,1,frequency,7 day adverb,
-\bq\s*(?:3(?:\.0+)?|three)\s*(?:hours|hour|hrs|hr|h)\b,8.0,1,frequency,q 3 hour,
-\b(?:8(?:\.0+)?|eight)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,8,1,frequency,8 per day,
-\b(?:8(?:\.0+)?|eight)\s+(?:daily)\b,8.0,1,frequency,8 day adverb,
-\bevery\s+(?:3(?:\.0+)?|three)\s+(?:hours|hour|hrs|hr|h)\b,8.0,1,frequency,every 3 hour,
-\b(?:9(?:\.0+)?|nine)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,9,1,frequency,9 per day,
-\b(?:9(?:\.0+)?|nine)\s+(?:daily)\b,9.0,1,frequency,9 day adverb,
-\b(?:10(?:\.0+)?|ten)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,10,1,frequency,10 per day,
-\b(?:10(?:\.0+)?|ten)\s+(?:daily)\b,10.0,1,frequency,10 day adverb,
-\b(?:11(?:\.0+)?|eleven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,11,1,frequency,11 per day,
-\b(?:11(?:\.0+)?|eleven)\s+(?:daily)\b,11.0,1,frequency,11 day adverb,
-\bq\s*(?:2(?:\.0+)?|two)\s*(?:hours|hour|hrs|hr|h)\b,12.0,1,frequency,q 2 hour,
-\b(?:12(?:\.0+)?|twelve)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,12,1,frequency,12 per day,
-\b(?:12(?:\.0+)?|twelve)\s+(?:daily)\b,12.0,1,frequency,12 day adverb,
-\bevery\s+(?:2(?:\.0+)?|two)\s+(?:hours|hour|hrs|hr|h)\b,12.0,1,frequency,every 2 hour,
-\b(?:1(?:\.0+)?|one)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,24,1,frequency,1 per hour,
-\b(?:1(?:\.0+)?|one)\s+(?:hourly)\b,24,1,frequency,1 hour adverb,
-\bq\s*(?:1(?:\.0+)?|one)\s*(?:hours|hour|hrs|hr|h)\b,24.0,1,frequency,q 1 hour,
-\bevery\s+(?:1(?:\.0+)?|one)\s+(?:hours|hour|hrs|hr|h)\b,24.0,1,frequency,every 1 hour,
-\b(?:2(?:\.0+)?|two)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,48,1,frequency,2 per hour,
-\b(?:2(?:\.0+)?|two)\s+(?:hourly)\b,48,1,frequency,2 hour adverb,
-\b(?:3(?:\.0+)?|three)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,72,1,frequency,3 per hour,
-\b(?:3(?:\.0+)?|three)\s+(?:hourly)\b,72,1,frequency,3 hour adverb,
-\b(?:4(?:\.0+)?|four)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,96,1,frequency,4 per hour,
-\b(?:4(?:\.0+)?|four)\s+(?:hourly)\b,96,1,frequency,4 hour adverb,
-\b(?:5(?:\.0+)?|five)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,120,1,frequency,5 per hour,
-\b(?:5(?:\.0+)?|five)\s+(?:hourly)\b,120,1,frequency,5 hour adverb,
-\b(?:6(?:\.0+)?|six)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,144,1,frequency,6 per hour,
-\b(?:6(?:\.0+)?|six)\s+(?:hourly)\b,144,1,frequency,6 hour adverb,
-\b(?:7(?:\.0+)?|seven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,168,1,frequency,7 per hour,
-\b(?:7(?:\.0+)?|seven)\s+(?:hourly)\b,168,1,frequency,7 hour adverb,
-\b(?:8(?:\.0+)?|eight)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,192,1,frequency,8 per hour,
-\b(?:8(?:\.0+)?|eight)\s+(?:hourly)\b,192,1,frequency,8 hour adverb,
-\b(?:9(?:\.0+)?|nine)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,216,1,frequency,9 per hour,
-\b(?:9(?:\.0+)?|nine)\s+(?:hourly)\b,216,1,frequency,9 hour adverb,
-\b(?:10(?:\.0+)?|ten)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,240,1,frequency,10 per hour,
-\b(?:10(?:\.0+)?|ten)\s+(?:hourly)\b,240,1,frequency,10 hour adverb,
-\b(?:11(?:\.0+)?|eleven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,264,1,frequency,11 per hour,
-\b(?:11(?:\.0+)?|eleven)\s+(?:hourly)\b,264,1,frequency,11 hour adverb,
-\b(?:12(?:\.0+)?|twelve)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,288,1,frequency,12 per hour,
-\b(?:12(?:\.0+)?|twelve)\s+(?:hourly)\b,288,1,frequency,12 hour adverb,
-\bevery other month\b,0.016666667,1,frequency,,
-\bqmonth\b,0.033333333,1,frequency,,
-\bevery other week\b,0.071428571,1,frequency,,
-\bq\s*(?:w|wk|week)\b,0.142857143,1,frequency,,
-\bevery 4th day\b,0.25,1,frequency,,
-\b(?:biw|biweekly)\b,0.285714286,1,frequency,biw,
-\btiw\b,0.428571429,1,frequency,,
-\b(?:every other day|qod|every other night)\b,0.5,1,frequency,,
-\b(?:once\s*(?:daily|a\s*day|per\s*day|every\s*day|each\s*day))\b,1,1,frequency,once daily,
-\b(?:every\s*24\s*(?:hours?|hrs?))\b,1,1,frequency,,
-\bq\s*/?\s*(?:day|d)\b,1,1,frequency,,
-\bqam\b,1,1,frequency,,
-\bq am\b,1,1,frequency,,
-\bq pm\b,1,1,frequency,,
-\bonce\s*(a|per)?\s*day\b,1,1,frequency,once daily,
-\b1\s*(x|times?)?\s*(/|per|a)?\s*day\b,1,1,frequency,once daily,
-\b1\s*/\s*day\b,1,1,frequency,once daily,
-\b1\s*per\s*day\b,1,1,frequency,once daily,
-\bevery am\b,1,1,frequency,,
-\bevery pm\b,1,1,frequency,,
-\bevery evening\b,1,1,frequency,,
-\bat hour of sleep\b,1,1,frequency,,
-\bq\s*a\.?\s*m\.?\b,1,1,frequency,1x/day,
-\bq\s*p\.?\s*m\.?\b,1,1,frequency,1x/day,
-\bq\s*h\.?\s*s\.?\b,1,1,frequency,1x/day,
-\bq-day\b,1,1,frequency,,
-\bq24 hours\b,1,1,frequency,,
-\bb[\.\s]*i?[\.\s]*d\b,2,1,frequency,bid,
-\btwice\s*(?:daily|a day|per day)\b,2,1,frequency,,
-\b2x\s*/?\s*d\b,2,1,frequency,2x/day,
-\btwice same day\b,2,1,frequency,,
-\btid\b,3,1,frequency,tid,
-\b3x\s*/?\s*d\b,3,1,frequency,3x/day,
-\bqid\b,4,1,frequency,qid,
-\b4x\s*/?\s*d\b,4,1,frequency,4x/day,
-\bas\s+needed\b,prn,1,prn,,
-\bas\s+required\b,prn,1,prn,,
-\bwhen\s+needed\b,prn,1,prn,,
-\bif\s+needed\b,prn,1,prn,,
-prn\b,prn,1,prn,,
-\brarely\b,prn,1,prn,,
-\bintermittent\b,prn,1,prn,,
-\bq\s*y\s*r\b,0.0027,2,frequency,1/365,
-\bqyr\b,0.0027,2,frequency,1/365,
-(?:/|\bper\b|\ba\b|x)\s*(?:y|yr|year)(?![a-z]),0.002739726,2,frequency,,
-\bq\s*m\s*o\b,0.0333,2,frequency,30-Jan,
-\bqmo\b,0.0333,2,frequency,30-Jan,
-(?:/|\bper\b|\ba\b|x)\s*(?:m|mo|month)(?![a-z]),0.033333333,2,frequency,,
-\bmonthly\b,0.033333333,2,frequency,,
-\bq\s*w\s*k\b,0.142857,2,frequency,7-Jan,
-\bqwk\b,0.142857,2,frequency,7-Jan,
-\bqw\b,0.142857,2,frequency,7-Jan,
-\bweekly\b,0.142857143,2,frequency,weekly,
-\bq\s*o\s*d\b,0.5,2,frequency,0.5x/day,
-\bqod\b,0.5,2,frequency,0.5x/day,
-\bevery\s*other\s*day\b,0.5,2,frequency,0.5x/day,
-\balt\s*days\b,0.5,2,frequency,0.5x/day,
-\b(?:q\.?\s*d\.?|od|q24h|q24)\b,1,2,frequency,,
-(?:/|\bper\b|\ba\b|x)\s*(?:d|day|daily)(?![a-z]),1,2,frequency,,`
-(?:/|\bper\b|\ba\b|x)\s*(?:24h|24hr|24hrs|24hour|24hours)(?![a-z]),1,2,frequency,,
-\bdaily\b,1,2,frequency,,
-\bqpm\b,1,2,frequency,,
-\bhs\b,1,2,frequency,,
-\bnightly\b,1,2,frequency,,
-\bevery night\b,1,2,frequency,,
-\bevery hour of sleep\b,1,2,frequency,,
-\bqhs\b,1,2,frequency,,
-\bq\.?\s*d\.?\b,1,2,frequency,once daily,
-\bq\s*d\b,1,2,frequency,once daily,
-\bq\s*\.?\s*d\b,1,2,frequency,once daily,
-\bq\s*day\b,1,2,frequency,once daily,
-\bqdaily\b,1,2,frequency,once daily,
-\bod\b,1,2,frequency,once daily,
-\bsid\b,1,2,frequency,once daily,
-\bevery\s*day\b,1,2,frequency,once daily,
-\bq\s*24\s*h\b,1,2,frequency,1x/day,
-\bq24h\b,1,2,frequency,1x/day,
-\b24 hours\b,1,2,frequency,,
-\b1\s*x\b,1x,2,frequency,,
-\bonce\b,1x,2,frequency,once (no unit),
-\bb\s*i\s*d\b,2,2,frequency,2x/day,
-\bbidly\b,2,2,frequency,2x/day,
-\bbd\b,2,2,frequency,2x/day,
-\bb\s*d\b,2,2,frequency,2x/day,
-\bbid\s*ac\b,2,2,frequency,2x/day,
-\bbid\s*pc\b,2,2,frequency,2x/day,
-\b2\s*x\s*daily\b,2,2,frequency,2x/day,
-\bqh\b,24,2,frequency,,
-\btwice\b,2x,2,frequency,twice (no unit),
-\bt\.?\s*i\.?\s*d\.?\b,3,2,frequency,3x/day,
-\bt\s*i\s*d\b,3,2,frequency,3x/day,
-\btid\s*ac\b,3,2,frequency,3x/day,
-\btid\s*pc\b,3,2,frequency,3x/day,
-\b3\s*x\s*daily\b,3,2,frequency,3x/day,
-\bq\.?\s*i\.?\s*d\.?\b,4,2,frequency,4x/day,
-\bq\s*i\s*d\b,4,2,frequency,4x/day,
-\b4\s*x\s*daily\b,4,2,frequency,4x/day,
-\bprn\b,prn,2,prn,prn,
-\bas\s*req\b,prn,2,prn,prn,
-\boccasionally\b,prn,2,prn,prn,
+raw,replacement,priority,category,notes
+\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:annually|yearly|year|yr|y)\b,0.000228311,1,frequency,q 12 year
+\bevery\s+(?:12(?:\.0+)?|twelve)\s+(?:annually|yearly|year|yr|y)\b,0.000228311,1,frequency,every 12 year
+\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:annually|yearly|year|yr|y)\b,0.000249066,1,frequency,q 11 year
+\bevery\s+(?:11(?:\.0+)?|eleven)\s+(?:annually|yearly|year|yr|y)\b,0.000249066,1,frequency,every 11 year
+\bq\s*(?:10(?:\.0+)?|ten)\s*(?:annually|yearly|year|yr|y)\b,0.000273973,1,frequency,q 10 year
+\bevery\s+(?:10(?:\.0+)?|ten)\s+(?:annually|yearly|year|yr|y)\b,0.000273973,1,frequency,every 10 year
+\bq\s*(?:9(?:\.0+)?|nine)\s*(?:annually|yearly|year|yr|y)\b,0.000304414,1,frequency,q 9 year
+\bevery\s+(?:9(?:\.0+)?|nine)\s+(?:annually|yearly|year|yr|y)\b,0.000304414,1,frequency,every 9 year
+\bq\s*(?:8(?:\.0+)?|eight)\s*(?:annually|yearly|year|yr|y)\b,0.000342466,1,frequency,q 8 year
+\bevery\s+(?:8(?:\.0+)?|eight)\s+(?:annually|yearly|year|yr|y)\b,0.000342466,1,frequency,every 8 year
+\bq\s*(?:7(?:\.0+)?|seven)\s*(?:annually|yearly|year|yr|y)\b,0.000391389,1,frequency,q 7 year
+\bevery\s+(?:7(?:\.0+)?|seven)\s+(?:annually|yearly|year|yr|y)\b,0.000391389,1,frequency,every 7 year
+\bq\s*(?:6(?:\.0+)?|six)\s*(?:annually|yearly|year|yr|y)\b,0.000456621,1,frequency,q 6 year
+\bevery\s+(?:6(?:\.0+)?|six)\s+(?:annually|yearly|year|yr|y)\b,0.000456621,1,frequency,every 6 year
+\bq\s*(?:5(?:\.0+)?|five)\s*(?:annually|yearly|year|yr|y)\b,0.000547945,1,frequency,q 5 year
+\bevery\s+(?:5(?:\.0+)?|five)\s+(?:annually|yearly|year|yr|y)\b,0.000547945,1,frequency,every 5 year
+\bq\s*(?:4(?:\.0+)?|four)\s*(?:annually|yearly|year|yr|y)\b,0.000684932,1,frequency,q 4 year
+\bevery\s+(?:4(?:\.0+)?|four)\s+(?:annually|yearly|year|yr|y)\b,0.000684932,1,frequency,every 4 year
+\bq\s*(?:3(?:\.0+)?|three)\s*(?:annually|yearly|year|yr|y)\b,0.000913242,1,frequency,q 3 year
+\bevery\s+(?:3(?:\.0+)?|three)\s+(?:annually|yearly|year|yr|y)\b,0.000913242,1,frequency,every 3 year
+\bq\s*(?:2(?:\.0+)?|two)\s*(?:annually|yearly|year|yr|y)\b,0.001369863,1,frequency,q 2 year
+\bevery\s+(?:2(?:\.0+)?|two)\s+(?:annually|yearly|year|yr|y)\b,0.001369863,1,frequency,every 2 year
+\b(?:1(?:\.0+)?|one)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.002739726,1,frequency,1 per year
+\b(?:1(?:\.0+)?|one)\s+(?:yearly|annually)\b,0.002739726,1,frequency,1 year adverb
+\bq\s*(?:1(?:\.0+)?|one)\s*(?:annually|yearly|year|yr|y)\b,0.002739726,1,frequency,q 1 year
+\bevery\s+(?:1(?:\.0+)?|one)\s+(?:annually|yearly|year|yr|y)\b,0.002739726,1,frequency,every 1 year
+\b(?:1(?:\.0+)?|one)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.002739726,1,frequency,1 days per year
+\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:annually|yearly|year|yr|y)\b,0.002739726,1,frequency,once per year
+\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:monthly|months|month|mo|m)\b,0.002777778,1,frequency,q 12 month
+\bevery\s+(?:12(?:\.0+)?|twelve)\s+(?:monthly|months|month|mo|m)\b,0.002777778,1,frequency,every 12 month
+\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:monthly|months|month|mo|m)\b,0.003030303,1,frequency,q 11 month
+\bevery\s+(?:11(?:\.0+)?|eleven)\s+(?:monthly|months|month|mo|m)\b,0.003030303,1,frequency,every 11 month
+\bq\s*(?:10(?:\.0+)?|ten)\s*(?:monthly|months|month|mo|m)\b,0.003333333,1,frequency,q 10 month
+\bevery\s+(?:10(?:\.0+)?|ten)\s+(?:monthly|months|month|mo|m)\b,0.003333333,1,frequency,every 10 month
+\bq\s*(?:9(?:\.0+)?|nine)\s*(?:monthly|months|month|mo|m)\b,0.003703704,1,frequency,q 9 month
+\bevery\s+(?:9(?:\.0+)?|nine)\s+(?:monthly|months|month|mo|m)\b,0.003703704,1,frequency,every 9 month
+\bq\s*(?:8(?:\.0+)?|eight)\s*(?:monthly|months|month|mo|m)\b,0.004166667,1,frequency,q 8 month
+\bevery\s+(?:8(?:\.0+)?|eight)\s+(?:monthly|months|month|mo|m)\b,0.004166667,1,frequency,every 8 month
+\bq\s*(?:7(?:\.0+)?|seven)\s*(?:monthly|months|month|mo|m)\b,0.004761905,1,frequency,q 7 month
+\bevery\s+(?:7(?:\.0+)?|seven)\s+(?:monthly|months|month|mo|m)\b,0.004761905,1,frequency,every 7 month
+\b(?:2(?:\.0+)?|two)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.005479452,1,frequency,2 per year
+\b(?:2(?:\.0+)?|two)\s+(?:yearly|annually)\b,0.005479452,1,frequency,2 year adverb
+\b(?:2(?:\.0+)?|two)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.005479452,1,frequency,2 days per year
+\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:annually|yearly|year|yr|y)\b,0.005479452,1,frequency,twice per year
+\bq\s*(?:6(?:\.0+)?|six)\s*(?:monthly|months|month|mo|m)\b,0.005555556,1,frequency,q 6 month
+\bevery\s+(?:6(?:\.0+)?|six)\s+(?:monthly|months|month|mo|m)\b,0.005555556,1,frequency,every 6 month
+\bq\s*(?:5(?:\.0+)?|five)\s*(?:monthly|months|month|mo|m)\b,0.006666667,1,frequency,q 5 month
+\bevery\s+(?:5(?:\.0+)?|five)\s+(?:monthly|months|month|mo|m)\b,0.006666667,1,frequency,every 5 month
+\b(?:3(?:\.0+)?|three)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.008219178,1,frequency,3 per year
+\b(?:3(?:\.0+)?|three)\s+(?:yearly|annually)\b,0.008219178,1,frequency,3 year adverb
+\b(?:3(?:\.0+)?|three)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.008219178,1,frequency,3 days per year
+\bq\s*(?:4(?:\.0+)?|four)\s*(?:monthly|months|month|mo|m)\b,0.008333333,1,frequency,q 4 month
+\bevery\s+(?:4(?:\.0+)?|four)\s+(?:monthly|months|month|mo|m)\b,0.008333333,1,frequency,every 4 month
+\b(?:4(?:\.0+)?|four)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.010958904,1,frequency,4 per year
+\b(?:4(?:\.0+)?|four)\s+(?:yearly|annually)\b,0.010958904,1,frequency,4 year adverb
+\b(?:4(?:\.0+)?|four)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.010958904,1,frequency,4 days per year
+\bq\s*(?:3(?:\.0+)?|three)\s*(?:monthly|months|month|mo|m)\b,0.011111111,1,frequency,q 3 month
+\bevery\s+(?:3(?:\.0+)?|three)\s+(?:monthly|months|month|mo|m)\b,0.011111111,1,frequency,every 3 month
+\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.011904762,1,frequency,q 12 week
+\bevery\s+(?:12(?:\.0+)?|twelve)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.011904762,1,frequency,every 12 week
+\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.012987013,1,frequency,q 11 week
+\bevery\s+(?:11(?:\.0+)?|eleven)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.012987013,1,frequency,every 11 week
+\b(?:5(?:\.0+)?|five)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.01369863,1,frequency,5 per year
+\b(?:5(?:\.0+)?|five)\s+(?:yearly|annually)\b,0.01369863,1,frequency,5 year adverb
+\b(?:5(?:\.0+)?|five)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.01369863,1,frequency,5 days per year
+\bq\s*(?:10(?:\.0+)?|ten)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.014285714,1,frequency,q 10 week
+\bevery\s+(?:10(?:\.0+)?|ten)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.014285714,1,frequency,every 10 week
+\bq\s*(?:9(?:\.0+)?|nine)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.015873016,1,frequency,q 9 week
+\bevery\s+(?:9(?:\.0+)?|nine)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.015873016,1,frequency,every 9 week
+\b(?:6(?:\.0+)?|six)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.016438356,1,frequency,6 per year
+\b(?:6(?:\.0+)?|six)\s+(?:yearly|annually)\b,0.016438356,1,frequency,6 year adverb
+\b(?:6(?:\.0+)?|six)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.016438356,1,frequency,6 days per year
+\bq\s*(?:2(?:\.0+)?|two)\s*(?:monthly|months|month|mo|m)\b,0.016666667,1,frequency,q 2 month
+\bevery\s+(?:2(?:\.0+)?|two)\s+(?:monthly|months|month|mo|m)\b,0.016666667,1,frequency,every 2 month
+\bq\s*(?:8(?:\.0+)?|eight)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.017857143,1,frequency,q 8 week
+\bevery\s+(?:8(?:\.0+)?|eight)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.017857143,1,frequency,every 8 week
+\b(?:7(?:\.0+)?|seven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.019178082,1,frequency,7 per year
+\b(?:7(?:\.0+)?|seven)\s+(?:yearly|annually)\b,0.019178082,1,frequency,7 year adverb
+\b(?:7(?:\.0+)?|seven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.019178082,1,frequency,7 days per year
+\bq\s*(?:7(?:\.0+)?|seven)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.020408163,1,frequency,q 7 week
+\bevery\s+(?:7(?:\.0+)?|seven)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.020408163,1,frequency,every 7 week
+\b(?:8(?:\.0+)?|eight)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.021917808,1,frequency,8 per year
+\b(?:8(?:\.0+)?|eight)\s+(?:yearly|annually)\b,0.021917808,1,frequency,8 year adverb
+\b(?:8(?:\.0+)?|eight)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.021917808,1,frequency,8 days per year
+\bq\s*(?:6(?:\.0+)?|six)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.023809524,1,frequency,q 6 week
+\bevery\s+(?:6(?:\.0+)?|six)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.023809524,1,frequency,every 6 week
+\b(?:9(?:\.0+)?|nine)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.024657534,1,frequency,9 per year
+\b(?:9(?:\.0+)?|nine)\s+(?:yearly|annually)\b,0.024657534,1,frequency,9 year adverb
+\b(?:9(?:\.0+)?|nine)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.024657534,1,frequency,9 days per year
+\b(?:10(?:\.0+)?|ten)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.02739726,1,frequency,10 per year
+\b(?:10(?:\.0+)?|ten)\s+(?:yearly|annually)\b,0.02739726,1,frequency,10 year adverb
+\b(?:10(?:\.0+)?|ten)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.02739726,1,frequency,10 days per year
+\bq\s*(?:5(?:\.0+)?|five)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.028571429,1,frequency,q 5 week
+\bevery\s+(?:5(?:\.0+)?|five)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.028571429,1,frequency,every 5 week
+\b(?:11(?:\.0+)?|eleven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.030136986,1,frequency,11 per year
+\b(?:11(?:\.0+)?|eleven)\s+(?:yearly|annually)\b,0.030136986,1,frequency,11 year adverb
+\b(?:11(?:\.0+)?|eleven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.030136986,1,frequency,11 days per year
+\b(?:12(?:\.0+)?|twelve)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:annually|yearly|year|yr|y)\b,0.032876712,1,frequency,12 per year
+\b(?:12(?:\.0+)?|twelve)\s+(?:yearly|annually)\b,0.032876712,1,frequency,12 year adverb
+\b(?:12(?:\.0+)?|twelve)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:annually|yearly|year|yr|y)\b,0.032876712,1,frequency,12 days per year
+\b(?:1(?:\.0+)?|one)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.033333333,1,frequency,1 per month
+\b(?:1(?:\.0+)?|one)\s+(?:monthly)\b,0.033333333,1,frequency,1 month adverb
+\bq\s*(?:1(?:\.0+)?|one)\s*(?:monthly|months|month|mo|m)\b,0.033333333,1,frequency,q 1 month
+\bevery\s+(?:1(?:\.0+)?|one)\s+(?:monthly|months|month|mo|m)\b,0.033333333,1,frequency,every 1 month
+\b(?:1(?:\.0+)?|one)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.033333333,1,frequency,1 days per month
+\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:monthly|months|month|mo|m)\b,0.033333333,1,frequency,once per month
+\bq\s*(?:4(?:\.0+)?|four)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.035714286,1,frequency,q 4 week
+\bevery\s+(?:4(?:\.0+)?|four)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.035714286,1,frequency,every 4 week
+\b(?:1(?:\.0+)?|one)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.041666667,1,frequency,1 days per hour
+\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:hours|hour|hrs|hr|h)\b,0.041666667,1,frequency,once per hour
+\bq\s*(?:3(?:\.0+)?|three)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.047619048,1,frequency,q 3 week
+\bevery\s+(?:3(?:\.0+)?|three)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.047619048,1,frequency,every 3 week
+\b(?:2(?:\.0+)?|two)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.066666667,1,frequency,2 per month
+\b(?:2(?:\.0+)?|two)\s+(?:monthly)\b,0.066666667,1,frequency,2 month adverb
+\b(?:2(?:\.0+)?|two)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.066666667,1,frequency,2 days per month
+\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:monthly|months|month|mo|m)\b,0.066666667,1,frequency,twice per month
+\bq\s*(?:2(?:\.0+)?|two)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.071428571,1,frequency,q 2 week
+\bevery\s+(?:2(?:\.0+)?|two)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.071428571,1,frequency,every 2 week
+\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.083333333,1,frequency,q 12 day
+\bevery\s+(?:12(?:\.0+)?|twelve)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.083333333,1,frequency,every 12 day
+\b(?:2(?:\.0+)?|two)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.083333333,1,frequency,2 days per hour
+\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:hours|hour|hrs|hr|h)\b,0.083333333,1,frequency,twice per hour
+\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.090909091,1,frequency,q 11 day
+\bevery\s+(?:11(?:\.0+)?|eleven)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.090909091,1,frequency,every 11 day
+\b(?:3(?:\.0+)?|three)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.1,1,frequency,3 per month
+\b(?:3(?:\.0+)?|three)\s+(?:monthly)\b,0.1,1,frequency,3 month adverb
+\bq\s*(?:10(?:\.0+)?|ten)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.1,1,frequency,q 10 day
+\bevery\s+(?:10(?:\.0+)?|ten)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.1,1,frequency,every 10 day
+\b(?:3(?:\.0+)?|three)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.1,1,frequency,3 days per month
+\bq\s*(?:9(?:\.0+)?|nine)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.111111111,1,frequency,q 9 day
+\bevery\s+(?:9(?:\.0+)?|nine)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.111111111,1,frequency,every 9 day
+\bq\s*(?:8(?:\.0+)?|eight)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.125,1,frequency,q 8 day
+\bevery\s+(?:8(?:\.0+)?|eight)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.125,1,frequency,every 8 day
+\b(?:3(?:\.0+)?|three)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.125,1,frequency,3 days per hour
+\b(?:4(?:\.0+)?|four)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.133333333,1,frequency,4 per month
+\b(?:4(?:\.0+)?|four)\s+(?:monthly)\b,0.133333333,1,frequency,4 month adverb
+\b(?:4(?:\.0+)?|four)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.133333333,1,frequency,4 days per month
+\b(?:1(?:\.0+)?|one)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,0.142857143,1,frequency,1 per week
+\b(?:1(?:\.0+)?|one)\s+(?:weekly)\b,0.142857143,1,frequency,1 week adverb
+\bq\s*(?:1(?:\.0+)?|one)\s*(?:weekly|weeks|week|wks|wk|w)\b,0.142857143,1,frequency,q 1 week
+\bq\s*(?:7(?:\.0+)?|seven)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.142857143,1,frequency,q 7 day
+\bevery\s+(?:1(?:\.0+)?|one)\s+(?:weekly|weeks|week|wks|wk|w)\b,0.142857143,1,frequency,every 1 week
+\bevery\s+(?:7(?:\.0+)?|seven)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.142857143,1,frequency,every 7 day
+\b(?:1(?:\.0+)?|one)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,0.142857143,1,frequency,1 days per week
+\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:weekly|weeks|week|wks|wk|w)\b,0.142857143,1,frequency,once per week
+\b(?:5(?:\.0+)?|five)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.166666667,1,frequency,5 per month
+\b(?:5(?:\.0+)?|five)\s+(?:monthly)\b,0.166666667,1,frequency,5 month adverb
+\bq\s*(?:6(?:\.0+)?|six)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.166666667,1,frequency,q 6 day
+\bevery\s+(?:6(?:\.0+)?|six)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.166666667,1,frequency,every 6 day
+\b(?:4(?:\.0+)?|four)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.166666667,1,frequency,4 days per hour
+\b(?:5(?:\.0+)?|five)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.166666667,1,frequency,5 days per month
+\bq\s*(?:5(?:\.0+)?|five)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.2,1,frequency,q 5 day
+\b(?:6(?:\.0+)?|six)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.2,1,frequency,6 per month
+\b(?:6(?:\.0+)?|six)\s+(?:monthly)\b,0.2,1,frequency,6 month adverb
+\bevery\s+(?:5(?:\.0+)?|five)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.2,1,frequency,every 5 day
+\b(?:6(?:\.0+)?|six)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.2,1,frequency,6 days per month
+\b(?:5(?:\.0+)?|five)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.208333333,1,frequency,5 days per hour
+\b(?:7(?:\.0+)?|seven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.233333333,1,frequency,7 per month
+\b(?:7(?:\.0+)?|seven)\s+(?:monthly)\b,0.233333333,1,frequency,7 month adverb
+\b(?:7(?:\.0+)?|seven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.233333333,1,frequency,7 days per month
+\bq\s*(?:4(?:\.0+)?|four)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.25,1,frequency,q 4 day
+\bevery\s+(?:4(?:\.0+)?|four)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.25,1,frequency,every 4 day
+\b(?:6(?:\.0+)?|six)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.25,1,frequency,6 days per hour
+\b(?:8(?:\.0+)?|eight)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.266666667,1,frequency,8 per month
+\b(?:8(?:\.0+)?|eight)\s+(?:monthly)\b,0.266666667,1,frequency,8 month adverb
+\b(?:8(?:\.0+)?|eight)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.266666667,1,frequency,8 days per month
+\b(?:2(?:\.0+)?|two)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,0.285714286,1,frequency,2 per week
+\b(?:2(?:\.0+)?|two)\s+(?:weekly)\b,0.285714286,1,frequency,2 week adverb
+\b(?:2(?:\.0+)?|two)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,0.285714286,1,frequency,2 days per week
+\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:weekly|weeks|week|wks|wk|w)\b,0.285714286,1,frequency,twice per week
+\b(?:7(?:\.0+)?|seven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.291666667,1,frequency,7 days per hour
+\b(?:9(?:\.0+)?|nine)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.3,1,frequency,9 per month
+\b(?:9(?:\.0+)?|nine)\s+(?:monthly)\b,0.3,1,frequency,9 month adverb
+\b(?:9(?:\.0+)?|nine)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.3,1,frequency,9 days per month
+\bq\s*(?:3(?:\.0+)?|three)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.333333333,1,frequency,q 3 day
+\b(?:10(?:\.0+)?|ten)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.333333333,1,frequency,10 per month
+\b(?:10(?:\.0+)?|ten)\s+(?:monthly)\b,0.333333333,1,frequency,10 month adverb
+\bevery\s+(?:3(?:\.0+)?|three)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.333333333,1,frequency,every 3 day
+\b(?:8(?:\.0+)?|eight)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.333333333,1,frequency,8 days per hour
+\b(?:10(?:\.0+)?|ten)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.333333333,1,frequency,10 days per month
+\b(?:11(?:\.0+)?|eleven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.366666667,1,frequency,11 per month
+\b(?:11(?:\.0+)?|eleven)\s+(?:monthly)\b,0.366666667,1,frequency,11 month adverb
+\b(?:11(?:\.0+)?|eleven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.366666667,1,frequency,11 days per month
+\b(?:9(?:\.0+)?|nine)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.375,1,frequency,9 days per hour
+\b(?:12(?:\.0+)?|twelve)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:monthly|months|month|mo|m)\b,0.4,1,frequency,12 per month
+\b(?:12(?:\.0+)?|twelve)\s+(?:monthly)\b,0.4,1,frequency,12 month adverb
+\b(?:12(?:\.0+)?|twelve)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:monthly|months|month|mo|m)\b,0.4,1,frequency,12 days per month
+\b(?:10(?:\.0+)?|ten)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.416666667,1,frequency,10 days per hour
+\b(?:3(?:\.0+)?|three)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,0.428571429,1,frequency,3 per week
+\b(?:3(?:\.0+)?|three)\s+(?:weekly)\b,0.428571429,1,frequency,3 week adverb
+\b(?:3(?:\.0+)?|three)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,0.428571429,1,frequency,3 days per week
+\b(?:11(?:\.0+)?|eleven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.458333333,1,frequency,11 days per hour
+\bq\s*(?:2(?:\.0+)?|two)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.5,1,frequency,q 2 day
+\bevery\s+(?:2(?:\.0+)?|two)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,0.5,1,frequency,every 2 day
+\b(?:12(?:\.0+)?|twelve)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:hours|hour|hrs|hr|h)\b,0.5,1,frequency,12 days per hour
+\b(?:4(?:\.0+)?|four)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,0.571428571,1,frequency,4 per week
+\b(?:4(?:\.0+)?|four)\s+(?:weekly)\b,0.571428571,1,frequency,4 week adverb
+\b(?:4(?:\.0+)?|four)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,0.571428571,1,frequency,4 days per week
+\b(?:5(?:\.0+)?|five)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,0.714285714,1,frequency,5 per week
+\b(?:5(?:\.0+)?|five)\s+(?:weekly)\b,0.714285714,1,frequency,5 week adverb
+\b(?:5(?:\.0+)?|five)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,0.714285714,1,frequency,5 days per week
+\b(?:6(?:\.0+)?|six)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,0.857142857,1,frequency,6 per week
+\b(?:6(?:\.0+)?|six)\s+(?:weekly)\b,0.857142857,1,frequency,6 week adverb
+\b(?:6(?:\.0+)?|six)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,0.857142857,1,frequency,6 days per week
+\b(?:1(?:\.0+)?|one)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,1,1,frequency,1 per day
+\b(?:1(?:\.0+)?|one)\s+(?:daily)\b,1,1,frequency,1 day adverb
+\bq\s*(?:1(?:\.0+)?|one)\s*(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,1,1,frequency,q 1 day
+\b(?:7(?:\.0+)?|seven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,1,1,frequency,7 per week
+\b(?:7(?:\.0+)?|seven)\s+(?:weekly)\b,1,1,frequency,7 week adverb
+\bevery\s+(?:1(?:\.0+)?|one)\s+(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,1,1,frequency,every 1 day
+\b(?:7(?:\.0+)?|seven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,1,1,frequency,7 days per week
+\bonce\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,1,1,frequency,once per day
+\b(?:8(?:\.0+)?|eight)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,1.142857143,1,frequency,8 per week
+\b(?:8(?:\.0+)?|eight)\s+(?:weekly)\b,1.142857143,1,frequency,8 week adverb
+\b(?:8(?:\.0+)?|eight)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,1.142857143,1,frequency,8 days per week
+\b(?:9(?:\.0+)?|nine)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,1.285714286,1,frequency,9 per week
+\b(?:9(?:\.0+)?|nine)\s+(?:weekly)\b,1.285714286,1,frequency,9 week adverb
+\b(?:9(?:\.0+)?|nine)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,1.285714286,1,frequency,9 days per week
+\b(?:10(?:\.0+)?|ten)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,1.428571429,1,frequency,10 per week
+\b(?:10(?:\.0+)?|ten)\s+(?:weekly)\b,1.428571429,1,frequency,10 week adverb
+\b(?:10(?:\.0+)?|ten)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,1.428571429,1,frequency,10 days per week
+\b(?:11(?:\.0+)?|eleven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,1.571428571,1,frequency,11 per week
+\b(?:11(?:\.0+)?|eleven)\s+(?:weekly)\b,1.571428571,1,frequency,11 week adverb
+\b(?:11(?:\.0+)?|eleven)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,1.571428571,1,frequency,11 days per week
+\b(?:12(?:\.0+)?|twelve)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:weekly|weeks|week|wks|wk|w)\b,1.714285714,1,frequency,12 per week
+\b(?:12(?:\.0+)?|twelve)\s+(?:weekly)\b,1.714285714,1,frequency,12 week adverb
+\b(?:12(?:\.0+)?|twelve)\s*(?:d|day|days)\s*(?:/\s*|per\s*|a\s*|each\s*|in\s*)?\s*(?:weekly|weeks|week|wks|wk|w)\b,1.714285714,1,frequency,12 days per week
+\b(?:2(?:\.0+)?|two)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,2,1,frequency,2 per day
+\b(?:2(?:\.0+)?|two)\s+(?:daily)\b,2,1,frequency,2 day adverb
+\bq\s*(?:12(?:\.0+)?|twelve)\s*(?:hours|hour|hrs|hr|h)\b,2,1,frequency,q 12 hour
+\bevery\s+(?:12(?:\.0+)?|twelve)\s+(?:hours|hour|hrs|hr|h)\b,2,1,frequency,every 12 hour
+\btwice\s*(?:/\s*|same\s*each\s*|every\s*|per\s*|a\s*)?(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,2,1,frequency,twice per day
+\bq\s*(?:11(?:\.0+)?|eleven)\s*(?:hours|hour|hrs|hr|h)\b,2.181818182,1,frequency,q 11 hour
+\bevery\s+(?:11(?:\.0+)?|eleven)\s+(?:hours|hour|hrs|hr|h)\b,2.181818182,1,frequency,every 11 hour
+\bq\s*(?:10(?:\.0+)?|ten)\s*(?:hours|hour|hrs|hr|h)\b,2.4,1,frequency,q 10 hour
+\bevery\s+(?:10(?:\.0+)?|ten)\s+(?:hours|hour|hrs|hr|h)\b,2.4,1,frequency,every 10 hour
+\bq\s*(?:9(?:\.0+)?|nine)\s*(?:hours|hour|hrs|hr|h)\b,2.666666667,1,frequency,q 9 hour
+\bevery\s+(?:9(?:\.0+)?|nine)\s+(?:hours|hour|hrs|hr|h)\b,2.666666667,1,frequency,every 9 hour
+\b(?:3(?:\.0+)?|three)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,3,1,frequency,3 per day
+\b(?:3(?:\.0+)?|three)\s+(?:daily)\b,3,1,frequency,3 day adverb
+\bq\s*(?:8(?:\.0+)?|eight)\s*(?:hours|hour|hrs|hr|h)\b,3,1,frequency,q 8 hour
+\bevery\s+(?:8(?:\.0+)?|eight)\s+(?:hours|hour|hrs|hr|h)\b,3,1,frequency,every 8 hour
+\bq\s*(?:7(?:\.0+)?|seven)\s*(?:hours|hour|hrs|hr|h)\b,3.428571429,1,frequency,q 7 hour
+\bevery\s+(?:7(?:\.0+)?|seven)\s+(?:hours|hour|hrs|hr|h)\b,3.428571429,1,frequency,every 7 hour
+\b(?:4(?:\.0+)?|four)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,4,1,frequency,4 per day
+\b(?:4(?:\.0+)?|four)\s+(?:daily)\b,4,1,frequency,4 day adverb
+\bq\s*(?:6(?:\.0+)?|six)\s*(?:hours|hour|hrs|hr|h)\b,4,1,frequency,q 6 hour
+\bevery\s+(?:6(?:\.0+)?|six)\s+(?:hours|hour|hrs|hr|h)\b,4,1,frequency,every 6 hour
+\bq\s*(?:5(?:\.0+)?|five)\s*(?:hours|hour|hrs|hr|h)\b,4.8,1,frequency,q 5 hour
+\bevery\s+(?:5(?:\.0+)?|five)\s+(?:hours|hour|hrs|hr|h)\b,4.8,1,frequency,every 5 hour
+\b(?:5(?:\.0+)?|five)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,5,1,frequency,5 per day
+\b(?:5(?:\.0+)?|five)\s+(?:daily)\b,5,1,frequency,5 day adverb
+\bq\s*(?:4(?:\.0+)?|four)\s*(?:hours|hour|hrs|hr|h)\b,6,1,frequency,q 4 hour
+\b(?:6(?:\.0+)?|six)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,6,1,frequency,6 per day
+\b(?:6(?:\.0+)?|six)\s+(?:daily)\b,6,1,frequency,6 day adverb
+\bevery\s+(?:4(?:\.0+)?|four)\s+(?:hours|hour|hrs|hr|h)\b,6,1,frequency,every 4 hour
+\b(?:7(?:\.0+)?|seven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,7,1,frequency,7 per day
+\b(?:7(?:\.0+)?|seven)\s+(?:daily)\b,7,1,frequency,7 day adverb
+\bq\s*(?:3(?:\.0+)?|three)\s*(?:hours|hour|hrs|hr|h)\b,8,1,frequency,q 3 hour
+\b(?:8(?:\.0+)?|eight)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,8,1,frequency,8 per day
+\b(?:8(?:\.0+)?|eight)\s+(?:daily)\b,8,1,frequency,8 day adverb
+\bevery\s+(?:3(?:\.0+)?|three)\s+(?:hours|hour|hrs|hr|h)\b,8,1,frequency,every 3 hour
+\b(?:9(?:\.0+)?|nine)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,9,1,frequency,9 per day
+\b(?:9(?:\.0+)?|nine)\s+(?:daily)\b,9,1,frequency,9 day adverb
+\b(?:10(?:\.0+)?|ten)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,10,1,frequency,10 per day
+\b(?:10(?:\.0+)?|ten)\s+(?:daily)\b,10,1,frequency,10 day adverb
+\b(?:11(?:\.0+)?|eleven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,11,1,frequency,11 per day
+\b(?:11(?:\.0+)?|eleven)\s+(?:daily)\b,11,1,frequency,11 day adverb
+\bq\s*(?:2(?:\.0+)?|two)\s*(?:hours|hour|hrs|hr|h)\b,12,1,frequency,q 2 hour
+\b(?:12(?:\.0+)?|twelve)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)\b,12,1,frequency,12 per day
+\b(?:12(?:\.0+)?|twelve)\s+(?:daily)\b,12,1,frequency,12 day adverb
+\bevery\s+(?:2(?:\.0+)?|two)\s+(?:hours|hour|hrs|hr|h)\b,12,1,frequency,every 2 hour
+\b(?:1(?:\.0+)?|one)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,24,1,frequency,1 per hour
+\b(?:1(?:\.0+)?|one)\s+(?:hourly)\b,24,1,frequency,1 hour adverb
+\bq\s*(?:1(?:\.0+)?|one)\s*(?:hours|hour|hrs|hr|h)\b,24,1,frequency,q 1 hour
+\bevery\s+(?:1(?:\.0+)?|one)\s+(?:hours|hour|hrs|hr|h)\b,24,1,frequency,every 1 hour
+\b(?:2(?:\.0+)?|two)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,48,1,frequency,2 per hour
+\b(?:2(?:\.0+)?|two)\s+(?:hourly)\b,48,1,frequency,2 hour adverb
+\b(?:3(?:\.0+)?|three)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,72,1,frequency,3 per hour
+\b(?:3(?:\.0+)?|three)\s+(?:hourly)\b,72,1,frequency,3 hour adverb
+\b(?:4(?:\.0+)?|four)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,96,1,frequency,4 per hour
+\b(?:4(?:\.0+)?|four)\s+(?:hourly)\b,96,1,frequency,4 hour adverb
+\b(?:5(?:\.0+)?|five)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,120,1,frequency,5 per hour
+\b(?:5(?:\.0+)?|five)\s+(?:hourly)\b,120,1,frequency,5 hour adverb
+\b(?:6(?:\.0+)?|six)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,144,1,frequency,6 per hour
+\b(?:6(?:\.0+)?|six)\s+(?:hourly)\b,144,1,frequency,6 hour adverb
+\b(?:7(?:\.0+)?|seven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,168,1,frequency,7 per hour
+\b(?:7(?:\.0+)?|seven)\s+(?:hourly)\b,168,1,frequency,7 hour adverb
+\b(?:8(?:\.0+)?|eight)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,192,1,frequency,8 per hour
+\b(?:8(?:\.0+)?|eight)\s+(?:hourly)\b,192,1,frequency,8 hour adverb
+\b(?:9(?:\.0+)?|nine)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,216,1,frequency,9 per hour
+\b(?:9(?:\.0+)?|nine)\s+(?:hourly)\b,216,1,frequency,9 hour adverb
+\b(?:10(?:\.0+)?|ten)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,240,1,frequency,10 per hour
+\b(?:10(?:\.0+)?|ten)\s+(?:hourly)\b,240,1,frequency,10 hour adverb
+\b(?:11(?:\.0+)?|eleven)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,264,1,frequency,11 per hour
+\b(?:11(?:\.0+)?|eleven)\s+(?:hourly)\b,264,1,frequency,11 hour adverb
+\b(?:12(?:\.0+)?|twelve)\s*(?:(?:(?:x|times?)\s*)?(?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)|(?:(?:x|times?)\s*))(?:hours|hour|hrs|hr|h)\b,288,1,frequency,12 per hour
+\b(?:12(?:\.0+)?|twelve)\s+(?:hourly)\b,288,1,frequency,12 hour adverb
+\bevery other month\b,0.016666667,1,frequency,
+\bqmonth\b,0.033333333,1,frequency,
+\bevery other week\b,0.071428571,1,frequency,
+\bq\s*(?:w|wk|week)\b,0.142857143,1,frequency,
+\bevery 4th day\b,0.25,1,frequency,
+\b(?:biw|biweekly|bi-weekly)\b,0.285714286,1,frequency,biw
+\btiw\b,0.428571429,1,frequency,
+\b(?:every other day|qod|every other night)\b,0.5,1,frequency,
+\b(?:once\s*(?:daily|a\s*day|per\s*day|every\s*day|each\s*day))\b,1,1,frequency,once daily
+\b(?:every\s*24\s*(?:hours?|hrs?))\b,1,1,frequency,
+\bq\s*/?\s*(?:day|d)\b,1,1,frequency,
+\bqam\b,1,1,frequency,
+\bq am\b,1,1,frequency,
+\bq pm\b,1,1,frequency,
+\bonce\s*(a|per)?\s*day\b,1,1,frequency,once daily
+\b1\s*(x|times?)?\s*(/|per|a)?\s*day\b,1,1,frequency,once daily
+\b1\s*/\s*day\b,1,1,frequency,once daily
+\b1\s*per\s*day\b,1,1,frequency,once daily
+\bevery am\b,1,1,frequency,
+\bevery pm\b,1,1,frequency,
+\bevery evening\b,1,1,frequency,
+\bat hour of sleep\b,1,1,frequency,
+\bq\s*a\.?\s*m\.?\b,1,1,frequency,1x/day
+\bq\s*p\.?\s*m\.?\b,1,1,frequency,1x/day
+\bq\s*h\.?\s*s\.?\b,1,1,frequency,1x/day
+\bq-day\b,1,1,frequency,
+\bq24 hours\b,1,1,frequency,
+\bb[\.\s]*i?[\.\s]*d\b,2,1,frequency,bid
+\btwice\s*(?:daily|a day|per day)\b,2,1,frequency,
+\b2x\s*/?\s*d\b,2,1,frequency,2x/day
+\btwice same day\b,2,1,frequency,
+\btid\b,3,1,frequency,tid
+\b3x\s*/?\s*d\b,3,1,frequency,3x/day
+\bqid\b,4,1,frequency,qid
+\b4x\s*/?\s*d\b,4,1,frequency,4x/day
+\bas\s+needed\b,prn,1,prn,
+\bas\s+required\b,prn,1,prn,
+\bwhen\s+needed\b,prn,1,prn,
+\bif\s+needed\b,prn,1,prn,
+prn\b,prn,1,prn,
+\brarely\b,prn,1,prn,
+\bintermittent\b,prn,1,prn,
+\bq\s*y\s*r\b,0.0027,2,frequency,1/365
+\bqyr\b,0.0027,2,frequency,1/365
+(?:/|\bper\b|\ba\b|x)\s*(?:y|yr|year)(?![a-z]),0.002739726,2,frequency,
+\bq\s*m\s*o\b,0.0333,2,frequency,30-Jan
+\bqmo\b,0.0333,2,frequency,30-Jan
+(?:/|\bper\b|\ba\b|x)\s*(?:m|mo|month)(?![a-z]),0.033333333,2,frequency,
+\bmonthly\b,0.033333333,2,frequency,
+\bq\s*w\s*k\b,0.142857,2,frequency,7-Jan
+\bqwk\b,0.142857,2,frequency,7-Jan
+\bqw\b,0.142857,2,frequency,7-Jan
+\bweekly\b,0.142857143,2,frequency,weekly
+\bq\s*o\s*d\b,0.5,2,frequency,0.5x/day
+\bqod\b,0.5,2,frequency,0.5x/day
+\bevery\s*other\s*day\b,0.5,2,frequency,0.5x/day
+\balt\s*days\b,0.5,2,frequency,0.5x/day
+\b(?:q\.?\s*d\.?|od|q24h|q24)\b,1,2,frequency,
+(?:/|\bper\b|\ba\b|x)\s*(?:d|day|daily)(?![a-z]),1,2,frequency,
+(?:/|\bper\b|\ba\b|x)\s*(?:24h|24hr|24hrs|24hour|24hours)(?![a-z]),1,2,frequency,
+\bdaily\b,1,2,frequency,
+\bqpm\b,1,2,frequency,
+\bhs\b,1,2,frequency,
+\bnightly\b,1,2,frequency,
+\bevery night\b,1,2,frequency,
+\bevery hour of sleep\b,1,2,frequency,
+\bqhs\b,1,2,frequency,
+\bq\.?\s*d\.?\b,1,2,frequency,once daily
+\bq\s*d\b,1,2,frequency,once daily
+\bq\s*\.?\s*d\b,1,2,frequency,once daily
+\bq\s*day\b,1,2,frequency,once daily
+\bqdaily\b,1,2,frequency,once daily
+\bod\b,1,2,frequency,once daily
+\bsid\b,1,2,frequency,once daily
+\bevery\s*day\b,1,2,frequency,once daily
+\bq\s*24\s*h\b,1,2,frequency,1x/day
+\bq24h\b,1,2,frequency,1x/day
+\b24 hours\b,1,2,frequency,
+\b1\s*x\b,1x,2,frequency,
+\bonce\b,1x,2,frequency,once (no unit)
+\bb\s*i\s*d\b,2,2,frequency,2x/day
+\bbidly\b,2,2,frequency,2x/day
+\bbd\b,2,2,frequency,2x/day
+\bb\s*d\b,2,2,frequency,2x/day
+\bbid\s*ac\b,2,2,frequency,2x/day
+\bbid\s*pc\b,2,2,frequency,2x/day
+\b2\s*x\s*daily\b,2,2,frequency,2x/day
+\bqh\b,24,2,frequency,
+\btwice\b,2x,2,frequency,twice (no unit)
+\bt\.?\s*i\.?\s*d\.?\b,3,2,frequency,3x/day
+\bt\s*i\s*d\b,3,2,frequency,3x/day
+\btid\s*ac\b,3,2,frequency,3x/day
+\btid\s*pc\b,3,2,frequency,3x/day
+\b3\s*x\s*daily\b,3,2,frequency,3x/day
+\bq\.?\s*i\.?\s*d\.?\b,4,2,frequency,4x/day
+\bq\s*i\s*d\b,4,2,frequency,4x/day
+\b4\s*x\s*daily\b,4,2,frequency,4x/day
+\bprn\b,prn,2,prn,prn
+\bas\s*req\b,prn,2,prn,prn
+\boccasionally\b,prn,2,prn,prn

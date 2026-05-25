@@ -1,8 +1,6 @@
 # preprocessing/unit_normalization.py
-
 import re
 import pandas as pd
-
 
 
 # ---------------------------------------------------
@@ -63,3 +61,10 @@ def normalize_units(
     ).strip()
 
     return text
+
+
+
+def apply_normalize_units(df, unit_pattern) :
+    df['clean_text'] = df["clean_text"].apply(lambda x : normalize_units(x, unit_pattern))
+    return df 
+
