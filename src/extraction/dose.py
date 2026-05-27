@@ -8,61 +8,70 @@ import pandas as pd
 NUM = r'(?:\d+(?:\.\d+)?|\.\d+)'
 SEP = r'\s*[/\-]\s*'
 
-
 # =========================================================
 # BUILD UNIT PATTERN
 # FROM COMPILED RULES
 # =========================================================
-def _build_unit_regex(
-    compiled_rules
-):
+def _build_unit_regex(compiled_rules):
     """
-    Build unit regex pattern from
-    compiled rule objects.
+    Build unit regex pattern from compiled rule objects.
+    Matches 'pattern_raw' aliases and maps them to 'replacement'.
+    Returns (pattern_str, list_of_(compiled_pattern, replacement)_tuples).
     """
 
-    unit_values = [
-
-        rule["replacement"]
-
+    # -----------------------------------------------------
+    # BUILD LOOKUP LIST
+    # ORDER PRESERVED — longer/more specific rules
+    # should come first in compiled_rules
+    # -----------------------------------------------------
+    rule_map = [
+        (rule["pattern"], rule["replacement"])
         for rule in compiled_rules
-
-        if pd.notna(
-            rule["replacement"]
-        )
+        if pd.notna(rule.get("replacement"))
+        and rule.get("pattern") is not None
     ]
 
     # -----------------------------------------------------
-    # DEDUPE PRESERVE ORDER
-    # -----------------------------------------------------
-    unit_values = list(
-        dict.fromkeys(unit_values)
-    )
-    print(unit_values)
-    janetl
-
-    # -----------------------------------------------------
+    # BUILD COMBINED PATTERN FOR DETECTION
     # LONGEST FIRST
-    # IMPORTANT
     # -----------------------------------------------------
-    unit_values = sorted(
-        unit_values,
+    pattern_raws = sorted(
+        [
+            rule["pattern_raw"]
+            for rule in compiled_rules
+            if rule.get("pattern_raw")
+        ],
         key=len,
         reverse=True
     )
 
-    # -----------------------------------------------------
-    # BUILD PATTERN
-    # -----------------------------------------------------
     unit_pattern = (
         r'(?:'
-        + '|'.join(
-            map(re.escape, unit_values)
-        )
+        + '|'.join(pattern_raws)
         + r')'
     )
 
-    return unit_pattern
+    return unit_pattern, rule_map
+
+
+# =========================================================
+# NORMALIZE UNIT
+# =========================================================
+def _normalize_unit(
+    raw_unit: str,
+    rule_map: list
+) -> str:
+    """
+    Resolve a matched raw unit string to its canonical
+    replacement by testing each compiled rule in order.
+    Falls back to the raw string if no match found.
+    """
+
+    for pattern, replacement in rule_map:
+        if pattern.fullmatch(raw_unit.strip()):
+            return replacement
+
+    return raw_unit.lower()
 
 
 
@@ -71,7 +80,8 @@ def _build_unit_regex(
 # =========================================================
 def extract_dose(
     text: str,
-    unit_pattern: str
+    unit_pattern: str,
+    rule_map: dict
 ):
 
     if text is None or (
@@ -80,6 +90,7 @@ def extract_dose(
     ):
 
         return pd.Series([
+            None,
             None,
             text
         ])
@@ -112,10 +123,7 @@ def extract_dose(
 
         full_match = match.group(0)
 
-        parts = re.split(
-            SEP,
-            full_match
-        )
+        parts = re.split(SEP, full_match)
 
         for part in parts:
 
@@ -128,11 +136,11 @@ def extract_dose(
                 continue
 
             parsed_doses.append({
-
                 "dose": m.group(1),
-
-                "unit": m.group(2),
-
+                "unit": _normalize_unit(
+                    m.group(2),
+                    rule_map
+                ),
                 "raw": part
             })
 
@@ -145,11 +153,8 @@ def extract_dose(
 
     # =====================================================
     # 1B. RATIOS WITH SHARED UNIT
-    # ex:
-    # 25/100 mg
-    # 5/7.5 mg
+    # ex: 25/100 mg, 5/7.5 mg
     # =====================================================
-
     ratio_pattern = rf'''
     (
         {NUM}
@@ -170,30 +175,25 @@ def extract_dose(
     for match in matches:
 
         ratio = match.group(1)
-
-        unit = match.group(2)
-
-        parts = re.split(
-            SEP,
-            ratio
+        unit = _normalize_unit(
+            match.group(2),
+            rule_map
         )
+
+        parts = re.split(SEP, ratio)
 
         # ---------------------------------------------
         # NORMALIZE NUMBERS
         # ---------------------------------------------
-
         normalized_doses = []
 
         for p in parts:
 
             try:
-
                 p = float(p)
-
                 if p.is_integer():
                     p = int(p)
-
-            except:
+            except Exception:
                 pass
 
             normalized_doses.append(p)
@@ -201,19 +201,11 @@ def extract_dose(
         # ---------------------------------------------
         # STORE SHARED-UNIT RATIO
         # ---------------------------------------------
-
         parsed_doses.append({
-
             "dose": normalized_doses,
-
             "unit": [unit],
-
-            "raw": f"{ratio} {unit}"
+            "raw": f"{ratio} {match.group(2)}"
         })
-
-    # -------------------------------------------------
-    # REMOVE MATCHED SPANS
-    # -------------------------------------------------
 
     text = re.sub(
         ratio_pattern,
@@ -244,19 +236,13 @@ def extract_dose(
 
     for ratio in matches:
 
-        parts = re.split(
-            SEP,
-            ratio
-        )
+        parts = re.split(SEP, ratio)
 
         for p in parts:
 
             parsed_doses.append({
-
                 "dose": p,
-
                 "unit": None,
-
                 "raw": p
             })
 
@@ -288,11 +274,11 @@ def extract_dose(
     for match in matches:
 
         parsed_doses.append({
-
             "dose": match.group(1),
-
-            "unit": match.group(2),
-
+            "unit": _normalize_unit(
+                match.group(2),
+                rule_map
+            ),
             "raw": match.group(0)
         })
 
@@ -325,8 +311,6 @@ def extract_dose(
             flags=re.VERBOSE
         )
 
-
-
     # =====================================================
     # FLATTEN OUTPUTS
     # =====================================================
@@ -350,16 +334,15 @@ def apply_dose_extraction(
     compiled_rules
 ):
     """
-    Apply dose extraction using
-    compiled unit rules.
+    Apply dose extraction using compiled unit rules.
     """
 
     df = df.copy()
 
     # -----------------------------------------------------
-    # BUILD UNIT PATTERN
+    # BUILD UNIT PATTERN + LOOKUP MAP
     # -----------------------------------------------------
-    unit_pattern = _build_unit_regex(
+    unit_pattern, rule_map = _build_unit_regex(
         compiled_rules
     )
 
@@ -373,7 +356,8 @@ def apply_dose_extraction(
     ]] = df["clean_text"].apply(
         lambda x: extract_dose(
             x,
-            unit_pattern
+            unit_pattern,
+            rule_map
         )
     )
 

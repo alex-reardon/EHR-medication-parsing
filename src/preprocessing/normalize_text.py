@@ -40,6 +40,12 @@ def _normalize_whitespace(text : str) -> str:
     return text
 
 
+def _remove_and(text:str) -> str:
+    text = re.sub(r'\band\b','', text)
+    return text
+
+
+
 
 def normalize_text(text: str) -> str:
     if pd.isna(text):
@@ -65,6 +71,9 @@ def normalize_text(text: str) -> str:
 
     # whitespace
     text = _normalize_whitespace(text)
+
+    #and
+    text = _remove_and(text)
 
     return text
 

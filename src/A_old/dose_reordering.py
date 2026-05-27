@@ -131,3 +131,38 @@ def reorder_combo_doses(
     return df
 
     
+def apply_reorder_combo_doses(
+    df: pd.DataFrame,
+    dose_col: str = "dose",
+    rxmatch_col: str = "rxmatch",
+    med_string_col: str = "med_string",
+    out_col: str = "dose_reordered",
+    threshold: int = 80
+) -> pd.DataFrame:
+    """
+    Apply reorder_combo_doses to a DataFrame and print metrics.
+    """
+
+    df = reorder_combo_doses(
+        df,
+        dose_col=dose_col,
+        rxmatch_col=rxmatch_col,
+        med_string_col=med_string_col,
+        out_col=out_col,
+        threshold=threshold
+    )
+
+    # -----------------------------------------------------
+    # METRICS
+    # -----------------------------------------------------
+    changed = (
+        df[out_col].apply(str) != df[dose_col].apply(str)
+    ).sum()
+
+    print(
+        f"Dose Reorder Complete: "
+        f"{changed}/{len(df)} rows reordered "
+        f"({changed/len(df):.2%})"
+    )
+
+    return df

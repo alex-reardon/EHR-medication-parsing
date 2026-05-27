@@ -9,7 +9,7 @@ from preprocessing.normalize_units import apply_normalize_units
 # MAIN TEXT PREPROCESSING
 # -------------------------------
 
-def normalize_medication(df, raw_med_col, compiled_patterns) -> str:
+def normalize_medication_text(df, raw_med_col, compiled_patterns) -> str:
     
     df = df.copy()
     # -----------------------------------------
@@ -41,6 +41,5 @@ def normalize_medication(df, raw_med_col, compiled_patterns) -> str:
             df=df,
             quantity_patterns=quantity_patterns
         )
-
 
     return df

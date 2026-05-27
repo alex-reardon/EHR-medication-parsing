@@ -7,6 +7,7 @@ from extraction.dose import apply_dose_extraction
 from extraction.frequency import apply_frequency_extraction
 from extraction.parenthetical import apply_parenthetical_extraction
 
+
 # ---------------------------------------------------
 # MAIN EXTRACTION PIPELINE
 # ---------------------------------------------------

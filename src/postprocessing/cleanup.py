@@ -19,6 +19,24 @@ def _clean_extraction_artifacts(text: str) -> str:
         text
     )
 
+
+    # -----------------------------------------
+    # REMOVE UNKNOWN/UNK
+    # -----------------------------------------
+
+    text = re.sub(
+        'unknown',
+        '',
+        text
+    )
+
+
+    text = re.sub(
+        'unk',
+        '',
+        text
+    )
+
     # -----------------------------------------
     # REMOVE DANGLING "/("
     # -----------------------------------------
@@ -33,10 +51,11 @@ def _clean_extraction_artifacts(text: str) -> str:
     # NORMALIZE SEPARATORS
     # -----------------------------------------
     text = re.sub(
-        r"\s*(?:\+|/|-|:|and)\s*",
-        "/",
+        r"\s*(?:\+|-|:|,)\s*",
+        " ",
         text
     )
+
 
     # -----------------------------------------
     # REMOVE DOUBLE / REPEATED HYPHENS

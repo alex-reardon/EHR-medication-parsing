@@ -1,10 +1,11 @@
 # postprocessing/postprocessing_pipeline.py
 from postprocessing.residual_numbers import apply_residual_number_extraction
 from postprocessing.cleanup import apply_cleanup
+from postprocessing.normalize_combo_order import apply_normalize_dose_order
 
 
 
-def clean_extracted_text(
+def clean_medication_text(
     df,
     text_col="clean_text"
 ):
@@ -47,5 +48,8 @@ def clean_extracted_text(
         text_col = text_col
     )
 
+    df = apply_normalize_dose_order(df, col = "clean_text", dose_col = "dose", out_dose_col = "dose_reordered")
+
+    
 
     return df

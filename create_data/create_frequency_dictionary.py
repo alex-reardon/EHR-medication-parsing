@@ -310,7 +310,12 @@ rows.append({
 df = pd.DataFrame(rows)
 df['category'] = "frequency"
 df_norm = pd.read_csv("/Users/emudr/PPMI_LEDD/data/frequency_dictionary_manual.csv")
+df_norm = df_norm.loc[:, ~df_norm.columns.str.startswith("Unnamed")]
+
 df_combined = pd.concat([df_norm, df], ignore_index=True)
 df_combined = df_combined.drop_duplicates(subset=["raw", "replacement"])
 df_combined = df_combined.sort_values(by=["priority", "replacement"])
+
+
+
 df_combined.to_csv("/Users/emudr/PPMI_LEDD/data/frequency_dictionary.csv", index=False)

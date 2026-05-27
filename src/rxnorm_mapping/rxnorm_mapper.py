@@ -18,8 +18,6 @@ def _build_rxnorm_lookup_table(rrf_path: str):
     rx = rx[(rx["lat"] == "ENG") & (rx["suppress"] == "N")]
     rx = rx[rx["tty"].isin(["IN", "MIN", "BN"])].copy()
 
-    rx["str_lower"] = rx["str"].str.lower().str.strip()
-
     lookup = rx.drop_duplicates("str_lower").set_index("str_lower")[["rxcui", "tty"]]
 
     # MIN lookup by RXCUI
@@ -108,11 +106,10 @@ def apply_rxnorm_mapping(
     input_col : str, 
     rxnorm_rrf_path: str,
     suffix : str,
-    match_threshold: int = 85,
-    base_text_col: str = None
+    match_threshold: int = 85
 ) -> pd.DataFrame:
 
-    rxnorm_candidate_terms, rxnorm_lookup_table, min_concept_lookup = _build_rxnorm_lookup_table(rxnorm_rrf_path) # FIXME remove rxnorm_lookup table
+    rxnorm_candidate_terms, rxnorm_lookup_table, min_concept_lookup = _build_rxnorm_lookup_table(rxnorm_rrf_path) 
 
     # -------------------------------
     # convert lists → tuples for hashing
@@ -152,6 +149,10 @@ def apply_rxnorm_mapping(
 
         return rxnorm_row["rxnorm_match" + suffix]
 
+    #TEMP
+    
+    print(min_concept_lookup.get('1372713'))
+    #TEMP
     df["MIN" + suffix] = df.apply(resolve_min_concept, axis=1)
 
 
