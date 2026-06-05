@@ -5,7 +5,7 @@ from preprocessing.pipeline import normalize_medication_text
 from extraction.pipeline import extract_medication_entities
 from postprocessing.pipeline import clean_medication_text
 from rxnorm_mapping.pipeline import rxnorm_map #change to canonicalization
-
+from daily_dose_calculation.pipeline import calculate_total_daily_dose
 
 
 import os
@@ -21,7 +21,7 @@ col_str_name = "LEDTRT_"
 subid = 'PATNO'
 raw_med_col = col_str_name + 'simulated'
 df = pd.read_csv("../data/PPMI/simulated/LEDD_Concomitant_Medication_Log_simulated.csv")
-df = df[[raw_med_col]]
+df = df[[raw_med_col, 'LEDD']]
 
 
 # # ## ADNI
@@ -56,13 +56,20 @@ df = df[[raw_med_col]]
 
 
 ####
-rrf_path="/Users/emudr/Desktop/EHRdata/rrf/RXNCONSO.RRF"
+rxnorm_rrf_path="/Users/emudr/Desktop/EHRdata/RxNorm_full_05042026/rrf/RXNCONSO.RRF"
+rxnrel_rrf_path = "/Users/emudr/Desktop/EHRdata/RxNorm_full_05042026/rrf/RXNCONSO.RRF"
 compiled_norm_patterns = build_normalization_pattern(path = norm_path)
 compiled_freq_patterns = build_frequency_pattern(path = freq_path)
 df = normalize_medication_text(df = df, raw_med_col = raw_med_col, compiled_patterns = compiled_norm_patterns)
 df = extract_medication_entities(df = df, compiled_freq_patterns = compiled_freq_patterns,compiled_norm_patterns = compiled_norm_patterns)
 df = clean_medication_text(df = df, text_col = "clean_text")
-df = rxnorm_map(df, rrf_path)
+df = rxnorm_map(df, rxnorm_rrf_path, rxnrel_rrf_path)
+df = calculate_total_daily_dose(
+    df,
+    dose_col="dose_reordered",
+    frequency_col="frequency_per_day",
+    amount_col="amount",
+) 
 df.to_csv('../data/' + data + '/output/out_' + data + '.csv')
 janetl
 
