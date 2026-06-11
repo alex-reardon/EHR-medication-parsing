@@ -4,7 +4,7 @@ import pandas as pd
 def _normalize_list_field(x):
 
     # missing
-    if pd.isna(x):
+    if x is None:
         return x
 
     # actual python list only
@@ -24,17 +24,18 @@ def apply_rxnorm_selector(
     df: pd.DataFrame,
     suffix_parenthetical_text: str = "parenthetical_text",
     suffix_clean_text: str = "clean_text",
-    out_cols=("best_rxnorm_match", "best_rxcui", "best_score", "best_tty")
+    out_cols=("best_rxnorm_match", "best_rxcui", "best_score", "best_tty", "best_sbdf")
 ) -> pd.DataFrame:
     """
     Select best RxNorm match between two candidates per row using priority:
-    MIN > IN > BN, then highest score.
+    BN > MIN > IN , then highest score.
 
     Creates:
         rxnorm_match
         rxcui
         score
         tty
+        sbdf
         parsed
 
     Logic:
@@ -48,7 +49,7 @@ def apply_rxnorm_selector(
         parsed = clean_text
     """
 
-    priority = {"MIN": 0, "IN": 1, "BN": 2}
+    priority = {"BN": 0,  "MIN": 1, "IN": 2}
 
     def _select_best_match_row(row):
 
@@ -84,19 +85,15 @@ def apply_rxnorm_selector(
         if (p_clean_text < p_parenthetical) or (p_clean_text == p_parenthetical and score_clean_text >= score_parenthetical):
 
             winner = suffix_clean_text
-
             parsed = row.get("clean_text")
 
             return pd.Series({
 
                 out_cols[0]: row.get(f"rxnorm_match{winner}"),
-
                 out_cols[1]: row.get(f"rxcui{winner}"),
-
                 out_cols[2]: row.get(f"score{winner}"),
-
-                out_cols[3]: row.get(f"tty{winner}"),
-
+                out_cols[3]: row.get(f"sbdf{winner}"),
+                out_cols[4]: row.get(f"tty{winner}"),
                 "parsed": parsed
             })
 
@@ -107,19 +104,15 @@ def apply_rxnorm_selector(
         elif (p_parenthetical < p_clean_text) or (p_parenthetical == p_clean_text and score_parenthetical > score_clean_text):
 
             winner = suffix_parenthetical_text
-
             parsed = row.get("parenthetical_text")
 
             return pd.Series({
 
                 out_cols[0]: row.get(f"rxnorm_match{winner}"),
-
                 out_cols[1]: row.get(f"rxcui{winner}"),
-
                 out_cols[2]: row.get(f"score{winner}"),
-
-                out_cols[3]: row.get(f"tty{winner}"),
-
+                out_cols[3]: row.get(f"sbdf{winner}"),
+                out_cols[4]: row.get(f"tty{winner}"),
                 "parsed": parsed
             })
 
@@ -132,15 +125,11 @@ def apply_rxnorm_selector(
             parsed = row.get("clean_text")
 
             return pd.Series({
-
                 out_cols[0]: row.get(f"rxnorm_match{winner}"),
-
                 out_cols[1]: row.get(f"rxcui{winner}"),
-
                 out_cols[2]: row.get(f"score{winner}"),
-
-                out_cols[3]: row.get(f"tty{winner}"),
-
+                out_cols[3]: row.get(f"sbdf{winner}"),
+                out_cols[4]: row.get(f"tty{winner}"),
                 "parsed": parsed
             })
     # -----------------------------------------------------

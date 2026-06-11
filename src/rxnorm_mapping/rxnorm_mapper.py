@@ -17,7 +17,7 @@ def _build_rxnorm_lookup_table(rrf_path: str, rxnrel_path: str):
 
     rx_all = rx[rx["tty"].isin(["IN", "MIN", "BN", "SBD", "SCD", "SBDF", "SBDC"])].copy()
 
-    rx_match = rx_all[rx_all["tty"].isin(["IN", "MIN", "BN"])]
+    rx_match = rx_all[rx_all["tty"].isin(["IN", "MIN", "BN", "SBDF", "SCD", "SBD", "SBCD"])]
     lookup = rx_match.drop_duplicates("str_lower").set_index("str_lower")[["rxcui", "tty"]]
     rx_names = lookup.index.tolist()
 
@@ -131,8 +131,10 @@ def _build_rxnorm_lookup_table(rrf_path: str, rxnrel_path: str):
     bn_to_min_via_sbdf = {}
 
     for _, bn_row in bn_rows.iterrows():
-        bracket = f"[{bn_row['str_lower'].strip()}]"
-        matches = sbdf_rows[sbdf_rows["str_lower"].str.endswith(bracket)]
+
+        bn = str(bn_row["str_lower"]).strip()
+        pattern = r"\[\s*" + re.escape(bn) + r"\s*\]"
+        matches = sbdf_rows[sbdf_rows["str_lower"].str.contains(pattern, regex=True, na=False)]
         if not matches.empty:
             sbdf_str = matches.iloc[0]["str_lower"]
             bn_to_sbdf_str[bn_row["rxcui"]] = sbdf_str
@@ -205,7 +207,7 @@ def _build_rxnorm_lookup_table(rrf_path: str, rxnrel_path: str):
 # PRIORITY FUNCTION
 # -------------------------------
 def _compare_rxnorm_matches(candidate, current_best):
-    priority = {"MIN": 0, "IN": 1, "BN": 2}
+    priority = {"BN": 0, "MIN": 1, "IN": 2}
 
     if current_best[3] == -1:
         return True

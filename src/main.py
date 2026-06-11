@@ -15,13 +15,13 @@ freq_path = "../data/frequency_dictionary.csv"
 outdir = '/Users/emudr/Desktop/'
 
 
-## PPMI
-data = 'PPMI'
-col_str_name = "LEDTRT_"
-subid = 'PATNO'
-raw_med_col = col_str_name + 'simulated'
-df = pd.read_csv("../data/PPMI/simulated/LEDD_Concomitant_Medication_Log_simulated.csv")
-df = df[[raw_med_col, 'LEDD']]
+# ## PPMI
+# data = 'PPMI'
+# col_str_name = "LEDTRT_"
+# subid = 'PATNO'
+# raw_med_col = col_str_name + 'simulated'
+# df = pd.read_csv("../data/PPMI/simulated/LEDD_Concomitant_Medication_Log_simulated.csv")
+# df = df[[raw_med_col, 'LEDD']]
 
 
 # # ## ADNI
@@ -52,6 +52,13 @@ df = df[[raw_med_col, 'LEDD']]
 # df = df.sample(n=2000, random_state=42) # FIXME DO ALL
 # df = df[[raw_med_col]]
 
+## PPMI Archived
+data = "PPMI_archived"
+col_str_name = "CMTRT_"
+subid= "PATNO"
+raw_med_col = col_str_name + 'simulated'
+df = pd.read_csv("../data/PPMI_archived/simulated/Concomitant_Medications-Archived_05Jun2026_simulated.csv")
+df = df[[raw_med_col, 'LEDD']]
 
 
 
@@ -71,7 +78,6 @@ df = calculate_total_daily_dose(
     amount_col="amount",
 ) 
 df.to_csv('../data/' + data + '/output/out_' + data + '.csv')
-janetl
 
 
 
@@ -79,26 +85,19 @@ janetl
 cols = [
     #subid,
     col_str_name + "simulated",
-    col_str_name + "normalized",
-    'final', 
-    'rxmatch', 
-    "amount",
-    "form",
+    'parsed', #FIXME
+    'best_rxnorm_match', 
+    'best_tty',
+    'best_sbdf',
     "release",
-    "is_prn",
+    "dose",
+    "amount",
     "frequency_per_day",
-    "dose_reordered",
-    "route",
-    'MIN', 
-    "time_of_day",
-    "numbers",
-    'rxcui', 
-    'score', 
-    'tty', 
-    'drug_class',
+    "dose_reordered", 
+    "LEDD"
 ]
 df = df[cols]
-df.to_csv('data/' + data + '/output/out_' + data + '.csv')
+df.to_csv('../data/' + data + '/output/outtemp_' + data + '.csv')
 
 
 # change output_col to clean_text_col
