@@ -1,3 +1,5 @@
+
+
 import pandas as pd
 from patterns.compile_normalization_patterns import build_normalization_pattern
 from patterns.compile_frequency_patterns import build_frequency_pattern
@@ -14,6 +16,12 @@ norm_path = "../data/normalization_dictionary.csv"
 freq_path = "../data/frequency_dictionary.csv"
 outdir = '/Users/emudr/Desktop/'
 
+def save_temp(df, name) : 
+    df.to_csv('/Users/emudr/Desktop/' + name + '.csv')
+
+def read_temp(df, name) : 
+    df = pd.read_csv('/Users/emudr/Desktop/' + name + '.csv')
+    return df 
 
 # ## PPMI
 # data = 'PPMI'
@@ -57,23 +65,26 @@ data = "PPMI_archived"
 col_str_name = "CMTRT_"
 subid= "PATNO"
 raw_med_col = col_str_name + 'simulated'
-df = pd.read_csv("../data/PPMI_archived/simulated/Concomitant_Medications-Archived_05Jun2026_simulated.csv")
-df = df[[raw_med_col, 'LEDD']]
+df = pd.read_csv("../data/PPMI_archived/simulated/Concomitant_Medications-Archived_05Jun2026_simulated_edited_part1.csv")
+df = df[['PATNO', 'REC_ID', raw_med_col, 'CMDOSE', 'CMDOSU','LEDD']]
 
 
 
 ####
-rxnorm_rrf_path="/Users/emudr/Desktop/EHRdata/RxNorm_full_05042026/rrf/RXNCONSO.RRF"
-rxnrel_rrf_path = "/Users/emudr/Desktop/EHRdata/RxNorm_full_05042026/rrf/RXNCONSO.RRF"
-compiled_norm_patterns = build_normalization_pattern(path = norm_path)
-compiled_freq_patterns = build_frequency_pattern(path = freq_path)
-df = normalize_medication_text(df = df, raw_med_col = raw_med_col, compiled_patterns = compiled_norm_patterns)
-df = extract_medication_entities(df = df, compiled_freq_patterns = compiled_freq_patterns,compiled_norm_patterns = compiled_norm_patterns)
-df = clean_medication_text(df = df, text_col = "clean_text")
-df = rxnorm_map(df, rxnorm_rrf_path, rxnrel_rrf_path)
+# rxnorm_rrf_path="/Users/emudr/Desktop/EHRdata/RxNorm_full_05042026/rrf/RXNCONSO.RRF"
+# rxnrel_rrf_path = "/Users/emudr/Desktop/EHRdata/RxNorm_full_05042026/rrf/RXNCONSO.RRF"
+# compiled_norm_patterns = build_normalization_pattern(path = norm_path)
+# compiled_freq_patterns = build_frequency_pattern(path = freq_path)
+# df = normalize_medication_text(df = df, raw_med_col = raw_med_col, compiled_patterns = compiled_norm_patterns)
+# df = extract_medication_entities(df = df, compiled_freq_patterns = compiled_freq_patterns,compiled_norm_patterns = compiled_norm_patterns)
+# df = clean_medication_text(df = df, text_col = "clean_text")
+# df = rxnorm_map(df, rxnorm_rrf_path, rxnrel_rrf_path)
+# save_temp(df, 'df1')
+df = read_temp(df, 'df1')
+
 df = calculate_total_daily_dose(
     df,
-    dose_col="dose_reordered",
+    dose_col="dose", #FIXME
     frequency_col="frequency_per_day",
     amount_col="amount",
 ) 

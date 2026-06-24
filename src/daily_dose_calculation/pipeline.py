@@ -1,5 +1,13 @@
 import pandas as pd
-from daily_dose_calculation.calculate_daily_dose import apply_expand_dose_rows
+from daily_dose_calculation.check_reordered import apply_order_flipped # ingredient order detection (creates TF )
+from daily_dose_calculation.reorder_dose import apply_dose_reorder # if above is TRUE flip 
+
+from daily_dose_calculation.calculate_daily_dose import apply_expand_dose_rows # freq*amt*dose for each dose (ex 25/100mg)
+from daily_dose_calculation.create_canonical_ledd_col import apply_create_canonical_ledd_col # create canonical med col name 
+
+from daily_dose_calculation.ledd_mapping import apply_ledd_mapping # merge conversion factor col to df 
+from daily_dose_calculation.calculate_ledd import apply_levodopa_ledd # calclulate levedopa equivalent daily dose (total levodopa daily dose * conversion factor)
+
 
 
 def calculate_total_daily_dose(
@@ -28,17 +36,31 @@ def calculate_total_daily_dose(
     DataFrame with one row per dose component and a total_dose_per_day column.
     """
 
-   
+
+
     required = [dose_col, frequency_col, amount_col]
     missing  = [c for c in required if c not in df.columns]
     if missing:
         raise ValueError(f"Missing columns: {missing}")
 
     df = df.copy()
+    df.loc[df["parsed"] == "madopar", "parsed"] = "levodopa/benserazide" #FIXME
+
+    
+    
+    
+    # Create canonical LEDD med col 
+    df = apply_create_canonical_ledd_col(df)
+    print(df.columns)
+
+
+    df = apply_order_flipped(df, input_col='parsed', match_col='canonical_LEDD_med')
+
+    df = apply_dose_reorder(df, dose_col = 'dose', input_col = 'parsed', matched_col = 'canonical_LEDD_med')
 
     df = apply_expand_dose_rows(
         df,
-        dose_col=dose_col,
+        dose_col='dose_reordered',
         frequency_col=frequency_col,
         amount_col=amount_col,
         output_col=output_col
@@ -49,4 +71,17 @@ def calculate_total_daily_dose(
     total    = df[out_cols].notna().any(axis=1).sum()
     print(f"Dose Calculation Complete: {total}/{len(df)} rows calculated ({total/len(df):.2%})")
 
-    return df
+    df = apply_ledd_mapping(
+        df,
+        ledd_csv_path="/Users/emudr/PPMI_LEDD/data/ledd_conversion_factors.csv",
+        name_col="canonical_LEDD_med",
+        release_col="release",
+        route_col="route"
+    )
+
+    df = apply_levodopa_ledd(df, dose_cols=("daily_dose_1", "daily_dose_2", "daily_dose_3"))
+
+
+    return df 
+
+

@@ -170,7 +170,7 @@ def extract_dose(
     # 1C. RATIOS WITHOUT UNITS
     # ex: 25/100
     # =====================================================
-    ratio_no_unit_sep     = r'\s*/\s*'
+    ratio_no_unit_sep     = SEP
     ratio_no_unit_pattern = rf'''
     \b
     {NUM}

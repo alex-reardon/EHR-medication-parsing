@@ -73,12 +73,12 @@ chew(?:able)?\b,chew,form,
 cream\b,cream,form,
 disperse\b,dispersible,form,
 dispersible\b,dispersible,form,
-dose\b,dose,form,ampoule
+dose\b,dose,form,
 elixir\b,elixir,form,
-emul(?:sion)?\b,emulsion,form,topical
+emul(?:sion)?\b,emulsion,form,
 film\b,film,form,
 foam\b,foam,form,
-gel\b,gel,form,dose
+gel\b,gel,form,
 gelcaps?\b,soft_gel,form,
 granules?\b,granules,form,
 ij\b,injection,form,
@@ -95,10 +95,10 @@ pack\b,pack,form,
 patch(?:es)?\b,patch,form,
 pill(?:s)?\b,pill,form,
 pmx\b,premix,form,
-powder\b,powder,form,topical
+powder\b,powder,form,
 prefill\b,prefill,form,
 premix\b,premix,form,
-pump\b,pump,form,pill
+pump\b,pump,form,
 reconstituted\b,reconstituted,form,
 ring\b,ring,form,
 shot(?:s)?\b,injection,form,
@@ -106,54 +106,53 @@ soft\s*gel(?:s)?\b,softgel,form,
 soln\b,soln,form,
 solp\b,solution powder,form,
 solr\b,solution reconstituted,form,
-solu\b,solution,form,shot synonym
-solution\b,solution,form,softgel
+solu\b,solution,form,
+solution\b,solution,form,
 solv inj\b,inj,form,
 solv\b,solvent,form,
 spray\b,spray,form,
 susp(?:ension)?\b,suspension,form,
-syr(?:inge)?\b,syringe,form,solution
+syr(?:inge)?\b,syringe,form,
 syrup\b,syrup,form,
 tb\b,tabs,form,
-troche\b,lozenge,form,spray
+troche\b,lozenge,form,
 vial(?:s)?\b,vial,form,
 cap(?:s|sule|sules)?\b,caps,form,
-drop(?:s)?\b,drop,form,syrup
+drop(?:s)?\b,drop,form,
 tab(?:let)?s?\b,tabs,form,
 \bcontinuous release\b,er,release,
-\bcr\b,er,release,vial
-\bdelayed release\b,er,release,capsule variants
-\bdepot\b,er,release,drops
-\bec\b,er,release,tablet variants
-\benteric\b,er,release,ER
-\benteric coated\b,er,release,CR
-\ber\b,er,release,ER
-\bextended release\b,er,release,ER
-\bextended\s*release\b,er,release,ER
-\bimmediate\s*release\b,ir,release,ER
-\bir\b,ir,release,ER
-\blp\b,er,release,ER
-\blt\b,er,release,ER
-\bmodified release\b,er,release,ER
-\bodt\b,er,release,IR
-\bprolib\b,er,release,IR
-\bprologed release\b,er,release,ER
-\breseased lib\b,er,release,ER
-\bret\b,er,release,ER
-\bretard\b,er,release,ER
-\bsa\b,er,release,ER
-\bslow release\b,er,release,ER
-\bsr\b,er,release,ER
-\bsustained release\b,er,release,ER
-\bsustained-release\b,er,release,ER
-\bsustained\s*release\b,er,release,ER
-\bxl\b,er,release,ER
-\bxr\b,er,release,ER
-\bapply\b,topical,route,ER
-\bbuccal\b,buccal,route,ER
-\bby\s*mouth\b,oral,route,SR
-\bcatheter\b,catheter,route,ER
-\bdialysis\b,dialysis,route,XR
+\bcr\b,er,release,
+\bdelayed release\b,er,release,
+\bdepot\b,er,release,
+\bec\b,er,release,
+\benteric\b,er,release,
+\benteric coated\b,er,release,
+\ber\b,er,release,
+\bextended release\b,er,release,
+\bextended\s*release\b,er,release,
+\bimmediate\s*release\b,ir,release,
+\bir\b,ir,release,
+\bmodified release\b,er,release,
+\bodt\b,er,release,
+\bprolib\b,er,release,
+\bprologed release\b,er,release,
+\breseased lib\b,er,release,
+\bret\b,er,release,
+\bretard\b,er,release,
+\bsa\b,er,release,
+\bslow release\b,er,release,
+\bsr\b,er,release,
+\bsustained release\b,er,release,
+\bsustained-release\b,er,release,
+\bsustained\s*release\b,er,release,
+\bxl\b,er,release,
+\bxr\b,er,release,
+\btopical\b,topical,route,
+\bapply\b,topical,route,
+\bbuccal\b,buccal,route,
+\bby\s*mouth\b,oral,route,
+\bcatheter\b,catheter,route,
+\bdialysis\b,dialysis,route,
 \bear\s*drops?\b,ear,route,
 \benteral tube\b,enteral tube,route,
 \beye\s*drops?\b,eye,route,
@@ -165,7 +164,7 @@ tab(?:let)?s?\b,tabs,form,
 \binfusion\b,infusion,route,
 \binh(?:l)?\b,inhalation,route,
 \binhal(?:e|ed|ation)?\b,inhalation ,route,
-\bintercatheter\b,intercatheter,route,intramuscular
+\bintercatheter\b,intercatheter,route,
 \bintestinal infusion\b,intestinal,route,
 \bintestinal\b,intestinal,route,
 \bintradermal\b,intradermal,route,
@@ -174,10 +173,10 @@ tab(?:let)?s?\b,tabs,form,
 \birrigation\b,irrigation,route,
 \biv(?:bp)?\b,iv,route,
 \bjtube\b,jtube,route,
-\bmis\b,mis,route,im
-\bmt\b,mt,route,iv
+\bmis\b,mis,route,
+\bmt\b,mt,route,
 \bnasal\b,nasal,route,
-\bnasogastric tube\b,nasogastric tube,route,intravenous
+\bnasogastric tube\b,nasogastric tube,route,
 \bneb(?:u)?\b,neb,route,
 \bnebuliz(?:er|ed)?\b,neb,route,
 \bng tube\b,ng tube,route,
@@ -196,9 +195,10 @@ tab(?:let)?s?\b,tabs,form,
 \bpo\b,oral,route,
 \bre supp\b,rectal,route,
 \brec\b,rectal,route,
+\bpr\b,rectal,route,
 \brect(?:al)?\b,rectal,route,
 \bsc\b,subcutaneous,route,
-\bsl\b,sublingual,route,by mouth
+\bsl\b,sublingual,route,
 \bsub(?:l|lingual)?\b,sublingual,route,
 \bsubc\b,subcutaneous,route,
 \bsubcut(?:aneous)?\b,subcutaneous,route,

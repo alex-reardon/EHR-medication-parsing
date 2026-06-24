@@ -48,7 +48,7 @@ def clean_medication_text(
         text_col = text_col
     )
 
-    df = apply_normalize_dose_order(df, col = "clean_text", dose_col = "dose", out_dose_col = "dose_reordered")
+    #df = apply_normalize_dose_order(df, col = "clean_text", dose_col = "dose", out_dose_col = "dose_reordered")
 
     
 

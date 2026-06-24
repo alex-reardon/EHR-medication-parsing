@@ -1,5 +1,6 @@
 import re
 import pandas as pd
+import ast
 
 
 def parse_dose_values(dose_raw):
@@ -18,17 +19,29 @@ def parse_dose_values(dose_raw):
     return [float(n) for n in numbers] if numbers else [None]
 
 
+
 def parse_amount(amount_raw):
-    """
-    Extract numeric value from amount.
-    [1] or ['1'] or 1 → 1.0
-    """
+    if pd.isna(amount_raw):
+        return None
+
+    # convert "[1.5]" -> [1.5]
+    if isinstance(amount_raw, str):
+        try:
+            parsed = ast.literal_eval(amount_raw)
+            if isinstance(parsed, list):
+                amount_raw = parsed
+        except Exception:
+            pass
+
     if isinstance(amount_raw, list):
         amount_raw = amount_raw[0] if amount_raw else None
+
     try:
         return float(amount_raw)
     except (TypeError, ValueError):
         return 1.0
+
+
 
 
 def apply_expand_dose_rows(df, dose_col, frequency_col, amount_col, output_col="total_dose_per_day"):
@@ -53,9 +66,16 @@ def apply_expand_dose_rows(df, dose_col, frequency_col, amount_col, output_col="
     else:
         col_names = [f"{output_col}_{i+1}" for i in range(max_components)]
 
+
     for _, row in df.iterrows():
         dose_values = parse_dose_values(row[dose_col])
         amount      = parse_amount(row[amount_col])
+
+        # FIXME
+        #FIXME if 
+        if pd.isna(amount):
+            amount= 1.0
+        
 
         try:
             freq = float(row[frequency_col])

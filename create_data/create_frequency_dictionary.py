@@ -10,7 +10,7 @@ num_words = {
 }
 
 time_units = {
-    "day": r"(?:24\s*(?:hours?|hrs?|h)|daily|days|day|d)",
+    "day": r"(?:24\s*(?:hours?|hrs?|h)|qd|daily|days|day|d)",
     "week": r"(?:weekly|weeks|week|wks|wk|w)",
     "month": r"(?:monthly|months|month|mo|m)",
     "year": r"(?:annually|yearly|year|yr|y)",
@@ -91,10 +91,10 @@ for n, word in num_words.items():
             (?:{n}(?:\.0+)?|{word})
             \s*
             (?:
-                (?:(?:x|times?)\s*)?
+                (?:(?:x|times|time|xs?)\s*)?
                 (?:/\s*|same\s*|each\s*|every\s*|per\s*|a\s*)
                 |
-                (?:(?:x|times?)\s*)
+                (?:(?:x|times|time|xs?)\s*)
             )
             {unit_pattern}
             \b
@@ -153,15 +153,12 @@ for n, word in num_words.items():
         # 3 monthly = 3/30
         # 2 hourly  = 2*24
         # -----------------------------------------
-
         if unit_name == "hour":
-
             replacement_adverb = (
                 n * 24
             )
 
         else:
-
             replacement_adverb = (
                 n / adverb_units[unit_name]["days"]
             )
@@ -169,14 +166,21 @@ for n, word in num_words.items():
         rows.append({
 
             "raw": pattern_adverb,
-
             "replacement": replacement_adverb,
-
             "priority": 1,
-
             "notes": f"{n} {unit_name} adverb"
         })
 
+
+time_units_no_hr = {
+    "day": r"(?:24\s*(?:hours?|hrs?|h)|qd|daily|days|day|d)",
+    "week": r"(?:weekly|weeks|week|wks|wk|w)",
+    "month": r"(?:monthly|months|month|mo|m)",
+    "year": r"(?:annually|yearly|year|yr|y)"
+}
+
+for n, word in num_words.items():
+    for unit_name, unit_pattern in time_units_no_hr.items():
 
         # -------------------------------
         # Pattern 2: "q2w", "q3d"
@@ -189,11 +193,7 @@ for n, word in num_words.items():
         \b
         """)
 
-        # ✅ NEW LOGIC (interval-based)
-        if unit_name == 'hour' :
-            replacement = n_per_day[unit_name]/n
-        else : 
-            replacement = 1 / (n * n_per_day[unit_name])
+        replacement = 1 / (n * n_per_day[unit_name])
 
         rows.append({
             "raw": pattern_q,
@@ -215,7 +215,6 @@ for n, word in num_words.items():
         """)
 
         # ✅ NEW LOGIC (interval-based)
-
         if unit_name == 'hour' :
             replacement = n_per_day[unit_name]/n
         else : 
@@ -239,7 +238,6 @@ for n, word in num_words.items():
     }
 
     for unit_name, unit_pattern in time_units_no_day.items():
-
         pattern_days_per_week = re.sub(r"\s+", "", rf"""
         \b
         (?:{n}(?:\.0+)?|{word})
@@ -252,11 +250,8 @@ for n, word in num_words.items():
         \b
         """)
 
-      
-        # ✅ NEW LOGIC
 
         replacement = n / n_per_day[unit_name]
-
 
         rows.append({
             "raw": pattern_days_per_week,
@@ -289,6 +284,24 @@ for word, n in special_words.items():
         })
 
 
+time_units_hour = {
+    "hour": r"(?:hours|hour|hrs|hr|h)"
+}
+for n, word in num_words.items():
+    for unit_name, unit_pattern in time_units_hour.items():
+        ## PATTERN q6h etc
+
+        pattern = rf"\bq\s*{n}\s*{unit_pattern}\b"
+        replacement = round(16 / n)
+
+        # Example of building the row, matching your existing style:
+        rows.append({
+            "raw": pattern,
+            "replacement": replacement,
+            "priority": 2,
+            "notes": "q#h frequency pattern"
+        })
+
 ## stand alone once 
 rows.append({
     "raw": r"\bonce\b",
@@ -304,6 +317,40 @@ rows.append({
     "priority": 2,
     "notes": "twice (no unit)"
 })
+
+
+for n, _ in num_words.items(): 
+    pattern_x = re.sub(r"\s+", "", rf"""
+            \b
+            (?:{n}(?:\.0+)?)
+            \s*
+            x\b""")
+    rows.append({
+        "raw": pattern_x,
+        "replacement": -4, # FIXME
+        "priority": 2,
+        "notes": f"FIXME"
+    })
+
+for n, word in num_words.items():
+        # -------------------------------
+        # Pattern : "2xqd" "or 2 xqd"
+        # -------------------------------
+        pattern_xqd = re.sub(r"\s+", "", rf"""
+            \b
+            (?:{n}(?:\.0+)?|{word})
+            \s*
+            x
+            \s*
+            qd
+            \b""")
+        
+        rows.append({
+            "raw": pattern_xqd,
+            "replacement": n,
+            "priority": 1,
+            "notes": f"{word} per {unit_name}"
+        })
 
 
 
