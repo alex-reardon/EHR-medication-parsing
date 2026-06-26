@@ -1,5 +1,8 @@
+import logging
 import requests
 import pandas as pd
+
+logger = logging.getLogger(__name__)
 
 
 def _fetch_rxclass_classes(
@@ -22,7 +25,7 @@ def _fetch_rxclass_classes(
 
     try:
         rxcui = str(int(float(rxcui)))
-    except:
+    except (ValueError, TypeError):
         return None
 
     url = (
@@ -68,7 +71,7 @@ def _fetch_rxclass_classes(
 
     except Exception as e:
 
-        print(e)
+        logger.warning("RxClass API error for rxcui %s: %s", rxcui, e)
 
         return None
 

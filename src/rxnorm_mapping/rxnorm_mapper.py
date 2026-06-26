@@ -17,9 +17,12 @@ Output columns (per suffix):
 
 from __future__ import annotations
 
+import logging
 import re
 import pandas as pd
 from rapidfuzz import process, fuzz
+
+logger = logging.getLogger(__name__)
 
 
 # ---------------------------------------------------------------------------
@@ -130,7 +133,8 @@ def _load_rrf(path: str) -> pd.DataFrame:
         "code", "str", "srl", "suppress", "cvf", "empty",
     ]
     df = pd.read_csv(path, sep="|", header=None, names=cols, dtype=str)
-    df = df[(df["lat"] == "ENG") & (df["suppress"] == "N")].copy()
+    #df = df[(df["lat"] == "ENG") & (df["suppress"] == "N")].copy() # FIXEM 
+    df = df[df["suppress"] == "N"].copy()
     df["str_lower"] = df["str"].str.lower().str.strip()
     return df
 
@@ -354,11 +358,11 @@ def _score_to_confidence(score: float | None) -> str:
         return "high"
     return "medium"
 
-_SEP_NORM = re.compile(r'[/+&]')
+_SEP_NORM = re.compile(r'\s*[/+&]\s*')
 
 def _normalize_input(term: str) -> str:
-    """Normalize separators so levodopa/carbidopa and levodopa+carbidopa
-    both tokenize the same way as RxNorm's 'carbidopa / levodopa'."""
+    """Normalize separators so levodopa/carbidopa, levodopa + carbidopa,
+    and levodopa / carbidopa all tokenize the same way."""
     return _SEP_NORM.sub(' ', term).strip()
 
 
@@ -550,9 +554,9 @@ def apply_rxnorm_mapping(
     high   = (df[f"parse_confidence{s}"] == "high").sum()
     med    = (df[f"parse_confidence{s}"] == "medium").sum()
     low    = (df[f"parse_confidence{s}"] == "low").sum()
-    print(
-        f"RxNorm mapping complete: {mapped}/{total} rows matched ({mapped/total:.1%})  "
-        f"| confidence — high: {high}, medium: {med}, low: {low}"
+    logger.info(
+        "RxNorm mapping complete: %d/%d rows matched (%.1f%%) | confidence — high: %d, medium: %d, low: %d",
+        mapped, total, 100 * mapped / total, high, med, low
     )
 
     return df

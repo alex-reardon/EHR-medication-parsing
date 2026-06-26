@@ -1,5 +1,8 @@
+import logging
 import re
 import pandas as pd
+
+logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------
 # GLOBALS
@@ -144,7 +147,7 @@ def apply_formulation_extraction(df, compiled_rules):
     # Metrics
     mapped_forms = df["form"].notna().sum()
     mapped_amounts = df["amount"].notna().sum()
-    print(f"Form Extraction: {mapped_forms}/{len(df)} ({mapped_forms/len(df):.1%})")
-    print(f"Amount Extraction: {mapped_amounts}/{len(df)} ({mapped_amounts/len(df):.1%})")
+    logger.info("Form Extraction: %d/%d (%.1f%%)", mapped_forms, len(df), 100 * mapped_forms / len(df))
+    logger.info("Amount Extraction: %d/%d (%.1f%%)", mapped_amounts, len(df), 100 * mapped_amounts / len(df))
 
     return df

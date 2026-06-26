@@ -1,5 +1,8 @@
+import logging
 import pandas as pd
 import re
+
+logger = logging.getLogger(__name__)
 
 
 # ---------------------------------------------------
@@ -86,10 +89,9 @@ def apply_quantity_normalization(
     total = len(df)
     non_null = df["clean_text"].notna().sum()
 
-    print(
-        f"Quantity Normalization Complete: "
-        f"{non_null}/{total} rows processed "
-        f"({non_null/total:.2%})"
+    logger.info(
+        "Quantity Normalization Complete: %d/%d rows processed (%.2f%%)",
+        non_null, total, 100 * non_null / total
     )
 
     return df

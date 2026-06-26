@@ -43,10 +43,7 @@ def calculate_total_daily_dose(
     if missing:
         raise ValueError(f"Missing columns: {missing}")
 
-    df = df.copy()
-    df.loc[df["parsed"] == "madopar", "parsed"] = "levodopa/benserazide" #FIXME
-
-    
+    df = df.copy()    
     
     
     # Create canonical LEDD med col 
@@ -80,7 +77,8 @@ def calculate_total_daily_dose(
     )
 
     df = apply_levodopa_ledd(df, dose_cols=("daily_dose_1", "daily_dose_2", "daily_dose_3"))
-
+    ld_mask = df["ledd_conversion_factor"].astype(str).str.contains(r"LD x ", na=False)
+    df.loc[ld_mask, "levodopa_ledd"] = df.loc[ld_mask, "ledd_conversion_factor"]
 
     return df 
 

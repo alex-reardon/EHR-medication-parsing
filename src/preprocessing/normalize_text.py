@@ -1,6 +1,9 @@
+import logging
 import pandas as pd
 import re
 import unicodedata
+
+logger = logging.getLogger(__name__)
 
 
 
@@ -98,10 +101,9 @@ def apply_text_normalization(
     total = len(df)
     non_null = df["clean_text"].notna().sum()
 
-    print(
-        f"Text Normalization Complete: "
-        f"{non_null}/{total} rows processed "
-        f"({non_null/total:.2%})"
+    logger.info(
+        "Text Normalization Complete: %d/%d rows processed (%.2f%%)",
+        non_null, total, 100 * non_null / total
     )
 
     return df

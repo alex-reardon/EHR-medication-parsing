@@ -402,6 +402,8 @@ prn\b,prn,1,prn,
 \b24 hours\b,1,2,frequency,
 \bq evening\b,1,2,frequency,
 \bqhd\b,1,2,frequency,
+\bqnoon\b,1,2,frequency,
+\bq noon\b,1,2,frequency,
 \b1\s*x\b,1x,2,frequency,
 \bonce\b,1x,2,frequency,once (no unit)
 \bb\s*i\s*d\b,2,2,frequency,2x/day

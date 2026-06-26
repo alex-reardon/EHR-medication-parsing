@@ -257,7 +257,7 @@ def normalize_frequency_value(val):
         try:
             return float(val)
 
-        except:
+        except (ValueError, TypeError):
             return val
 
     return val
@@ -291,7 +291,7 @@ def normalize_numeric_frequency(numeric_freq):
                     float(val)
                 )
 
-            except:
+            except (ValueError, TypeError):
                 continue
 
         if not cleaned:
@@ -312,7 +312,7 @@ def normalize_numeric_frequency(numeric_freq):
     try:
         return float(numeric_freq)
 
-    except:
+    except (ValueError, TypeError):
         return None
 
 
@@ -376,10 +376,9 @@ def apply_frequency_extraction(
         "frequency_per_day"
     ].notna().sum()
 
-    print(
-        f"Frequency Extraction Complete: "
-        f"{mapped}/{len(df)} rows mapped "
-        f"({mapped/len(df):.2%})"
+    logger.info(
+        "Frequency Extraction Complete: %d/%d rows mapped (%.2f%%)",
+        mapped, len(df), 100 * mapped / len(df)
     )
 
     return df

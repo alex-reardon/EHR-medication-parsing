@@ -1,6 +1,9 @@
 # postprocessing/residual_number_extraction.py
+import logging
 import re
 import pandas as pd
+
+logger = logging.getLogger(__name__)
 
 
 # ---------------------------------------------------------
@@ -237,16 +240,13 @@ def apply_residual_number_extraction(
     mapped = df["residual_numbers"].notna().sum()
     tokens_found = df["residual_tokens"].notna().sum()
 
-    print(
-        f"Residual Number Extraction: "
-        f"{mapped}/{len(df)} "
-        f"({mapped/len(df):.1%})"
+    logger.info(
+        "Residual Number Extraction: %d/%d (%.1f%%)",
+        mapped, len(df), 100 * mapped / len(df)
     )
-
-    print(
-        f"Residual Token Extraction: "
-        f"{tokens_found}/{len(df)} "
-        f"({tokens_found/len(df):.1%})"
+    logger.info(
+        "Residual Token Extraction: %d/%d (%.1f%%)",
+        tokens_found, len(df), 100 * tokens_found / len(df)
     )
 
     return df

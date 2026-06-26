@@ -95,6 +95,9 @@ def _extract_category(
     ])
 
 
-def apply_category_extraction(df, category, compiled_rules) :
-    df[[f"{category}", f"{category}_source", "clean_text"]] = (df["clean_text"].apply( lambda x: _extract_category(x, compiled_rules)))
+def apply_category_extraction(df, category, compiled_rules):
+    df = df.copy()
+    df[[f"{category}", f"{category}_source", "clean_text"]] = df["clean_text"].apply(
+        lambda x: _extract_category(x, compiled_rules)
+    )
     return df

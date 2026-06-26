@@ -109,9 +109,6 @@ def _reorder_dose_for_swap(dose, index_order: list[int] | None = None):
 
         
     if not isinstance(dose, list) or len(dose) == 0:
-        print("dose", dose)
-        print("type", type(dose))
-        print("step1", dose)
         return dose
 
     # ---------------------------------------------------------
@@ -120,13 +117,10 @@ def _reorder_dose_for_swap(dose, index_order: list[int] | None = None):
     if all(_is_numeric(d) for d in dose) and len(dose) > 1:
 
         if index_order is not None and len(index_order) == len(dose):
-            print("step2", dose)
             return [dose[i] for i in index_order]
 
         if index_order is None and len(dose) == 2:
-            print("Step3", dose)
             return [dose[1], dose[0]]  # legacy pair fallback
-        print("step4", dose)
         return dose  # can't safely reorder without explicit index_order
 
     # ---------------------------------------------------------
@@ -142,14 +136,12 @@ def _reorder_dose_for_swap(dose, index_order: list[int] | None = None):
         )
 
         if not m:
-            print("5", dose)
             return dose
 
         numbers = m.group(1).split('/')
         unit = m.group(2).strip()
 
         if len(numbers) < 2:
-            print("6", dose)
             return dose  # single value, nothing to reorder
 
         if index_order is not None and len(index_order) == len(numbers):
@@ -157,16 +149,13 @@ def _reorder_dose_for_swap(dose, index_order: list[int] | None = None):
         elif index_order is None and len(numbers) == 2:
             reordered = [numbers[1], numbers[0]]  # legacy pair fallback
         else:
-            print("7", dose)
             return dose  # can't safely reorder without explicit index_order
 
         rejoined = '/'.join(reordered)
 
         if unit:
             rejoined = f"{rejoined} {unit}"
-        print("8", [rejoined])
         return [rejoined]
-    print("9", dose)
     return dose
 
 
@@ -192,11 +181,6 @@ def apply_dose_reorder(
             row[input_col],
             row[matched_col],
         )
-        #TEMP
-        print("row[dose_col]", row[dose_col])
-        print("b", index_order)
-        print("reordered_dose", _reorder_dose_for_swap(row[dose_col], index_order))
-        #TEMP
         return _reorder_dose_for_swap(row[dose_col], index_order)
 
     df[out_col] = df.apply(_reorder_row, axis=1)

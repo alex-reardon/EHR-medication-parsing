@@ -79,16 +79,6 @@ def _clean_extraction_artifacts(text: str) -> str:
     )
 
     # -----------------------------------------
-    # REMOVE TRAILING SLASHES
-    # -----------------------------------------
-
-    text = re.sub(
-        r'[\s/\/.///]+$',
-        '',
-        text
-    )
-
-    # -----------------------------------------
     # REMOVE TRAILING NON-ALPHANUMERIC CHARS
     text = re.sub(
         r'[^a-zA-Z0-9]+$',

@@ -1,5 +1,8 @@
+import logging
 import re
 import pandas as pd
+
+logger = logging.getLogger(__name__)
 
 
 # =========================================================
@@ -267,10 +270,9 @@ def apply_dose_extraction(df: pd.DataFrame, compiled_rules):
     )
 
     mapped = df["dose"].notna().sum()
-    print(
-        f"Dose Extraction Complete: "
-        f"{mapped}/{len(df)} rows mapped "
-        f"({mapped/len(df):.2%})"
+    logger.info(
+        "Dose Extraction Complete: %d/%d rows mapped (%.2f%%)",
+        mapped, len(df), 100 * mapped / len(df)
     )
 
     return df

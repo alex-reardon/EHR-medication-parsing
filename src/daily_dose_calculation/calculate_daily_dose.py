@@ -21,6 +21,9 @@ def parse_dose_values(dose_raw):
 
 
 def parse_amount(amount_raw):
+    if isinstance(amount_raw, list): 
+        amount_raw = amount_raw[0] if amount_raw else None
+        
     if pd.isna(amount_raw):
         return None
 
