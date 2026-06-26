@@ -1,1 +1,7 @@
 src/__pycache__/*
+.ipynb_checkpoints/
+create_data/
+data/
+notebooks/
+old/
+src/daily_dose_calculation/*
