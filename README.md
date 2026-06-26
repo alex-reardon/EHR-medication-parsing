@@ -51,13 +51,13 @@ Output CSVs
 
 ## Supported datasets
 
-| Dataset | ID column | Raw medication column | Notes |
+| Dataset | ID column | Raw medication column | 
 |---|---|---|---|
-| PPMI archived | `PATNO` | `CMTRT_simulated` | active |
-| PPMI | `PATNO` | `LEDTRT_simulated` | commented out |
-| ADNI | `PTID` | `CMMED_simulated` | commented out |
-| simGPT | — | `rx_note_simulated` | commented out |
-| eICU | `patientunitstayid` | `drugname` | commented out |
+| PPMI archived | `PATNO` | `CMTRT_simulated` | 
+| PPMI | `PATNO` | `LEDTRT_simulated` |
+| ADNI | `PTID` | `CMMED_simulated` |
+| simGPT | — | `rx_note_simulated` | 
+| eICU | `patientunitstayid` | `drugname` |
 
 
 
