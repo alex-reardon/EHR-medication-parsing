@@ -10,33 +10,26 @@ def _extract_category(
 ):
 
     if pd.isna(text):
-
         return pd.Series([
             None,
             text
         ])
 
     text = str(text).lower()
-
     cleaned = text
-
     matches = []
-
     raw_matches = []
 
     # -----------------------------------------------------
     # APPLY RULES
     # -----------------------------------------------------
     for rule in compiled_rules:
-
         pattern = rule["pattern"]
-
         replacement = rule["replacement"]
-
         found = list(
             pattern.finditer(cleaned)
         )
-
+        
         if not found:
             continue
 
@@ -46,7 +39,6 @@ def _extract_category(
         matches.append(
             replacement
         )
-
         # ---------------------------------------------
         # STORE RAW MATCHES
         # ---------------------------------------------
@@ -54,7 +46,6 @@ def _extract_category(
             m.group(0)
             for m in found
         ])
-
         # ---------------------------------------------
         # REMOVE MATCHES
         # ---------------------------------------------
@@ -67,7 +58,6 @@ def _extract_category(
     # DEDUPE
     # -----------------------------------------------------
     if matches:
-
         matches = list(
             dict.fromkeys(matches)
         )
@@ -93,6 +83,7 @@ def _extract_category(
         None,
         text
     ])
+
 
 
 def apply_category_extraction(df, category, compiled_rules):

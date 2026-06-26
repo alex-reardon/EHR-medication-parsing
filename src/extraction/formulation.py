@@ -7,7 +7,6 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------
 # GLOBALS
 # ---------------------------------------------------------
-
 NUM = r'(?:\d+(?:\.\d+)?|\.\d+)'
 SEP = r'\s*-\s*'
 
@@ -43,6 +42,7 @@ def _build_formulation_regex(compiled_rules):
         pattern,
         flags=re.IGNORECASE | re.VERBOSE
     )
+
 
 # ---------------------------------------------------------
 # PARSE SINGLE TEXT

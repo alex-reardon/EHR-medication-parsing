@@ -11,7 +11,6 @@ logger = logging.getLogger(__name__)
 # HELPERS
 # =========================================================
 def _has_valid_existing_value(val):
-
     if val is None:
         return False
 
@@ -45,22 +44,16 @@ def _build_frequency_regex(compiled_rules):
             return None, None, text
 
         text = str(text).lower()
-
         cleaned = text
-
         matches = []
-
         raw_matches = []
 
         # -------------------------------------------------
         # APPLY RULES
         # -------------------------------------------------
         for rule in compiled_rules:
-
             pattern = rule["pattern"]
-
             replacement = rule["replacement"]
-
             found = list(
                 pattern.finditer(cleaned)
             )
@@ -76,37 +69,20 @@ def _build_frequency_regex(compiled_rules):
             # ---------------------------------------------
             # STORE RAW MATCHES
             # ---------------------------------------------
-            raw_matches.extend([
-                m.group(0)
-                for m in found
-            ])
+            raw_matches.extend([m.group(0) for m in found])
 
             # ---------------------------------------------
             # REMOVE MATCHES
             # ---------------------------------------------
-            cleaned = pattern.sub(
-                " ",
-                cleaned
-            )
+            cleaned = pattern.sub(" ", cleaned)
 
         # -------------------------------------------------
         # CLEANUP
         # -------------------------------------------------
         if matches:
-
-            matches = list(
-                dict.fromkeys(matches)
-            )
-
-            raw_matches = list(
-                dict.fromkeys(raw_matches)
-            )
-
-            cleaned = re.sub(
-                r"\s+",
-                " ",
-                cleaned
-            ).strip()
+            matches = list(dict.fromkeys(matches))
+            raw_matches = list(dict.fromkeys(raw_matches))
+            cleaned = re.sub(r"\s+", " ", cleaned).strip()
 
             return (
                 matches,
@@ -152,35 +128,23 @@ def extract_frequency_fast(
     # PROCESS ROW
     # -----------------------------------------------------
     def _process_frequency_row(row):
-
         text = row["clean_text"]
-
         existing = row[freq_col]
-
         existing_raw = row[raw_col]
-
-        new_matches, raw_matches, cleaned = extractor(
-            text
-        )
+        new_matches, raw_matches, cleaned = extractor(text)
 
         # -------------------------------------------------
         # NOTHING NEW FOUND
         # -------------------------------------------------
         if not new_matches:
-
-            return pd.Series([
-                existing,
-                existing_raw,
-                text
-            ])
+            return pd.Series([existing, existing_raw, text])
 
         # -------------------------------------------------
         # NORMALIZED MATCHES
         # -------------------------------------------------
         if _has_valid_existing_value(existing):
 
-            existing = (
-                existing
+            existing = (existing
                 if isinstance(existing, list)
                 else [existing]
             )

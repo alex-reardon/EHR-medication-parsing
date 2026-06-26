@@ -1,5 +1,8 @@
+import logging
 import re
 import pandas as pd
+
+logger = logging.getLogger(__name__)
 
 
 # =========================================================
@@ -14,11 +17,8 @@ def _build_prn_regex(
     """
 
     terms = [
-
         rule["pattern_raw"]
-
         for rule in compiled_rules
-
         if pd.notna(
             rule["pattern_raw"]
         )
@@ -56,13 +56,7 @@ def extract_prn(
     """
 
     if pd.isna(text):
-
-        return pd.Series([
-            False,
-            None,
-            text
-        ])
-
+        return pd.Series([False, None, text ])
     text = str(text).lower()
 
     # -----------------------------------------------------
@@ -77,11 +71,7 @@ def extract_prn(
     # -----------------------------------------------------
     if not found:
 
-        return pd.Series([
-            False,
-            None,
-            text
-        ])
+        return pd.Series([False, None, text])
 
     # -----------------------------------------------------
     # RAW MATCHES
@@ -128,7 +118,6 @@ def apply_prn_extraction(
 
     and update clean_text.
     """
-
     df = df.copy()
 
     # -----------------------------------------------------
@@ -170,10 +159,9 @@ def apply_prn_extraction(
     # -----------------------------------------------------
     mapped = df["is_prn"].sum()
 
-    print(
-        f"PRN Extraction Complete: "
-        f"{mapped}/{len(df)} rows mapped "
-        f"({mapped/len(df):.2%})"
+    logger.info(
+        "PRN Extraction Complete: %d/%d rows mapped (%.2f%%)",
+        mapped, len(df), 100 * mapped / len(df)
     )
 
     return df

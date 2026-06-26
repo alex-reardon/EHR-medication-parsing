@@ -1,7 +1,13 @@
 src/__pycache__/*
 .ipynb_checkpoints/
 create_data/
-data/
+data/RxNorm_full_05042026
+data/PPMI_archived
+data/PPMI
+data/eicu
+data/carevue
+data/ADNI
 notebooks/
 old/
 src/daily_dose_calculation/*
+evaluation/

@@ -1,7 +1,10 @@
 # category_extraction/parenthetical_extraction.py
 
+import logging
 import re
 import pandas as pd
+
+logger = logging.getLogger(__name__)
 
 
 # ---------------------------------------------------------
@@ -48,22 +51,16 @@ def extract_parenthetical(text):
     )
 
     for match in matches:
-
         match = match.strip()
-
         if match:
-
             parsed["parenthetical_text"].append({
-
                 "text": match,
-
                 "raw": f"({match})"
             })
 
     # -----------------------------------------------------
     # REMOVE PARENTHETICAL TEXT
     # -----------------------------------------------------
-
     working = re.sub(
         PAREN_PATTERN,
         ' ',
@@ -73,7 +70,6 @@ def extract_parenthetical(text):
     # -----------------------------------------------------
     # COLLAPSE WHITESPACE
     # -----------------------------------------------------
-
     working = re.sub(
         r'\s+',
         ' ',
@@ -81,7 +77,6 @@ def extract_parenthetical(text):
     ).strip()
 
     parsed["clean_text"] = working
-
     return parsed
 
 
@@ -121,7 +116,6 @@ def apply_parenthetical_extraction(
     # -----------------------------------------------------
     # UPDATE CLEAN TEXT
     # -----------------------------------------------------
-
     df[text_col] = (
         df["parsed_parenthetical"]
         .apply(lambda x: x["clean_text"])
@@ -130,13 +124,11 @@ def apply_parenthetical_extraction(
     # -----------------------------------------------------
     # METRICS
     # -----------------------------------------------------
-
     mapped = df["parenthetical_text"].notna().sum()
 
-    print(
-        f"Parenthetical Extraction: "
-        f"{mapped}/{len(df)} "
-        f"({mapped/len(df):.1%})"
+    logger.info(
+        "Parenthetical Extraction: %d/%d (%.1f%%)",
+        mapped, len(df), 100 * mapped / len(df)
     )
 
     return df

@@ -1,5 +1,5 @@
 """
-rxnorm_mapping.py
+rxnorm_mapper.py
 -----------------
 Matches messy medication strings to RxNorm concepts and produces
 formulation-aware canonical forms suitable for LEDD computation.
@@ -16,7 +16,6 @@ Output columns (per suffix):
 """
 
 from __future__ import annotations
-
 import logging
 import re
 import pandas as pd
@@ -70,7 +69,6 @@ _WHITESPACE_NORM = re.compile(r'\s{2,}')
 # ---------------------------------------------------------------------------
 # Formulation extraction (pure, no RxNorm needed)
 # ---------------------------------------------------------------------------
-
 def extract_formulation(text: str) -> str | None:
     """
     Return the first matching normalised formulation tag from *text*, or None.
@@ -87,7 +85,6 @@ def extract_formulation(text: str) -> str | None:
 # ---------------------------------------------------------------------------
 # SBDF string helpers
 # ---------------------------------------------------------------------------
-
 def _clean_sbdf_to_ingredient_key(sbdf_str: str) -> str:
     """
     Strip bracket content and dose-form tokens from an SBDF string,
@@ -125,7 +122,6 @@ def _sbdf_str_to_min(
 # ---------------------------------------------------------------------------
 # RxNorm lookup-table construction
 # ---------------------------------------------------------------------------
-
 def _load_rrf(path: str) -> pd.DataFrame:
     cols = [
         "rxcui", "lat", "ts", "lui", "stt", "sui", "ispref",
@@ -226,15 +222,29 @@ def _build_bn_to_min_and_sbdf(
             bn_to_min.setdefault(row.bn, sbd_to_min_map[row.sbd])
 
     # --- path 2: bracket pattern BN→SBDF→MIN ---
+    # Pre-index SBDF strings by their bracket content (e.g. "[sinemet cr]" → "sinemet cr")
+    # so each BN lookup is O(1) instead of a full DataFrame scan.
+    sbdf_bracket = (
+        sbdf_rows["str_lower"]
+        .str.extract(r'\[([^\]]+)\]', expand=False)
+        .str.strip()
+    )
+    bracket_to_sbdf: dict[str, str] = (
+        sbdf_rows.assign(bracket=sbdf_bracket)
+        .dropna(subset=["bracket"])
+        .drop_duplicates("bracket")
+        .set_index("bracket")["str_lower"]
+        .to_dict()
+    )
+
     bn_to_sbdf: dict[str, str] = {}
     for _, bn_row in bn_rows.iterrows():
-        bn_str  = str(bn_row["str_lower"]).strip()
-        pattern = re.compile(r"\[\s*" + re.escape(bn_str) + r"\s*\]")
-        hits    = sbdf_rows[sbdf_rows["str_lower"].str.contains(pattern, regex=True, na=False)]
-        if hits.empty:
+        bn_str   = str(bn_row["str_lower"]).strip()
+        sbdf_str = bracket_to_sbdf.get(bn_str)
+        if sbdf_str is None:
             continue
-        sbdf_str = hits.iloc[0]["str_lower"]
         bn_to_sbdf[bn_row["rxcui"]] = sbdf_str
+
         # only fill bn_to_min if RXNREL didn't already get it
         if bn_row["rxcui"] not in bn_to_min:
             min_str = _sbdf_str_to_min(sbdf_str, min_str_set, min_str_list, sbdf_threshold)
@@ -349,10 +359,8 @@ def build_rxnorm_lookup_table(
 # ---------------------------------------------------------------------------
 # Match helpers
 # ---------------------------------------------------------------------------
-
-
 def _score_to_confidence(score: float | None) -> str:
-    if score is None or score < CONFIDENCE_MEDIUM:
+    if pd.isna(score) or score < CONFIDENCE_MEDIUM:
         return "low"
     if score >= CONFIDENCE_HIGH:
         return "high"

@@ -58,7 +58,6 @@ def extract_medication_entities(
         compiled_rules = formulation_patterns,
     )
 
-
     # ---------------------------------------------------
     # RELEASE EXTRACTION
     # ---------------------------------------------------
@@ -68,7 +67,6 @@ def extract_medication_entities(
         category = 'release'
     )
 
-
     # ---------------------------------------------------
     # PRN EXTRACTION
     # ---------------------------------------------------
@@ -77,16 +75,13 @@ def extract_medication_entities(
         compiled_rules = prn_patterns
     )
 
-
     # ---------------------------------------------------
     # FREQUENCY EXTRACTION
     # ---------------------------------------------------
-
     df = apply_frequency_extraction(
         df=df,
         compiled_rules=frequency_patterns
     )
-
 
     # ---------------------------------------------------
     # DOSE EXTRACTION
@@ -95,7 +90,6 @@ def extract_medication_entities(
         df=df, 
         compiled_rules = dose_patterns
     )
-
 
     # ---------------------------------------------------
     # ROUTE EXTRACTION
@@ -124,8 +118,6 @@ def extract_medication_entities(
         category = 'time_of_day'
     )
 
-
-
     # ---------------------------------------------------
     # MEAL: RELATION EXTRACTION
     # ---------------------------------------------------
@@ -135,11 +127,9 @@ def extract_medication_entities(
         category = 'meal_relation'
     )
 
-
     # ---------------------------------------------------
     # Parentheses EXTRACTION
     # ---------------------------------------------------
     df = apply_parenthetical_extraction(df)
-
 
     return df

@@ -94,6 +94,7 @@ def apply_rxnorm_selector(
                 out_cols[2]: row.get(f"score{winner}"),
                 out_cols[3]: row.get(f"sbdf{winner}"),
                 out_cols[4]: row.get(f"tty{winner}"),
+                "best_parse_confidence": row.get(f"parse_confidence{winner}"),
                 "parsed": parsed
             })
 
@@ -113,6 +114,7 @@ def apply_rxnorm_selector(
                 out_cols[2]: row.get(f"score{winner}"),
                 out_cols[3]: row.get(f"sbdf{winner}"),
                 out_cols[4]: row.get(f"tty{winner}"),
+                "best_parse_confidence": row.get(f"parse_confidence{winner}"),
                 "parsed": parsed
             })
 
@@ -130,6 +132,7 @@ def apply_rxnorm_selector(
                 out_cols[2]: row.get(f"score{winner}"),
                 out_cols[3]: row.get(f"sbdf{winner}"),
                 out_cols[4]: row.get(f"tty{winner}"),
+                "best_parse_confidence": row.get(f"parse_confidence{winner}"),
                 "parsed": parsed
             })
     # -----------------------------------------------------

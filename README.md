@@ -1,6 +1,6 @@
-# PPMI LEDD Pipeline
+# EHR Medication Parsing Pipeline
 
-Computes **Levodopa Equivalent Daily Dose (LEDD)** from free-text concomitant medication entries in clinical research datasets (PPMI, ADNI, eICU, simulated).
+Parsing canonical medication name, dose, release, formulation, etc. from free-text concomitant medication entries in clinical research datasets (PPMI, ADNI, eICU, simulated).
 
 ---
 
@@ -45,7 +45,6 @@ Raw medication text
        ▼
 Output CSVs
   data/<dataset>/output/out_<dataset>.csv       ← full output
-  data/<dataset>/output/outtemp_<dataset>.csv   ← key columns only
 ```
 
 ---
@@ -60,22 +59,7 @@ Output CSVs
 | simGPT | — | `rx_note_simulated` | commented out |
 | eICU | `patientunitstayid` | `drugname` | commented out |
 
-Switch datasets by uncommenting the relevant block and commenting out the active one.
 
----
-
-## Checkpointing
-
-Steps 1–4 are slow (RxNorm lookup reads large RRF files). The pipeline can checkpoint after step 4:
-
-```python
-save_temp(df, 'df1')   # write intermediate result to Desktop
-df = read_temp(df, 'df1')  # reload from checkpoint
-```
-
-Currently the pipeline loads from the checkpoint (`read_temp`) and runs only step 5. To rerun from scratch, comment out `read_temp` and uncomment steps 1–4.
-
----
 
 ## Key input files
 
