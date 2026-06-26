@@ -1,0 +1,321 @@
+,raw,replacement,priority,category,notes
+0,\beight times daily\b,8.0,1,frequency,eight times daily
+2,\bevery 36 hours\b,0.6666666666666666,1,frequency,every 36 hours
+3,\bevery thirty six hours\b,0.6666666666666666,1,frequency,every 36 hours
+5,\bq36hr\b,0.6666666666666666,1,frequency,every 36 hours
+6,\bfive times a day\b,5.0,1,frequency,five times a day
+7,\bfive times daily\b,5.0,1,frequency,five times a day
+9,\bfour times a day\b,4.0,1,frequency,four times a day
+10,\bfour times daily\b,4.0,1,frequency,four times a day
+12,\bqds - four times daily\b,4.0,1,frequency,four times a day
+13,\bqds - quater die sumendus\b,4.0,1,frequency,four times a day
+14,\bqid - four times daily\b,4.0,1,frequency,four times a day
+15,\bfour times daily after meals and at bedtime\b,4.0,1,frequency,four times daily after meals and at bedtime
+17,\bqidpchs\b,4.0,1,frequency,four times daily after meals and at bedtime
+18,\bfour times daily before meals and at bedtime\b,4.0,1,frequency,four times daily before meals and at bedtime
+20,\bqidachs\b,4.0,1,frequency,four times daily before meals and at bedtime
+21,\bfour times daily with meals and at bedtime\b,4.0,1,frequency,four times daily with meals and at bedtime
+23,\b4 to 6 times a day\b,6.0,1,frequency,four to six times a day
+24,\b4-6x/day\b,6.0,1,frequency,four to six times a day
+25,\bfour to six times a day\b,6.0,1,frequency,four to six times a day
+29,\b9 times a day\b,9.0,1,frequency,nine times a day
+30,\b9x/day\b,9.0,1,frequency,nine times a day
+31,\bnine times a day\b,9.0,1,frequency,nine times a day
+33,\bonce a day\b,1.0,1,frequency,once a day
+34,\bonce daily\b,1.0,1,frequency,once a day
+36,\bod - once daily\b,1.0,1,frequency,once a day
+37,\bod - omni die\b,1.0,1,frequency,once a day
+38,"\bonce a day, at bedtime\b",1.0,1,frequency,"once a day, at bedtime"
+40,\bqhs\b,1.0,1,frequency,"once a day, at bedtime"
+41,"\bonce a day, in the evening\b",1.0,1,frequency,"once a day, in the evening"
+43,\bqpm\b,1.0,1,frequency,"once a day, in the evening"
+44,\b1 to 4 times a day\b,4.0,1,frequency,one to four times a day
+45,\b1-4x/day\b,4.0,1,frequency,one to four times a day
+46,\bone to four times a day\b,4.0,1,frequency,one to four times a day
+48,\b1 to 3 times a day\b,3.0,1,frequency,one to three times a day
+49,\b1-3x/day\b,3.0,1,frequency,one to three times a day
+50,\bone to three times a day\b,3.0,1,frequency,one to three times a day
+52,\b1 to 2 times a day\b,2.0,1,frequency,one to two times a day
+53,\b1-2x/day\b,2.0,1,frequency,one to two times a day
+54,\bone to two times a day\b,2.0,1,frequency,one to two times a day
+56,\bseven times daily\b,7.0,1,frequency,seven times daily
+58,\bsix times a day\b,6.0,1,frequency,six times daily
+59,\bsix times daily\b,6.0,1,frequency,six times daily
+61,\b16 times a day\b,16.0,1,frequency,sixteen times a day
+62,\b16x/day\b,16.0,1,frequency,sixteen times a day
+63,\bsixteen times a day\b,16.0,1,frequency,sixteen times a day
+65,\b10 times a day\b,10.0,1,frequency,ten times a day
+66,\b10x/day\b,10.0,1,frequency,ten times a day
+67,\bten times a day\b,10.0,1,frequency,ten times a day
+69,\b3x /day\b,3.0,1,frequency,three times a day
+70,\bthree times a day\b,3.0,1,frequency,three times a day
+71,\bthree times daily\b,3.0,1,frequency,three times a day
+73,\btds - three times daily\b,3.0,1,frequency,three times a day
+74,\btds - ter die sumendus\b,3.0,1,frequency,three times a day
+75,\btid - three times daily\b,3.0,1,frequency,three times a day
+76,"\b3 times a day, before meals\b",3.0,1,frequency,"three times a day, before meals"
+77,\btidac\b,3.0,1,frequency,"three times a day, before meals"
+78,"\bthree times a day, before meals\b",3.0,1,frequency,"three times a day, before meals"
+80,"\b3 times a day, with meals\b",3.0,1,frequency,"three times a day, with meals"
+81,\btidwm\b,3.0,1,frequency,"three times a day, with meals"
+82,"\bthree times a day, with meals\b",3.0,1,frequency,"three times a day, with meals"
+84,\btidpc\b,3.0,1,frequency,three times daily after meals
+85,\bthree times daily after meals\b,3.0,1,frequency,three times daily after meals
+87,\b3 to 4 times a day\b,4.0,1,frequency,three to four times a day
+88,\b3-4x /day\b,4.0,1,frequency,three to four times a day
+89,\bthree to four times a day\b,4.0,1,frequency,three to four times a day
+91,\b12 times a day\b,12.0,1,frequency,twelve times a day
+92,\b12x/day\b,12.0,1,frequency,twelve times a day
+93,\btwelve times a day\b,12.0,1,frequency,twelve times a day
+95,\btwice a day\b,2.0,1,frequency,twice a day
+97,\btwice daily\b,2.0,1,frequency,twice a day
+98,\bbd - twice daily\b,2.0,1,frequency,twice a day
+99,\bbd - bis die\b,2.0,1,frequency,twice a day
+100,\bbid - twice a day\b,2.0,1,frequency,twice a day
+101,\bbidpc\b,2.0,1,frequency,twice a day after meals
+102,\btwice a day after meals\b,2.0,1,frequency,twice a day after meals
+104,\bbidac\b,2.0,1,frequency,twice a day before meals
+105,\btwice a day before meals\b,2.0,1,frequency,twice a day before meals
+107,\bbidwm\b,2.0,1,frequency,twice a day with meals
+108,\btwice a day with meals\b,2.0,1,frequency,twice a day with meals
+110,"\b2 times a day monday, wednesday and friday\b",2.0,1,frequency,"two times a day monday, wednesday and friday"
+111,\bbid mwf\b,2.0,1,frequency,"two times a day monday, wednesday and friday"
+112,"\btwo times a day monday, wednesday and friday\b",2.0,1,frequency,"two times a day monday, wednesday and friday"
+114,\b2 to 4 times a day\b,4.0,1,frequency,two to four times a day
+115,\b2-4x/day\b,4.0,1,frequency,two to four times a day
+116,\btwo to four times a day\b,4.0,1,frequency,two to four times a day
+126,\bfour times per year\b,0.010958904109589041,1,frequency,four times per year
+130,\bonce per year\b,0.0027397260273972603,1,frequency,once per year
+132,\bthree times per year\b,0.008219178082191782,1,frequency,three times per year
+134,\btwice per year\b,0.005479452054794521,1,frequency,twice per year
+136,\balternate days\b,0.5,1,frequency,every 2 days
+138,\bevery 2 days\b,0.5,1,frequency,every 2 days
+139,\bevery other day\b,0.5,1,frequency,every 2 days
+140,\b5 times a week\b,0.7142857142857142,1,frequency,five times a week
+141,\b5x/wk\b,0.7142857142857142,1,frequency,five times a week
+142,\bfive times a week\b,0.7142857142857142,1,frequency,five times a week
+143,\bfive times weekly\b,0.7142857142857142,1,frequency,five times a week
+145,\b4 times a week\b,0.5714285714285714,1,frequency,four times weekly
+146,\b4x/wk\b,0.5714285714285714,1,frequency,four times weekly
+147,\bfour times a week\b,0.5714285714285714,1,frequency,four times weekly
+148,\bfour times weekly\b,0.5714285714285714,1,frequency,four times weekly
+155,\bonce a week\b,0.14285714285714285,1,frequency,once a week
+157,\bonce weekly\b,0.14285714285714285,1,frequency,once a week
+158,\bseven times weekly\b,1.0,1,frequency,seven times weekly
+160,\b6 times a week\b,0.8571428571428571,1,frequency,six times a week
+161,\b6x/wk\b,0.8571428571428571,1,frequency,six times a week
+162,\bsix times a week\b,0.8571428571428571,1,frequency,six times a week
+163,\bsix times weekly\b,0.8571428571428571,1,frequency,six times a week
+165,\bthree times a week\b,0.42857142857142855,1,frequency,three times a week
+166,\bthree times weekly\b,0.42857142857142855,1,frequency,three times a week
+168,\bthrice weekly\b,0.42857142857142855,1,frequency,three times a week
+169,"\bthree times a week on monday, wednesday and friday\b",0.42857142857142855,1,frequency,"three times a week on monday, wednesday and friday"
+171,"\bthree times a week on tuesday, thursday and saturday\b",0.42857142857142855,1,frequency,"three times a week on tuesday, thursday and saturday"
+173,"\bthree times a week on wednesday, friday and sunday\b",0.42857142857142855,1,frequency,"three times a week on wednesday, friday and sunday"
+175,\b3-4 times a week\b,0.5714285714285714,1,frequency,three to four times a week
+176,\b3-4x /wk\b,0.5714285714285714,1,frequency,three to four times a week
+177,\bthree to four times a week\b,0.5714285714285714,1,frequency,three to four times a week
+179,\btwice a week on monday and thursday\b,0.2857142857142857,1,frequency,twice a week on monday and thursday
+181,\btwice a week on thursday and sunday\b,0.2857142857142857,1,frequency,twice a week on thursday and sunday
+183,\btwice a week on tuesday and friday\b,0.2857142857142857,1,frequency,twice a week on tuesday and friday
+185,\btwice a week on wednesday and saturday\b,0.2857142857142857,1,frequency,twice a week on wednesday and saturday
+187,\b2x/wk\b,0.2857142857142857,1,frequency,twice weekly
+188,\btwice a week\b,0.2857142857142857,1,frequency,twice weekly
+189,\btwice weekly\b,0.2857142857142857,1,frequency,twice weekly
+191,\btwo times a week\b,0.2857142857142857,1,frequency,twice weekly
+192,\b2-3 times a week\b,0.42857142857142855,1,frequency,two to three times a week
+193,\btwo to three times a week\b,0.42857142857142855,1,frequency,two to three times a week
+195,\bfour times per hour\b,0.16666666666666666,1,frequency,four times per hour
+199,\bonce per hour\b,0.041666666666666664,1,frequency,once per hour
+201,\bsix times per hour\b,0.25,1,frequency,six times per hour
+203,\bthree times per hour\b,0.125,1,frequency,three times per hour
+205,\btwice per hour\b,0.08333333333333333,1,frequency,twice per hour
+207,\bfour times monthly\b,0.13333333333333333,1,frequency,four times monthly
+213,\bonce monthly\b,0.03333333333333333,1,frequency,once monthly
+215,\bthree times a month\b,0.1,1,frequency,three times a month
+216,\bthree times monthly\b,0.1,1,frequency,three times a month
+218,\btwice monthly\b,0.06666666666666667,1,frequency,twice monthly
+224,\bevery 10 hours\b,2.4,1,frequency,every 10 hours
+225,\bevery ten hours\b,2.4,1,frequency,every 10 hours
+227,\bevery 10 minutes\b,144.0,1,frequency,every 10 minutes
+228,\bevery ten minutes\b,144.0,1,frequency,every 10 minutes
+230,\bq 10 min\b,144.0,1,frequency,every 10 minutes
+231,\bevery 10 weeks\b,0.014285714285714285,1,frequency,every 10 weeks
+232,\bevery ten weeks\b,0.014285714285714285,1,frequency,every 10 weeks
+234,\bevery 10 years\b,0.00027397260273972606,1,frequency,every 10 years
+235,\bevery ten years\b,0.00027397260273972606,1,frequency,every 10 years
+237,\bevery 12 hours\b,2.0,1,frequency,every 12 hours
+238,\bevery twelve hours\b,2.0,1,frequency,every 12 hours
+240,\bq12h - every twelve hours\b,2.0,1,frequency,every 12 hours
+241,\bevery 15 minutes\b,96.0,1,frequency,every 15 minutes
+242,\bevery fifteen minutes\b,96.0,1,frequency,every 15 minutes
+244,\bquarter-hourly\b,96.0,1,frequency,every 15 minutes
+245,\bevery 16 hours\b,1.5,1,frequency,every 16 hours
+246,\bevery sixteen hours\b,1.5,1,frequency,every 16 hours
+248,\bq16hr\b,1.5,1,frequency,every 16 hours
+249,\bevery 18 hours\b,1.3333333333333333,1,frequency,every 18 hours
+250,\bevery eighteen hours\b,1.3333333333333333,1,frequency,every 18 hours
+252,\bq18hr\b,1.3333333333333333,1,frequency,every 18 hours
+253,\b2 hourly\b,12.0,1,frequency,every 2 hours
+254,\bevery 2 hours\b,12.0,1,frequency,every 2 hours
+255,\bevery two hours\b,12.0,1,frequency,every 2 hours
+257,\btwo hourly\b,12.0,1,frequency,every 2 hours
+258,\bevery 2 minutes\b,720.0,1,frequency,every 2 minutes
+259,\bevery two minutes\b,720.0,1,frequency,every 2 minutes
+261,\bevery 2 months\b,0.016666666666666666,1,frequency,every 2 months
+262,\bevery two months\b,0.016666666666666666,1,frequency,every 2 months
+264,\balternate weeks\b,0.07142857142857142,1,frequency,every 2 weeks
+265,\bbiweekly\b,0.07142857142857142,1,frequency,every 2 weeks
+267,\bevery 2 weeks\b,0.07142857142857142,1,frequency,every 2 weeks
+268,\bevery two weeks\b,0.07142857142857142,1,frequency,every 2 weeks
+269,\bfortnightly\b,0.07142857142857142,1,frequency,every 2 weeks
+270,\bevery 20 minutes\b,72.0,1,frequency,every 20 minutes
+271,\bevery twenty minutes\b,72.0,1,frequency,every 20 minutes
+273,\bevery 3 days\b,0.3333333333333333,1,frequency,every 3 days
+274,\bevery three days\b,0.3333333333333333,1,frequency,every 3 days
+276,\bq3day\b,0.3333333333333333,1,frequency,every 3 days
+277,\b3 hourly\b,8.0,1,frequency,every 3 hours
+278,\bevery 3 hours\b,8.0,1,frequency,every 3 hours
+279,\bevery three hours\b,8.0,1,frequency,every 3 hours
+281,\bthree hourly\b,8.0,1,frequency,every 3 hours
+282,\bevery 3 minutes\b,480.0,1,frequency,every 3 minutes
+283,\bevery three minutes\b,480.0,1,frequency,every 3 minutes
+285,\bevery 3 months\b,0.01111111111111111,1,frequency,every 3 months
+286,\bevery three months\b,0.01111111111111111,1,frequency,every 3 months
+287,\bevery twelve weeks\b,0.01111111111111111,1,frequency,every 3 months
+288,\bquarterly\b,0.01111111111111111,1,frequency,every 3 months
+289,\btrimonthly\b,0.01111111111111111,1,frequency,every 3 months
+291,\bq3mo\b,0.01111111111111111,1,frequency,every 3 months
+292,\bevery 3 years\b,0.0009132420091324201,1,frequency,every 3 years
+293,\bevery three years\b,0.0009132420091324201,1,frequency,every 3 years
+295,\bevery 30 minutes\b,48.0,1,frequency,every 30 minutes
+296,\bevery thirty minutes\b,48.0,1,frequency,every 30 minutes
+298,\bhalf-hourly\b,48.0,1,frequency,every 30 minutes
+299,\bevery 4 days\b,0.25,1,frequency,every 4 days
+300,\bevery four days\b,0.25,1,frequency,every 4 days
+302,\bq4day\b,0.25,1,frequency,every 4 days
+303,\bevery 4 hours\b,6.0,1,frequency,every 4 hours
+304,\bevery four hours\b,6.0,1,frequency,every 4 hours
+306,\bfour hourly\b,6.0,1,frequency,every 4 hours
+307,\bq4h - every four hours\b,6.0,1,frequency,every 4 hours
+308,\bqqh - quarta quaque hora\b,6.0,1,frequency,every 4 hours
+309,\bevery 4 months\b,0.008333333333333333,1,frequency,every 4 months
+310,\bevery four months\b,0.008333333333333333,1,frequency,every 4 months
+312,\bevery 4 weeks\b,0.03571428571428571,1,frequency,every 4 weeks
+313,\bevery four weeks\b,0.03571428571428571,1,frequency,every 4 weeks
+315,\bq4wk\b,0.03571428571428571,1,frequency,every 4 weeks
+316,\bevery 40 hours\b,0.6,1,frequency,every 40 hours
+317,\bevery forty hours\b,0.6,1,frequency,every 40 hours
+319,\bq40hr\b,0.6,1,frequency,every 40 hours
+320,\bevery 40 minutes\b,36.0,1,frequency,every 40 minutes
+321,\bevery forty minutes\b,36.0,1,frequency,every 40 minutes
+323,\bevery 45 minutes\b,32.0,1,frequency,every 45 minutes
+324,\bevery forty-five minutes\b,32.0,1,frequency,every 45 minutes
+326,\bevery 48 hours\b,0.5,1,frequency,every 48 hours
+327,\bevery forty eight hours\b,0.5,1,frequency,every 48 hours
+329,\bq48hr\b,0.5,1,frequency,every 48 hours
+330,\bevery 5 days\b,0.2,1,frequency,every 5 days
+331,\bevery five days\b,0.2,1,frequency,every 5 days
+333,\bq5day\b,0.2,1,frequency,every 5 days
+334,\bevery 5 hours\b,4.8,1,frequency,every 5 hours
+335,\bevery five hours\b,4.8,1,frequency,every 5 hours
+337,\bq5hr\b,4.8,1,frequency,every 5 hours
+338,\bevery 5 minutes\b,288.0,1,frequency,every 5 minutes
+339,\bevery five minutes\b,288.0,1,frequency,every 5 minutes
+341,\bevery 5 years\b,0.0005479452054794521,1,frequency,every 5 years
+342,\bevery five years\b,0.0005479452054794521,1,frequency,every 5 years
+344,\bevery 6 hours\b,4.0,1,frequency,every 6 hours
+345,\bevery six hours\b,4.0,1,frequency,every 6 hours
+347,\bq6h - every six hours\b,4.0,1,frequency,every 6 hours
+348,\bevery 6 months\b,0.005555555555555555,1,frequency,every 6 months
+349,\bevery six months\b,0.005555555555555555,1,frequency,every 6 months
+351,\bq6mo\b,0.005555555555555555,1,frequency,every 6 months
+352,\bevery 6 weeks\b,0.023809523809523808,1,frequency,every 6 weeks
+353,\bevery six weeks\b,0.023809523809523808,1,frequency,every 6 weeks
+355,\bevery 60 hours\b,0.4,1,frequency,every 60 hours
+356,\bevery sixty hours\b,0.4,1,frequency,every 60 hours
+358,\bq60hr\b,0.4,1,frequency,every 60 hours
+359,\bevery 8 hours\b,3.0,1,frequency,every 8 hours
+360,\bevery eight hours\b,3.0,1,frequency,every 8 hours
+362,\bq8h - every eight hours\b,3.0,1,frequency,every 8 hours
+363,\bevery 9 months\b,0.0037037037037037034,1,frequency,every 9 months
+364,\bevery nine months\b,0.0037037037037037034,1,frequency,every 9 months
+366,\bevery 90 minutes\b,16.0,1,frequency,every 90 minutes
+367,\bevery ninety minutes\b,16.0,1,frequency,every 90 minutes
+373,\bevery 8 minutes\b,180.0,1,frequency,every eight minutes
+374,\bevery eight minutes\b,180.0,1,frequency,every eight minutes
+376,\bevery 8 to 12 hours\b,2.4,1,frequency,every eight to twelve hours
+377,\bevery eight to twelve hours\b,2.4,1,frequency,every eight to twelve hours
+379,\bq8-12hr\b,2.4,1,frequency,every eight to twelve hours
+382,\bevery 5 to 10 minutes\b,192.0,1,frequency,every five to ten minutes
+383,\bevery five to ten minutes\b,192.0,1,frequency,every five to ten minutes
+385,\bq5-10min\b,192.0,1,frequency,every five to ten minutes
+386,\bevery 4 hours while awake\b,6.0,1,frequency,every four hours whilst awake
+387,\bevery 4 hours whilst awake\b,6.0,1,frequency,every four hours whilst awake
+388,\bevery four hours while awake\b,6.0,1,frequency,every four hours whilst awake
+390,\bevery four hours whilst awake\b,6.0,1,frequency,every four hours whilst awake
+391,\bq4hrwa\b,6.0,1,frequency,every four hours whilst awake
+392,\bevery 4 minutes\b,360.0,1,frequency,every four minutes
+393,\bevery four minutes\b,360.0,1,frequency,every four minutes
+395,\b4-6 hourly\b,4.8,1,frequency,every four to six hours
+396,\bevery 4 to 6 hours\b,4.8,1,frequency,every four to six hours
+397,\bevery four to six hours\b,4.8,1,frequency,every four to six hours
+399,\bfour to six hourly\b,4.8,1,frequency,every four to six hours
+400,\bq4-6hr\b,4.8,1,frequency,every four to six hours
+401,\bevery 14 days\b,0.07142857142857142,1,frequency,every fourteen days
+402,\bevery fourteen days\b,0.07142857142857142,1,frequency,every fourteen days
+416,\bevery 96 hours\b,0.25,1,frequency,every ninety six hours
+417,\bevery ninety six hours\b,0.25,1,frequency,every ninety six hours
+419,\bq96hr\b,0.25,1,frequency,every ninety six hours
+422,\bevery 1 to 2 hours\b,16.0,1,frequency,every one to two hours
+423,\bevery one to two hours\b,16.0,1,frequency,every one to two hours
+425,\bq1-2 hr\b,16.0,1,frequency,every one to two hours
+426,"\bevery other day, at bedtime\b",0.5,1,frequency,"every other day, at bedtime"
+428,\bqodhs\b,0.5,1,frequency,"every other day, at bedtime"
+429,\balternate years\b,0.0013698630136986301,1,frequency,every other year
+430,\bbiannually\b,0.0013698630136986301,1,frequency,every other year
+431,\bevery other year\b,0.0013698630136986301,1,frequency,every other year
+435,\bevery 7 days\b,0.14285714285714285,1,frequency,every seven days
+436,\bevery seven days\b,0.14285714285714285,1,frequency,every seven days
+438,\bq7days\b,0.14285714285714285,1,frequency,every seven days
+439,\bevery 7 minutes\b,205.71428571428572,1,frequency,every seven minutes
+440,\bevery seven minutes\b,205.71428571428572,1,frequency,every seven minutes
+442,\bevery 72 hours\b,0.08333333333333333,1,frequency,every seventy two hours
+443,\bevery seventy two hours\b,0.08333333333333333,1,frequency,every seventy two hours
+445,\bq72hr\b,0.08333333333333333,1,frequency,every seventy two hours
+446,\bevery 6 minutes\b,240.0,1,frequency,every six minutes
+447,\bevery six minutes\b,240.0,1,frequency,every six minutes
+449,\bevery 6 to 8 hours\b,3.4285714285714284,1,frequency,every six to eight hours
+450,\bevery six to eight hours\b,3.4285714285714284,1,frequency,every six to eight hours
+452,\bq6-8hr\b,3.4285714285714284,1,frequency,every six to eight hours
+453,\bevery 10-15 minutes\b,115.2,1,frequency,every ten to fifteen minutes
+454,\bevery ten to fifteen minutes\b,115.2,1,frequency,every ten to fifteen minutes
+456,\bq10-15min\b,115.2,1,frequency,every ten to fifteen minutes
+461,\bevery 10 to 12 minutes\b,130.9090909090909,1,frequency,every ten to twelve minutes
+462,\bevery ten to twelve minutes\b,130.9090909090909,1,frequency,every ten to twelve minutes
+467,\bevery 3 hours while awake\b,8.0,1,frequency,every three hours while awake
+468,\bevery three hours while awake\b,8.0,1,frequency,every three hours while awake
+470,\b3-4 hourly\b,6.857142857142857,1,frequency,every three to four hours
+471,\bevery three to four hours\b,6.857142857142857,1,frequency,every three to four hours
+473,\bthree to four hourly\b,6.857142857142857,1,frequency,every three to four hours
+474,\bevery 3-4 hours while awake\b,6.857142857142857,1,frequency,every three to four hours while awake
+475,\bevery three to four hours while awake\b,6.857142857142857,1,frequency,every three to four hours while awake
+477,\bevery 3 to 6 hours\b,5.333333333333333,1,frequency,every three to six hours
+478,\bevery three to six hours\b,5.333333333333333,1,frequency,every three to six hours
+480,\bq3-6hr\b,5.333333333333333,1,frequency,every three to six hours
+481,\bevery 12 minutes\b,120.0,1,frequency,every twelve minutes
+482,\bevery twelve minutes\b,120.0,1,frequency,every twelve minutes
+484,\bevery 28 days\b,8.0,1,frequency,every twenty eight days
+485,\bevery twenty eight days\b,8.0,1,frequency,every twenty eight days
+487,\bevery 24 hours\b,0.16666666666666666,1,frequency,every twenty four hours
+488,\bevery twenty four hours\b,0.16666666666666666,1,frequency,every twenty four hours
+490,\bq24hr\b,0.16666666666666666,1,frequency,every twenty four hours
+491,\bevery 21 days\b,1.0,1,frequency,every twenty one days
+492,\bevery twenty one days\b,1.0,1,frequency,every twenty one days
+494,\b2-4 hourly\b,8.0,1,frequency,every two to four hours
+495,\bevery 2 to 4 hours\b,8.0,1,frequency,every two to four hours
+496,\bevery two to four hours\b,8.0,1,frequency,every two to four hours
+498,\btwo to four hourly\b,8.0,1,frequency,every two to four hours
+499,\bevery 2 to 3 hours\b,9.6,1,frequency,every two to three hours
+500,\bevery two to three hours\b,9.6,1,frequency,every two to three hours
+502,\bq2-3hr\b,9.6,1,frequency,every two to three hours
